@@ -31,10 +31,10 @@ namespace BDDValueCheck
                                 "Prop", "PanHash", "Name", "Bank", "Tags", "IdVoie", "Smact", 
                                 "Timings"];
 
-            for (int i = 0; i < columns.Length; i++)
-            {
-                Console.WriteLine(columns[i]);
-            }
+            //for (int i = 0; i < columns.Length; i++)
+            //{
+            //    Console.WriteLine(columns[i]);
+            //}
 
 
         }
