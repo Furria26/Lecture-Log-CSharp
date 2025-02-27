@@ -1,0 +1,1356 @@
+2024-09-17 23:30:01.904 EMVControl rsyslogd: [origin software="rsyslogd" swVersion="5.8.2" x-pid="1112" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+2024-09-17 23:30:01.916 EMVControl dpkg:     Name           Version
+2024-09-17 23:30:01.917 EMVControl dpkg: +++-==============-==============
+2024-09-17 23:30:01.918 EMVControl dpkg: ii  AsfUserApps    3.0.4-g6aa0499ca
+2024-09-17 23:30:19.488 EMVControl taskFtp2: Failed to read 2. ftp set: ip='' user='' filename=''
+2024-09-17 23:30:19.870 EMVControl taskFtp2: Inform voie about 'ftp2_no_connect'
+2024-09-17 23:30:19.882 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_2.txt
+2024-09-17 23:30:19.882 EMVControl Voie[1900]: Read event notification from 0_0: event #924, err OK
+2024-09-17 23:30:19.882 EMVControl Voie[1900]: Event #924
+2024-09-17 23:30:19.882 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-17 23:30:19.882 EMVControl Voie[1900]:     > AE0070011924
+2024-09-17 23:30:19.951 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_2.txt.old
+2024-09-17 23:30:30.267 EMVControl Srv900[1964]: NFCL1 status
+2024-09-17 23:30:30.267 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-17 23:30:30.267 EMVControl Srv900[1964]:  Frames from Module            = 1674080
+2024-09-17 23:30:30.267 EMVControl Srv900[1964]:  Frames to Module              = 1666193
+2024-09-17 23:30:30.267 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1661743:1661743:0
+2024-09-17 23:30:30.267 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-17 23:30:30.267 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-17 23:30:30.267 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-17 23:30:30.267 EMVControl Srv900[1964]:  module.system_time            = 4016640.250 s
+2024-09-17 23:30:30.267 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-17 23:30:30.267 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-17 23:30:30.271 EMVControl Srv900[1964]:  module.l900_rx                = 1666477
+2024-09-17 23:30:30.271 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-17 23:30:30.271 EMVControl Srv900[1964]:  module.l900_tx                = 1673963
+2024-09-17 23:30:30.271 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-17 23:32:01.814 EMVControl NfcPara[6395]: Params are only 4 days old (<6)
+2024-09-17 23:32:01.814 EMVControl NfcPara[6395]: Warning! Params becomes old (4 days >2) => new TLP is recommended
+2024-09-17 23:32:01.814 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg4_1.txt
+2024-09-17 23:32:01.814 EMVControl Voie[1900]: Read event notification from 4_1: event #26, err KO
+2024-09-17 23:32:01.814 EMVControl Voie[1900]: Event #26
+2024-09-17 23:32:01.814 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-17 23:32:01.814 EMVControl Voie[1900]:     > AE0070011026
+2024-09-17 23:32:01.878 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg4_1.txt.old
+2024-09-17 23:32:31.324 EMVControl Srv900[1964]: NFCL1 status
+2024-09-17 23:32:31.324 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-17 23:32:31.324 EMVControl Srv900[1964]:  Frames from Module            = 1674105
+2024-09-17 23:32:31.324 EMVControl Srv900[1964]:  Frames to Module              = 1666217
+2024-09-17 23:32:31.324 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1661767:1661767:0
+2024-09-17 23:32:31.324 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-17 23:32:31.324 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-17 23:32:31.324 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-17 23:32:31.324 EMVControl Srv900[1964]:  module.system_time            = 4016760.250 s
+2024-09-17 23:32:31.324 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-17 23:32:31.324 EMVControl Srv900[1964]:  module.adc_temp               = 35.8 deg
+2024-09-17 23:32:31.327 EMVControl Srv900[1964]:  module.l900_rx                = 1666501
+2024-09-17 23:32:31.328 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-17 23:32:31.328 EMVControl Srv900[1964]:  module.l900_tx                = 1673987
+2024-09-17 23:32:31.328 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-17 23:34:32.251 EMVControl Srv900[1964]: NFCL1 status
+2024-09-17 23:34:32.251 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-17 23:34:32.251 EMVControl Srv900[1964]:  Frames from Module            = 1674129
+2024-09-17 23:34:32.251 EMVControl Srv900[1964]:  Frames to Module              = 1666241
+2024-09-17 23:34:32.251 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1661791:1661791:0
+2024-09-17 23:34:32.251 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-17 23:34:32.251 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-17 23:34:32.251 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-17 23:34:32.251 EMVControl Srv900[1964]:  module.system_time            = 4016880.250 s
+2024-09-17 23:34:32.251 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.73:24.80) V
+2024-09-17 23:34:32.251 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-17 23:34:32.254 EMVControl Srv900[1964]:  module.l900_rx                = 1666525
+2024-09-17 23:34:32.254 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-17 23:34:32.254 EMVControl Srv900[1964]:  module.l900_tx                = 1674011
+2024-09-17 23:34:32.254 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-17 23:34:58.154 EMVControl ntpd_log: stratum=4, drift=-23ppm, offset=-0.011766s poll=512
+2024-09-17 23:34:58.185 EMVControl ntpd_log: Inform voie about 'ntpd_ok'
+2024-09-17 23:34:58.197 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_9.txt
+2024-09-17 23:34:58.198 EMVControl Voie[1900]: Read event notification from 0_0: event #950, err OK
+2024-09-17 23:34:58.198 EMVControl Voie[1900]: Event #950
+2024-09-17 23:34:58.198 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-17 23:34:58.198 EMVControl Voie[1900]:     > AE0070011950
+2024-09-17 23:34:58.264 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_9.txt.old
+2024-09-17 23:36:32.252 EMVControl Srv900[1964]: NFCL1 status
+2024-09-17 23:36:32.252 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-17 23:36:32.252 EMVControl Srv900[1964]:  Frames from Module            = 1674153
+2024-09-17 23:36:32.253 EMVControl Srv900[1964]:  Frames to Module              = 1666265
+2024-09-17 23:36:32.253 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1661815:1661815:0
+2024-09-17 23:36:32.253 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-17 23:36:32.253 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-17 23:36:32.253 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-17 23:36:32.253 EMVControl Srv900[1964]:  module.system_time            = 4017000.250 s
+2024-09-17 23:36:32.253 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.70:24.80) V
+2024-09-17 23:36:32.253 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-17 23:36:32.256 EMVControl Srv900[1964]:  module.l900_rx                = 1666549
+2024-09-17 23:36:32.256 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-17 23:36:32.256 EMVControl Srv900[1964]:  module.l900_tx                = 1674035
+2024-09-17 23:36:32.256 EMVControl Srv900[1964]:  module.lm_temp                = 30.4 deg
+2024-09-17 23:38:15.244 EMVControl Srv900[1964]: WatchNfcRx jitter: -101ms
+2024-09-17 23:38:32.344 EMVControl Srv900[1964]: NFCL1 status
+2024-09-17 23:38:32.344 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-17 23:38:32.344 EMVControl Srv900[1964]:  Frames from Module            = 1674177
+2024-09-17 23:38:32.344 EMVControl Srv900[1964]:  Frames to Module              = 1666289
+2024-09-17 23:38:32.344 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1661839:1661839:0
+2024-09-17 23:38:32.344 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-17 23:38:32.345 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-17 23:38:32.345 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-17 23:38:32.345 EMVControl Srv900[1964]:  module.system_time            = 4017120.250 s
+2024-09-17 23:38:32.345 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-17 23:38:32.345 EMVControl Srv900[1964]:  module.adc_temp               = 33.8 deg
+2024-09-17 23:38:32.348 EMVControl Srv900[1964]:  module.l900_rx                = 1666573
+2024-09-17 23:38:32.348 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-17 23:38:32.348 EMVControl Srv900[1964]:  module.l900_tx                = 1674059
+2024-09-17 23:38:32.348 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-17 23:40:20.706 EMVControl taskFtp2: Ftp1 said i have to load new xml config
+2024-09-17 23:40:21.119 EMVControl taskFtp2: Failed to read 2. ftp set: ip='' user='' filename=''
+2024-09-17 23:40:33.321 EMVControl Srv900[1964]: NFCL1 status
+2024-09-17 23:40:33.321 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-17 23:40:33.321 EMVControl Srv900[1964]:  Frames from Module            = 1674201
+2024-09-17 23:40:33.321 EMVControl Srv900[1964]:  Frames to Module              = 1666313
+2024-09-17 23:40:33.321 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1661863:1661863:0
+2024-09-17 23:40:33.321 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-17 23:40:33.321 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-17 23:40:33.321 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-17 23:40:33.321 EMVControl Srv900[1964]:  module.system_time            = 4017240.250 s
+2024-09-17 23:40:33.321 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-17 23:40:33.321 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-17 23:40:33.325 EMVControl Srv900[1964]:  module.l900_rx                = 1666597
+2024-09-17 23:40:33.325 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-17 23:40:33.325 EMVControl Srv900[1964]:  module.l900_tx                = 1674083
+2024-09-17 23:40:33.325 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-17 23:40:50.245 EMVControl Srv900[1964]: WatchNfcRx jitter: -101ms
+2024-09-17 23:41:57.359 EMVControl Srv900[1964]: WatchNfc jitter: 110ms
+2024-09-17 23:42:34.356 EMVControl Srv900[1964]: NFCL1 status
+2024-09-17 23:42:34.356 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-17 23:42:34.356 EMVControl Srv900[1964]:  Frames from Module            = 1674225
+2024-09-17 23:42:34.356 EMVControl Srv900[1964]:  Frames to Module              = 1666338
+2024-09-17 23:42:34.356 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1661888:1661888:0
+2024-09-17 23:42:34.356 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-17 23:42:34.356 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-17 23:42:34.356 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-17 23:42:34.356 EMVControl Srv900[1964]:  module.system_time            = 4017365.250 s
+2024-09-17 23:42:34.356 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.68:24.80) V
+2024-09-17 23:42:34.356 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-17 23:42:34.360 EMVControl Srv900[1964]:  module.l900_rx                = 1666622
+2024-09-17 23:42:34.360 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-17 23:42:34.360 EMVControl Srv900[1964]:  module.l900_tx                = 1674108
+2024-09-17 23:42:34.360 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-17 23:44:35.290 EMVControl Srv900[1964]: NFCL1 status
+2024-09-17 23:44:35.290 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-17 23:44:35.290 EMVControl Srv900[1964]:  Frames from Module            = 1674249
+2024-09-17 23:44:35.290 EMVControl Srv900[1964]:  Frames to Module              = 1666362
+2024-09-17 23:44:35.290 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1661912:1661912:0
+2024-09-17 23:44:35.290 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-17 23:44:35.290 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-17 23:44:35.290 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-17 23:44:35.290 EMVControl Srv900[1964]:  module.system_time            = 4017485.250 s
+2024-09-17 23:44:35.290 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-17 23:44:35.290 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-17 23:44:35.294 EMVControl Srv900[1964]:  module.l900_rx                = 1666646
+2024-09-17 23:44:35.294 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-17 23:44:35.294 EMVControl Srv900[1964]:  module.l900_tx                = 1674132
+2024-09-17 23:44:35.294 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-17 23:46:36.312 EMVControl Srv900[1964]: NFCL1 status
+2024-09-17 23:46:36.312 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-17 23:46:36.312 EMVControl Srv900[1964]:  Frames from Module            = 1674274
+2024-09-17 23:46:36.312 EMVControl Srv900[1964]:  Frames to Module              = 1666386
+2024-09-17 23:46:36.312 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1661936:1661936:0
+2024-09-17 23:46:36.312 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-17 23:46:36.312 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-17 23:46:36.312 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-17 23:46:36.312 EMVControl Srv900[1964]:  module.system_time            = 4017605.000 s
+2024-09-17 23:46:36.312 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.69:24.80) V
+2024-09-17 23:46:36.312 EMVControl Srv900[1964]:  module.adc_temp               = 35.3 deg
+2024-09-17 23:46:36.315 EMVControl Srv900[1964]:  module.l900_rx                = 1666670
+2024-09-17 23:46:36.315 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-17 23:46:36.315 EMVControl Srv900[1964]:  module.l900_tx                = 1674156
+2024-09-17 23:46:36.315 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-17 23:47:19.814 EMVControl ntpd_log: stratum=4, drift=-23ppm, offset=-0.012774s poll=512
+2024-09-17 23:47:19.839 EMVControl ntpd_log: Inform voie about 'ntpd_ok'
+2024-09-17 23:47:19.854 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_9.txt
+2024-09-17 23:47:19.854 EMVControl Voie[1900]: Read event notification from 0_0: event #950, err OK
+2024-09-17 23:47:19.854 EMVControl Voie[1900]: Event #950
+2024-09-17 23:47:19.855 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-17 23:47:19.855 EMVControl Voie[1900]:     > AE0070011950
+2024-09-17 23:47:19.925 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_9.txt.old
+2024-09-17 23:48:36.324 EMVControl Srv900[1964]: NFCL1 status
+2024-09-17 23:48:36.324 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-17 23:48:36.324 EMVControl Srv900[1964]:  Frames from Module            = 1674298
+2024-09-17 23:48:36.324 EMVControl Srv900[1964]:  Frames to Module              = 1666410
+2024-09-17 23:48:36.324 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1661960:1661960:0
+2024-09-17 23:48:36.324 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-17 23:48:36.324 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-17 23:48:36.324 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-17 23:48:36.324 EMVControl Srv900[1964]:  module.system_time            = 4017725.250 s
+2024-09-17 23:48:36.324 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.70:24.80) V
+2024-09-17 23:48:36.324 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-17 23:48:36.327 EMVControl Srv900[1964]:  module.l900_rx                = 1666694
+2024-09-17 23:48:36.327 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-17 23:48:36.328 EMVControl Srv900[1964]:  module.l900_tx                = 1674180
+2024-09-17 23:48:36.328 EMVControl Srv900[1964]:  module.lm_temp                = 30.4 deg
+2024-09-17 23:50:21.818 EMVControl taskFtp2: Failed to read 2. ftp set: ip='' user='' filename=''
+2024-09-17 23:50:22.207 EMVControl taskFtp2: Inform voie about 'ftp2_no_connect'
+2024-09-17 23:50:22.219 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_2.txt
+2024-09-17 23:50:22.220 EMVControl Voie[1900]: Read event notification from 0_0: event #924, err OK
+2024-09-17 23:50:22.220 EMVControl Voie[1900]: Event #924
+2024-09-17 23:50:22.220 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-17 23:50:22.220 EMVControl Voie[1900]:     > AE0070011924
+2024-09-17 23:50:22.291 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_2.txt.old
+2024-09-17 23:50:37.321 EMVControl Srv900[1964]: NFCL1 status
+2024-09-17 23:50:37.321 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-17 23:50:37.321 EMVControl Srv900[1964]:  Frames from Module            = 1674322
+2024-09-17 23:50:37.321 EMVControl Srv900[1964]:  Frames to Module              = 1666434
+2024-09-17 23:50:37.321 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1661984:1661984:0
+2024-09-17 23:50:37.321 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-17 23:50:37.321 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-17 23:50:37.321 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-17 23:50:37.321 EMVControl Srv900[1964]:  module.system_time            = 4017845.250 s
+2024-09-17 23:50:37.321 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.68:24.80) V
+2024-09-17 23:50:37.321 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-17 23:50:37.324 EMVControl Srv900[1964]:  module.l900_rx                = 1666718
+2024-09-17 23:50:37.325 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-17 23:50:37.325 EMVControl Srv900[1964]:  module.l900_tx                = 1674204
+2024-09-17 23:50:37.325 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-17 23:52:37.343 EMVControl Srv900[1964]: NFCL1 status
+2024-09-17 23:52:37.343 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-17 23:52:37.343 EMVControl Srv900[1964]:  Frames from Module            = 1674346
+2024-09-17 23:52:37.343 EMVControl Srv900[1964]:  Frames to Module              = 1666458
+2024-09-17 23:52:37.343 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662008:1662008:0
+2024-09-17 23:52:37.343 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-17 23:52:37.343 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-17 23:52:37.343 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-17 23:52:37.343 EMVControl Srv900[1964]:  module.system_time            = 4017965.250 s
+2024-09-17 23:52:37.343 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.68:24.80) V
+2024-09-17 23:52:37.343 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-17 23:52:37.346 EMVControl Srv900[1964]:  module.l900_rx                = 1666742
+2024-09-17 23:52:37.346 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-17 23:52:37.346 EMVControl Srv900[1964]:  module.l900_tx                = 1674228
+2024-09-17 23:52:37.346 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-17 23:52:40.247 EMVControl Srv900[1964]: WatchNfcRx jitter: -101ms
+2024-09-17 23:54:38.265 EMVControl Srv900[1964]: NFCL1 status
+2024-09-17 23:54:38.265 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-17 23:54:38.265 EMVControl Srv900[1964]:  Frames from Module            = 1674370
+2024-09-17 23:54:38.265 EMVControl Srv900[1964]:  Frames to Module              = 1666482
+2024-09-17 23:54:38.265 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662032:1662032:0
+2024-09-17 23:54:38.265 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-17 23:54:38.265 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-17 23:54:38.265 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-17 23:54:38.265 EMVControl Srv900[1964]:  module.system_time            = 4018085.000 s
+2024-09-17 23:54:38.265 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.70:24.80) V
+2024-09-17 23:54:38.265 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-17 23:54:38.269 EMVControl Srv900[1964]:  module.l900_rx                = 1666766
+2024-09-17 23:54:38.269 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-17 23:54:38.269 EMVControl Srv900[1964]:  module.l900_tx                = 1674252
+2024-09-17 23:54:38.269 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-17 23:56:38.272 EMVControl Srv900[1964]: NFCL1 status
+2024-09-17 23:56:38.272 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-17 23:56:38.272 EMVControl Srv900[1964]:  Frames from Module            = 1674394
+2024-09-17 23:56:38.272 EMVControl Srv900[1964]:  Frames to Module              = 1666506
+2024-09-17 23:56:38.272 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662056:1662056:0
+2024-09-17 23:56:38.272 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-17 23:56:38.272 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-17 23:56:38.272 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-17 23:56:38.272 EMVControl Srv900[1964]:  module.system_time            = 4018205.250 s
+2024-09-17 23:56:38.272 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-17 23:56:38.272 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-17 23:56:38.276 EMVControl Srv900[1964]:  module.l900_rx                = 1666790
+2024-09-17 23:56:38.276 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-17 23:56:38.276 EMVControl Srv900[1964]:  module.l900_tx                = 1674276
+2024-09-17 23:56:38.276 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-17 23:58:34.438 EMVControl ntpd_log: stratum=4, drift=-23ppm, offset=-0.014567s poll=512
+2024-09-17 23:58:34.470 EMVControl ntpd_log: Inform voie about 'ntpd_ok'
+2024-09-17 23:58:34.481 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_9.txt
+2024-09-17 23:58:34.481 EMVControl Voie[1900]: Read event notification from 0_0: event #950, err OK
+2024-09-17 23:58:34.481 EMVControl Voie[1900]: Event #950
+2024-09-17 23:58:34.481 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-17 23:58:34.481 EMVControl Voie[1900]:     > AE0070011950
+2024-09-17 23:58:34.548 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_9.txt.old
+2024-09-17 23:58:38.334 EMVControl Srv900[1964]: NFCL1 status
+2024-09-17 23:58:38.334 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-17 23:58:38.334 EMVControl Srv900[1964]:  Frames from Module            = 1674418
+2024-09-17 23:58:38.334 EMVControl Srv900[1964]:  Frames to Module              = 1666530
+2024-09-17 23:58:38.334 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662080:1662080:0
+2024-09-17 23:58:38.334 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-17 23:58:38.334 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-17 23:58:38.334 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-17 23:58:38.334 EMVControl Srv900[1964]:  module.system_time            = 4018325.250 s
+2024-09-17 23:58:38.334 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.70:24.80) V
+2024-09-17 23:58:38.334 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-17 23:58:38.338 EMVControl Srv900[1964]:  module.l900_rx                = 1666814
+2024-09-17 23:58:38.338 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-17 23:58:38.338 EMVControl Srv900[1964]:  module.l900_tx                = 1674300
+2024-09-17 23:58:38.338 EMVControl Srv900[1964]:  module.lm_temp                = 30.4 deg
+2024-09-18 00:00:23.045 EMVControl taskFtp2: Ftp1 said i have to load new xml config
+2024-09-18 00:00:23.192 EMVControl taskFtp2: Failed to read 2. ftp set: ip='' user='' filename=''
+2024-09-18 00:00:39.271 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:00:39.271 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:00:39.271 EMVControl Srv900[1964]:  Frames from Module            = 1674442
+2024-09-18 00:00:39.271 EMVControl Srv900[1964]:  Frames to Module              = 1666555
+2024-09-18 00:00:39.271 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662105:1662105:0
+2024-09-18 00:00:39.271 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:00:39.271 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:00:39.271 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:00:39.271 EMVControl Srv900[1964]:  module.system_time            = 4018450.250 s
+2024-09-18 00:00:39.271 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.70:24.80) V
+2024-09-18 00:00:39.271 EMVControl Srv900[1964]:  module.adc_temp               = 35.3 deg
+2024-09-18 00:00:39.274 EMVControl Srv900[1964]:  module.l900_rx                = 1666839
+2024-09-18 00:00:39.274 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:00:39.274 EMVControl Srv900[1964]:  module.l900_tx                = 1674325
+2024-09-18 00:00:39.274 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 00:02:39.338 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:02:39.338 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:02:39.338 EMVControl Srv900[1964]:  Frames from Module            = 1674466
+2024-09-18 00:02:39.338 EMVControl Srv900[1964]:  Frames to Module              = 1666579
+2024-09-18 00:02:39.338 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662129:1662129:0
+2024-09-18 00:02:39.338 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:02:39.338 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:02:39.338 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:02:39.338 EMVControl Srv900[1964]:  module.system_time            = 4018570.250 s
+2024-09-18 00:02:39.338 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.69:24.80) V
+2024-09-18 00:02:39.338 EMVControl Srv900[1964]:  module.adc_temp               = 33.8 deg
+2024-09-18 00:02:39.341 EMVControl Srv900[1964]:  module.l900_rx                = 1666863
+2024-09-18 00:02:39.341 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:02:39.342 EMVControl Srv900[1964]:  module.l900_tx                = 1674349
+2024-09-18 00:02:39.342 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 00:04:40.244 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:04:40.245 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:04:40.245 EMVControl Srv900[1964]:  Frames from Module            = 1674490
+2024-09-18 00:04:40.245 EMVControl Srv900[1964]:  Frames to Module              = 1666603
+2024-09-18 00:04:40.245 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662153:1662153:0
+2024-09-18 00:04:40.245 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:04:40.245 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:04:40.245 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:04:40.245 EMVControl Srv900[1964]:  module.system_time            = 4018690.250 s
+2024-09-18 00:04:40.245 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 00:04:40.245 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 00:04:40.248 EMVControl Srv900[1964]:  module.l900_rx                = 1666887
+2024-09-18 00:04:40.248 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:04:40.248 EMVControl Srv900[1964]:  module.l900_tx                = 1674373
+2024-09-18 00:04:40.248 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 00:06:40.321 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:06:40.322 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:06:40.322 EMVControl Srv900[1964]:  Frames from Module            = 1674514
+2024-09-18 00:06:40.322 EMVControl Srv900[1964]:  Frames to Module              = 1666627
+2024-09-18 00:06:40.322 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662177:1662177:0
+2024-09-18 00:06:40.322 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:06:40.322 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:06:40.322 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:06:40.322 EMVControl Srv900[1964]:  module.system_time            = 4018810.000 s
+2024-09-18 00:06:40.322 EMVControl Srv900[1964]:  module.adc_24v                = (24.69:24.73:24.80) V
+2024-09-18 00:06:40.322 EMVControl Srv900[1964]:  module.adc_temp               = 35.3 deg
+2024-09-18 00:06:40.325 EMVControl Srv900[1964]:  module.l900_rx                = 1666911
+2024-09-18 00:06:40.325 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:06:40.325 EMVControl Srv900[1964]:  module.l900_tx                = 1674397
+2024-09-18 00:06:40.326 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 00:08:41.268 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:08:41.269 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:08:41.269 EMVControl Srv900[1964]:  Frames from Module            = 1674539
+2024-09-18 00:08:41.269 EMVControl Srv900[1964]:  Frames to Module              = 1666651
+2024-09-18 00:08:41.269 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662201:1662201:0
+2024-09-18 00:08:41.269 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:08:41.269 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:08:41.269 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:08:41.269 EMVControl Srv900[1964]:  module.system_time            = 4018930.250 s
+2024-09-18 00:08:41.269 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 00:08:41.269 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-18 00:08:41.272 EMVControl Srv900[1964]:  module.l900_rx                = 1666935
+2024-09-18 00:08:41.272 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:08:41.272 EMVControl Srv900[1964]:  module.l900_tx                = 1674421
+2024-09-18 00:08:41.273 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 00:09:37.066 EMVControl ntpd_log: stratum=4, drift=-23ppm, offset=-0.016606s poll=512
+2024-09-18 00:09:37.091 EMVControl ntpd_log: Inform voie about 'ntpd_ok'
+2024-09-18 00:09:37.107 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_9.txt
+2024-09-18 00:09:37.107 EMVControl Voie[1900]: Read event notification from 0_0: event #950, err OK
+2024-09-18 00:09:37.107 EMVControl Voie[1900]: Event #950
+2024-09-18 00:09:37.107 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 00:09:37.107 EMVControl Voie[1900]:     > AE0070011950
+2024-09-18 00:09:37.176 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_9.txt.old
+2024-09-18 00:10:23.791 EMVControl taskFtp2: Failed to read 2. ftp set: ip='' user='' filename=''
+2024-09-18 00:10:24.181 EMVControl taskFtp2: Inform voie about 'ftp2_no_connect'
+2024-09-18 00:10:24.193 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_2.txt
+2024-09-18 00:10:24.193 EMVControl Voie[1900]: Read event notification from 0_0: event #924, err OK
+2024-09-18 00:10:24.193 EMVControl Voie[1900]: Event #924
+2024-09-18 00:10:24.193 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 00:10:24.193 EMVControl Voie[1900]:     > AE0070011924
+2024-09-18 00:10:24.264 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_2.txt.old
+2024-09-18 00:10:42.310 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:10:42.310 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:10:42.310 EMVControl Srv900[1964]:  Frames from Module            = 1674563
+2024-09-18 00:10:42.310 EMVControl Srv900[1964]:  Frames to Module              = 1666675
+2024-09-18 00:10:42.311 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662225:1662225:0
+2024-09-18 00:10:42.311 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:10:42.311 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:10:42.311 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:10:42.311 EMVControl Srv900[1964]:  module.system_time            = 4019050.250 s
+2024-09-18 00:10:42.311 EMVControl Srv900[1964]:  module.adc_24v                = (24.69:24.71:24.80) V
+2024-09-18 00:10:42.311 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-18 00:10:42.314 EMVControl Srv900[1964]:  module.l900_rx                = 1666959
+2024-09-18 00:10:42.314 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:10:42.314 EMVControl Srv900[1964]:  module.l900_tx                = 1674445
+2024-09-18 00:10:42.314 EMVControl Srv900[1964]:  module.lm_temp                = 30.4 deg
+2024-09-18 00:12:42.343 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:12:42.343 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:12:42.343 EMVControl Srv900[1964]:  Frames from Module            = 1674587
+2024-09-18 00:12:42.343 EMVControl Srv900[1964]:  Frames to Module              = 1666699
+2024-09-18 00:12:42.343 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662249:1662249:0
+2024-09-18 00:12:42.343 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:12:42.343 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:12:42.343 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:12:42.343 EMVControl Srv900[1964]:  module.system_time            = 4019170.000 s
+2024-09-18 00:12:42.343 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 00:12:42.343 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-18 00:12:42.346 EMVControl Srv900[1964]:  module.l900_rx                = 1666983
+2024-09-18 00:12:42.347 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:12:42.347 EMVControl Srv900[1964]:  module.l900_tx                = 1674469
+2024-09-18 00:12:42.347 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 00:14:43.284 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:14:43.284 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:14:43.284 EMVControl Srv900[1964]:  Frames from Module            = 1674611
+2024-09-18 00:14:43.284 EMVControl Srv900[1964]:  Frames to Module              = 1666723
+2024-09-18 00:14:43.284 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662273:1662273:0
+2024-09-18 00:14:43.284 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:14:43.285 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:14:43.285 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:14:43.285 EMVControl Srv900[1964]:  module.system_time            = 4019290.000 s
+2024-09-18 00:14:43.285 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 00:14:43.285 EMVControl Srv900[1964]:  module.adc_temp               = 35.8 deg
+2024-09-18 00:14:43.288 EMVControl Srv900[1964]:  module.l900_rx                = 1667007
+2024-09-18 00:14:43.288 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:14:43.288 EMVControl Srv900[1964]:  module.l900_tx                = 1674493
+2024-09-18 00:14:43.288 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 00:16:43.296 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:16:43.296 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:16:43.296 EMVControl Srv900[1964]:  Frames from Module            = 1674635
+2024-09-18 00:16:43.296 EMVControl Srv900[1964]:  Frames to Module              = 1666747
+2024-09-18 00:16:43.296 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662297:1662297:0
+2024-09-18 00:16:43.296 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:16:43.296 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:16:43.296 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:16:43.297 EMVControl Srv900[1964]:  module.system_time            = 4019410.250 s
+2024-09-18 00:16:43.297 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 00:16:43.297 EMVControl Srv900[1964]:  module.adc_temp               = 35.8 deg
+2024-09-18 00:16:43.300 EMVControl Srv900[1964]:  module.l900_rx                = 1667031
+2024-09-18 00:16:43.300 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:16:43.300 EMVControl Srv900[1964]:  module.l900_tx                = 1674517
+2024-09-18 00:16:43.300 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 00:18:43.298 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:18:43.298 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:18:43.298 EMVControl Srv900[1964]:  Frames from Module            = 1674659
+2024-09-18 00:18:43.298 EMVControl Srv900[1964]:  Frames to Module              = 1666771
+2024-09-18 00:18:43.298 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662321:1662321:0
+2024-09-18 00:18:43.298 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:18:43.298 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:18:43.298 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:18:43.298 EMVControl Srv900[1964]:  module.system_time            = 4019530.250 s
+2024-09-18 00:18:43.299 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.69:24.80) V
+2024-09-18 00:18:43.299 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 00:18:43.302 EMVControl Srv900[1964]:  module.l900_rx                = 1667055
+2024-09-18 00:18:43.302 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:18:43.302 EMVControl Srv900[1964]:  module.l900_tx                = 1674541
+2024-09-18 00:18:43.302 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 00:20:25.003 EMVControl taskFtp2: Ftp1 said i have to load new xml config
+2024-09-18 00:20:25.151 EMVControl taskFtp2: Failed to read 2. ftp set: ip='' user='' filename=''
+2024-09-18 00:20:43.315 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:20:43.315 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:20:43.315 EMVControl Srv900[1964]:  Frames from Module            = 1674683
+2024-09-18 00:20:43.315 EMVControl Srv900[1964]:  Frames to Module              = 1666795
+2024-09-18 00:20:43.315 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662345:1662345:0
+2024-09-18 00:20:43.315 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:20:43.315 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:20:43.315 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:20:43.315 EMVControl Srv900[1964]:  module.system_time            = 4019650.000 s
+2024-09-18 00:20:43.315 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.68:24.80) V
+2024-09-18 00:20:43.315 EMVControl Srv900[1964]:  module.adc_temp               = 35.3 deg
+2024-09-18 00:20:43.319 EMVControl Srv900[1964]:  module.l900_rx                = 1667079
+2024-09-18 00:20:43.319 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:20:43.319 EMVControl Srv900[1964]:  module.l900_tx                = 1674565
+2024-09-18 00:20:43.319 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 00:21:56.731 EMVControl ntpd_log: stratum=4, drift=-23ppm, offset=-0.017930s poll=512
+2024-09-18 00:21:56.761 EMVControl ntpd_log: Inform voie about 'ntpd_ok'
+2024-09-18 00:21:56.774 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_9.txt
+2024-09-18 00:21:56.774 EMVControl Voie[1900]: Read event notification from 0_0: event #950, err OK
+2024-09-18 00:21:56.774 EMVControl Voie[1900]: Event #950
+2024-09-18 00:21:56.774 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 00:21:56.774 EMVControl Voie[1900]:     > AE0070011950
+2024-09-18 00:21:56.842 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_9.txt.old
+2024-09-18 00:22:44.342 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:22:44.342 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:22:44.342 EMVControl Srv900[1964]:  Frames from Module            = 1674707
+2024-09-18 00:22:44.342 EMVControl Srv900[1964]:  Frames to Module              = 1666820
+2024-09-18 00:22:44.342 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662370:1662370:0
+2024-09-18 00:22:44.342 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:22:44.342 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:22:44.342 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:22:44.342 EMVControl Srv900[1964]:  module.system_time            = 4019775.250 s
+2024-09-18 00:22:44.342 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.69:24.80) V
+2024-09-18 00:22:44.342 EMVControl Srv900[1964]:  module.adc_temp               = 35.3 deg
+2024-09-18 00:22:44.345 EMVControl Srv900[1964]:  module.l900_rx                = 1667104
+2024-09-18 00:22:44.345 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:22:44.345 EMVControl Srv900[1964]:  module.l900_tx                = 1674590
+2024-09-18 00:22:44.345 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 00:24:45.289 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:24:45.289 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:24:45.289 EMVControl Srv900[1964]:  Frames from Module            = 1674731
+2024-09-18 00:24:45.289 EMVControl Srv900[1964]:  Frames to Module              = 1666844
+2024-09-18 00:24:45.289 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662394:1662394:0
+2024-09-18 00:24:45.289 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:24:45.289 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:24:45.289 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:24:45.289 EMVControl Srv900[1964]:  module.system_time            = 4019895.250 s
+2024-09-18 00:24:45.289 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.69:24.80) V
+2024-09-18 00:24:45.289 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 00:24:45.292 EMVControl Srv900[1964]:  module.l900_rx                = 1667128
+2024-09-18 00:24:45.292 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:24:45.292 EMVControl Srv900[1964]:  module.l900_tx                = 1674614
+2024-09-18 00:24:45.292 EMVControl Srv900[1964]:  module.lm_temp                = 30.4 deg
+2024-09-18 00:26:45.291 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:26:45.291 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:26:45.291 EMVControl Srv900[1964]:  Frames from Module            = 1674755
+2024-09-18 00:26:45.291 EMVControl Srv900[1964]:  Frames to Module              = 1666868
+2024-09-18 00:26:45.291 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662418:1662418:0
+2024-09-18 00:26:45.291 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:26:45.291 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:26:45.291 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:26:45.291 EMVControl Srv900[1964]:  module.system_time            = 4020015.000 s
+2024-09-18 00:26:45.291 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.70:24.80) V
+2024-09-18 00:26:45.291 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-18 00:26:45.294 EMVControl Srv900[1964]:  module.l900_rx                = 1667152
+2024-09-18 00:26:45.294 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:26:45.294 EMVControl Srv900[1964]:  module.l900_tx                = 1674638
+2024-09-18 00:26:45.294 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 00:28:46.337 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:28:46.337 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:28:46.337 EMVControl Srv900[1964]:  Frames from Module            = 1674780
+2024-09-18 00:28:46.338 EMVControl Srv900[1964]:  Frames to Module              = 1666892
+2024-09-18 00:28:46.338 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662442:1662442:0
+2024-09-18 00:28:46.338 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:28:46.338 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:28:46.338 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:28:46.338 EMVControl Srv900[1964]:  module.system_time            = 4020135.250 s
+2024-09-18 00:28:46.338 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.73:24.80) V
+2024-09-18 00:28:46.338 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 00:28:46.341 EMVControl Srv900[1964]:  module.l900_rx                = 1667176
+2024-09-18 00:28:46.341 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:28:46.341 EMVControl Srv900[1964]:  module.l900_tx                = 1674662
+2024-09-18 00:28:46.341 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 00:30:04.117 EMVControl MagPara[6201]: Params are only 5 days old (<6)
+2024-09-18 00:30:04.117 EMVControl MagPara[6201]: Warning! Params becomes old (5 days >2) => new TLP is recommended
+2024-09-18 00:30:04.117 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg2_1.txt
+2024-09-18 00:30:04.117 EMVControl Voie[1900]: Read event notification from 2_1: event #24, err KO
+2024-09-18 00:30:04.117 EMVControl Voie[1900]: Event #24
+2024-09-18 00:30:04.117 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 00:30:04.117 EMVControl Voie[1900]:     > AE0070011024
+2024-09-18 00:30:04.184 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg2_1.txt.old
+2024-09-18 00:30:25.700 EMVControl taskFtp2: Failed to read 2. ftp set: ip='' user='' filename=''
+2024-09-18 00:30:26.084 EMVControl taskFtp2: Inform voie about 'ftp2_no_connect'
+2024-09-18 00:30:26.096 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_2.txt
+2024-09-18 00:30:26.096 EMVControl Voie[1900]: Read event notification from 0_0: event #924, err OK
+2024-09-18 00:30:26.096 EMVControl Voie[1900]: Event #924
+2024-09-18 00:30:26.096 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 00:30:26.096 EMVControl Voie[1900]:     > AE0070011924
+2024-09-18 00:30:26.169 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_2.txt.old
+2024-09-18 00:30:47.304 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:30:47.304 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:30:47.304 EMVControl Srv900[1964]:  Frames from Module            = 1674804
+2024-09-18 00:30:47.304 EMVControl Srv900[1964]:  Frames to Module              = 1666916
+2024-09-18 00:30:47.304 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662466:1662466:0
+2024-09-18 00:30:47.304 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:30:47.304 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:30:47.304 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:30:47.304 EMVControl Srv900[1964]:  module.system_time            = 4020255.250 s
+2024-09-18 00:30:47.304 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.69:24.80) V
+2024-09-18 00:30:47.304 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-18 00:30:47.308 EMVControl Srv900[1964]:  module.l900_rx                = 1667200
+2024-09-18 00:30:47.308 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:30:47.308 EMVControl Srv900[1964]:  module.l900_tx                = 1674686
+2024-09-18 00:30:47.308 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 00:32:04.838 EMVControl NfcPara[6395]: Params are only 4 days old (<6)
+2024-09-18 00:32:04.838 EMVControl NfcPara[6395]: Warning! Params becomes old (4 days >2) => new TLP is recommended
+2024-09-18 00:32:04.838 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg4_1.txt
+2024-09-18 00:32:04.839 EMVControl Voie[1900]: Read event notification from 4_1: event #26, err KO
+2024-09-18 00:32:04.839 EMVControl Voie[1900]: Event #26
+2024-09-18 00:32:04.839 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 00:32:04.839 EMVControl Voie[1900]:     > AE0070011026
+2024-09-18 00:32:04.906 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg4_1.txt.old
+2024-09-18 00:32:48.346 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:32:48.346 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:32:48.346 EMVControl Srv900[1964]:  Frames from Module            = 1674828
+2024-09-18 00:32:48.346 EMVControl Srv900[1964]:  Frames to Module              = 1666940
+2024-09-18 00:32:48.346 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662490:1662490:0
+2024-09-18 00:32:48.346 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:32:48.346 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:32:48.346 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:32:48.346 EMVControl Srv900[1964]:  module.system_time            = 4020375.250 s
+2024-09-18 00:32:48.346 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 00:32:48.346 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-18 00:32:48.350 EMVControl Srv900[1964]:  module.l900_rx                = 1667224
+2024-09-18 00:32:48.350 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:32:48.350 EMVControl Srv900[1964]:  module.l900_tx                = 1674710
+2024-09-18 00:32:48.350 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 00:33:04.460 EMVControl ntpd_log: stratum=4, drift=-23ppm, offset=-0.019320s poll=256
+2024-09-18 00:33:04.485 EMVControl ntpd_log: Inform voie about 'ntpd_ok'
+2024-09-18 00:33:04.494 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_9.txt
+2024-09-18 00:33:04.496 EMVControl Voie[1900]: Read event notification from 0_0: event #950, err OK
+2024-09-18 00:33:04.496 EMVControl Voie[1900]: Event #950
+2024-09-18 00:33:04.496 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 00:33:04.496 EMVControl Voie[1900]:     > AE0070011950
+2024-09-18 00:33:04.564 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_9.txt.old
+2024-09-18 00:34:49.277 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:34:49.277 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:34:49.277 EMVControl Srv900[1964]:  Frames from Module            = 1674852
+2024-09-18 00:34:49.277 EMVControl Srv900[1964]:  Frames to Module              = 1666965
+2024-09-18 00:34:49.277 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662515:1662515:0
+2024-09-18 00:34:49.278 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:34:49.278 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:34:49.278 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:34:49.278 EMVControl Srv900[1964]:  module.system_time            = 4020500.250 s
+2024-09-18 00:34:49.278 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.70:24.80) V
+2024-09-18 00:34:49.278 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 00:34:49.281 EMVControl Srv900[1964]:  module.l900_rx                = 1667249
+2024-09-18 00:34:49.281 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:34:49.281 EMVControl Srv900[1964]:  module.l900_tx                = 1674735
+2024-09-18 00:34:49.281 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 00:36:49.309 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:36:49.309 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:36:49.309 EMVControl Srv900[1964]:  Frames from Module            = 1674876
+2024-09-18 00:36:49.309 EMVControl Srv900[1964]:  Frames to Module              = 1666989
+2024-09-18 00:36:49.309 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662539:1662539:0
+2024-09-18 00:36:49.309 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:36:49.309 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:36:49.309 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:36:49.309 EMVControl Srv900[1964]:  module.system_time            = 4020620.000 s
+2024-09-18 00:36:49.309 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 00:36:49.309 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-18 00:36:49.312 EMVControl Srv900[1964]:  module.l900_rx                = 1667273
+2024-09-18 00:36:49.312 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:36:49.312 EMVControl Srv900[1964]:  module.l900_tx                = 1674759
+2024-09-18 00:36:49.313 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 00:38:50.315 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:38:50.316 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:38:50.316 EMVControl Srv900[1964]:  Frames from Module            = 1674900
+2024-09-18 00:38:50.316 EMVControl Srv900[1964]:  Frames to Module              = 1667013
+2024-09-18 00:38:50.316 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662563:1662563:0
+2024-09-18 00:38:50.316 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:38:50.316 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:38:50.316 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:38:50.316 EMVControl Srv900[1964]:  module.system_time            = 4020740.000 s
+2024-09-18 00:38:50.316 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.73:24.80) V
+2024-09-18 00:38:50.316 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-18 00:38:50.319 EMVControl Srv900[1964]:  module.l900_rx                = 1667297
+2024-09-18 00:38:50.319 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:38:50.319 EMVControl Srv900[1964]:  module.l900_tx                = 1674783
+2024-09-18 00:38:50.319 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 00:40:26.985 EMVControl taskFtp2: Ftp1 said i have to load new xml config
+2024-09-18 00:40:27.140 EMVControl taskFtp2: Failed to read 2. ftp set: ip='' user='' filename=''
+2024-09-18 00:40:50.322 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:40:50.322 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:40:50.322 EMVControl Srv900[1964]:  Frames from Module            = 1674924
+2024-09-18 00:40:50.322 EMVControl Srv900[1964]:  Frames to Module              = 1667037
+2024-09-18 00:40:50.322 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662587:1662587:0
+2024-09-18 00:40:50.322 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:40:50.322 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:40:50.322 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:40:50.322 EMVControl Srv900[1964]:  module.system_time            = 4020860.250 s
+2024-09-18 00:40:50.322 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 00:40:50.322 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 00:40:50.325 EMVControl Srv900[1964]:  module.l900_rx                = 1667321
+2024-09-18 00:40:50.325 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:40:50.325 EMVControl Srv900[1964]:  module.l900_tx                = 1674807
+2024-09-18 00:40:50.325 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 00:42:51.343 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:42:51.343 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:42:51.343 EMVControl Srv900[1964]:  Frames from Module            = 1674949
+2024-09-18 00:42:51.343 EMVControl Srv900[1964]:  Frames to Module              = 1667061
+2024-09-18 00:42:51.343 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662611:1662611:0
+2024-09-18 00:42:51.343 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:42:51.343 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:42:51.343 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:42:51.343 EMVControl Srv900[1964]:  module.system_time            = 4020980.250 s
+2024-09-18 00:42:51.343 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.73:24.80) V
+2024-09-18 00:42:51.343 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 00:42:51.346 EMVControl Srv900[1964]:  module.l900_rx                = 1667345
+2024-09-18 00:42:51.346 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:42:51.346 EMVControl Srv900[1964]:  module.l900_tx                = 1674831
+2024-09-18 00:42:51.346 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 00:44:09.261 EMVControl ntpd_log: stratum=4, drift=-23ppm, offset=-0.019131s poll=128
+2024-09-18 00:44:09.286 EMVControl ntpd_log: Inform voie about 'ntpd_ok'
+2024-09-18 00:44:09.297 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_9.txt
+2024-09-18 00:44:09.297 EMVControl Voie[1900]: Read event notification from 0_0: event #950, err OK
+2024-09-18 00:44:09.297 EMVControl Voie[1900]: Event #950
+2024-09-18 00:44:09.297 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 00:44:09.297 EMVControl Voie[1900]:     > AE0070011950
+2024-09-18 00:44:09.364 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_9.txt.old
+2024-09-18 00:44:52.304 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:44:52.304 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:44:52.304 EMVControl Srv900[1964]:  Frames from Module            = 1674973
+2024-09-18 00:44:52.304 EMVControl Srv900[1964]:  Frames to Module              = 1667085
+2024-09-18 00:44:52.304 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662635:1662635:0
+2024-09-18 00:44:52.304 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:44:52.304 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:44:52.304 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:44:52.304 EMVControl Srv900[1964]:  module.system_time            = 4021100.000 s
+2024-09-18 00:44:52.304 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.69:24.80) V
+2024-09-18 00:44:52.304 EMVControl Srv900[1964]:  module.adc_temp               = 33.8 deg
+2024-09-18 00:44:52.307 EMVControl Srv900[1964]:  module.l900_rx                = 1667369
+2024-09-18 00:44:52.307 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:44:52.307 EMVControl Srv900[1964]:  module.l900_tx                = 1674855
+2024-09-18 00:44:52.307 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 00:46:53.334 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:46:53.334 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:46:53.334 EMVControl Srv900[1964]:  Frames from Module            = 1674997
+2024-09-18 00:46:53.334 EMVControl Srv900[1964]:  Frames to Module              = 1667109
+2024-09-18 00:46:53.334 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662659:1662659:0
+2024-09-18 00:46:53.334 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:46:53.334 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:46:53.334 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:46:53.334 EMVControl Srv900[1964]:  module.system_time            = 4021220.000 s
+2024-09-18 00:46:53.334 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 00:46:53.334 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-18 00:46:53.338 EMVControl Srv900[1964]:  module.l900_rx                = 1667393
+2024-09-18 00:46:53.338 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:46:53.338 EMVControl Srv900[1964]:  module.l900_tx                = 1674879
+2024-09-18 00:46:53.338 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 00:48:54.259 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:48:54.259 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:48:54.259 EMVControl Srv900[1964]:  Frames from Module            = 1675021
+2024-09-18 00:48:54.259 EMVControl Srv900[1964]:  Frames to Module              = 1667134
+2024-09-18 00:48:54.259 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662684:1662684:0
+2024-09-18 00:48:54.259 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:48:54.259 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:48:54.259 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:48:54.259 EMVControl Srv900[1964]:  module.system_time            = 4021345.250 s
+2024-09-18 00:48:54.259 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 00:48:54.259 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 00:48:54.262 EMVControl Srv900[1964]:  module.l900_rx                = 1667418
+2024-09-18 00:48:54.263 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:48:54.263 EMVControl Srv900[1964]:  module.l900_tx                = 1674904
+2024-09-18 00:48:54.263 EMVControl Srv900[1964]:  module.lm_temp                = 30.4 deg
+2024-09-18 00:50:27.681 EMVControl taskFtp2: Failed to read 2. ftp set: ip='' user='' filename=''
+2024-09-18 00:50:28.067 EMVControl taskFtp2: Inform voie about 'ftp2_no_connect'
+2024-09-18 00:50:28.079 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_2.txt
+2024-09-18 00:50:28.079 EMVControl Voie[1900]: Read event notification from 0_0: event #924, err OK
+2024-09-18 00:50:28.079 EMVControl Voie[1900]: Event #924
+2024-09-18 00:50:28.079 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 00:50:28.079 EMVControl Voie[1900]:     > AE0070011924
+2024-09-18 00:50:28.148 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_2.txt.old
+2024-09-18 00:50:55.302 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:50:55.303 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:50:55.303 EMVControl Srv900[1964]:  Frames from Module            = 1675045
+2024-09-18 00:50:55.303 EMVControl Srv900[1964]:  Frames to Module              = 1667158
+2024-09-18 00:50:55.303 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662708:1662708:0
+2024-09-18 00:50:55.303 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:50:55.303 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:50:55.303 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:50:55.303 EMVControl Srv900[1964]:  module.system_time            = 4021465.000 s
+2024-09-18 00:50:55.303 EMVControl Srv900[1964]:  module.adc_24v                = (24.69:24.71:24.80) V
+2024-09-18 00:50:55.303 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 00:50:55.306 EMVControl Srv900[1964]:  module.l900_rx                = 1667442
+2024-09-18 00:50:55.306 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:50:55.306 EMVControl Srv900[1964]:  module.l900_tx                = 1674928
+2024-09-18 00:50:55.306 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 00:52:56.311 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:52:56.312 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:52:56.312 EMVControl Srv900[1964]:  Frames from Module            = 1675070
+2024-09-18 00:52:56.312 EMVControl Srv900[1964]:  Frames to Module              = 1667182
+2024-09-18 00:52:56.312 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662732:1662732:0
+2024-09-18 00:52:56.312 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:52:56.312 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:52:56.312 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:52:56.312 EMVControl Srv900[1964]:  module.system_time            = 4021585.250 s
+2024-09-18 00:52:56.312 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 00:52:56.312 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 00:52:56.315 EMVControl Srv900[1964]:  module.l900_rx                = 1667466
+2024-09-18 00:52:56.315 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:52:56.315 EMVControl Srv900[1964]:  module.l900_tx                = 1674952
+2024-09-18 00:52:56.315 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 00:54:57.256 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:54:57.256 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:54:57.257 EMVControl Srv900[1964]:  Frames from Module            = 1675094
+2024-09-18 00:54:57.257 EMVControl Srv900[1964]:  Frames to Module              = 1667206
+2024-09-18 00:54:57.257 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662756:1662756:0
+2024-09-18 00:54:57.257 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:54:57.257 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:54:57.257 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:54:57.257 EMVControl Srv900[1964]:  module.system_time            = 4021705.250 s
+2024-09-18 00:54:57.257 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.68:24.80) V
+2024-09-18 00:54:57.257 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 00:54:57.260 EMVControl Srv900[1964]:  module.l900_rx                = 1667490
+2024-09-18 00:54:57.260 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:54:57.260 EMVControl Srv900[1964]:  module.l900_tx                = 1674976
+2024-09-18 00:54:57.260 EMVControl Srv900[1964]:  module.lm_temp                = 30.4 deg
+2024-09-18 00:55:18.213 EMVControl ntpd_log: stratum=4, drift=-25ppm, offset=-0.008327s poll=32
+2024-09-18 00:55:18.244 EMVControl ntpd_log: Inform voie about 'ntpd_ok'
+2024-09-18 00:55:18.256 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_9.txt
+2024-09-18 00:55:18.256 EMVControl Voie[1900]: Read event notification from 0_0: event #950, err OK
+2024-09-18 00:55:18.256 EMVControl Voie[1900]: Event #950
+2024-09-18 00:55:18.256 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 00:55:18.256 EMVControl Voie[1900]:     > AE0070011950
+2024-09-18 00:55:18.325 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_9.txt.old
+2024-09-18 00:56:58.301 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:56:58.302 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:56:58.302 EMVControl Srv900[1964]:  Frames from Module            = 1675118
+2024-09-18 00:56:58.302 EMVControl Srv900[1964]:  Frames to Module              = 1667230
+2024-09-18 00:56:58.302 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662780:1662780:0
+2024-09-18 00:56:58.302 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:56:58.302 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:56:58.302 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:56:58.302 EMVControl Srv900[1964]:  module.system_time            = 4021825.000 s
+2024-09-18 00:56:58.302 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.70:24.80) V
+2024-09-18 00:56:58.302 EMVControl Srv900[1964]:  module.adc_temp               = 35.3 deg
+2024-09-18 00:56:58.306 EMVControl Srv900[1964]:  module.l900_rx                = 1667514
+2024-09-18 00:56:58.306 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:56:58.306 EMVControl Srv900[1964]:  module.l900_tx                = 1675000
+2024-09-18 00:56:58.306 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 00:58:59.307 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 00:58:59.307 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 00:58:59.307 EMVControl Srv900[1964]:  Frames from Module            = 1675142
+2024-09-18 00:58:59.308 EMVControl Srv900[1964]:  Frames to Module              = 1667255
+2024-09-18 00:58:59.308 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662805:1662805:0
+2024-09-18 00:58:59.308 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 00:58:59.308 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 00:58:59.308 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 00:58:59.308 EMVControl Srv900[1964]:  module.system_time            = 4021950.250 s
+2024-09-18 00:58:59.308 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 00:58:59.308 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-18 00:58:59.311 EMVControl Srv900[1964]:  module.l900_rx                = 1667539
+2024-09-18 00:58:59.311 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 00:58:59.311 EMVControl Srv900[1964]:  module.l900_tx                = 1675025
+2024-09-18 00:58:59.311 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 01:00:28.908 EMVControl taskFtp2: Ftp1 said i have to load new xml config
+2024-09-18 01:00:29.065 EMVControl taskFtp2: Failed to read 2. ftp set: ip='' user='' filename=''
+2024-09-18 01:01:00.344 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:01:00.344 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:01:00.344 EMVControl Srv900[1964]:  Frames from Module            = 1675166
+2024-09-18 01:01:00.344 EMVControl Srv900[1964]:  Frames to Module              = 1667279
+2024-09-18 01:01:00.344 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662829:1662829:0
+2024-09-18 01:01:00.344 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:01:00.344 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:01:00.344 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:01:00.344 EMVControl Srv900[1964]:  module.system_time            = 4022070.250 s
+2024-09-18 01:01:00.344 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.70:24.80) V
+2024-09-18 01:01:00.344 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:01:00.347 EMVControl Srv900[1964]:  module.l900_rx                = 1667563
+2024-09-18 01:01:00.347 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:01:00.347 EMVControl Srv900[1964]:  module.l900_tx                = 1675049
+2024-09-18 01:01:00.347 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 01:03:01.270 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:03:01.270 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:03:01.270 EMVControl Srv900[1964]:  Frames from Module            = 1675191
+2024-09-18 01:03:01.270 EMVControl Srv900[1964]:  Frames to Module              = 1667303
+2024-09-18 01:03:01.270 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662853:1662853:0
+2024-09-18 01:03:01.270 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:03:01.270 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:03:01.270 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:03:01.270 EMVControl Srv900[1964]:  module.system_time            = 4022190.250 s
+2024-09-18 01:03:01.270 EMVControl Srv900[1964]:  module.adc_24v                = (24.69:24.73:24.80) V
+2024-09-18 01:03:01.270 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:03:01.273 EMVControl Srv900[1964]:  module.l900_rx                = 1667587
+2024-09-18 01:03:01.273 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:03:01.273 EMVControl Srv900[1964]:  module.l900_tx                = 1675073
+2024-09-18 01:03:01.273 EMVControl Srv900[1964]:  module.lm_temp                = 30.4 deg
+2024-09-18 01:05:01.271 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:05:01.271 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:05:01.271 EMVControl Srv900[1964]:  Frames from Module            = 1675215
+2024-09-18 01:05:01.271 EMVControl Srv900[1964]:  Frames to Module              = 1667327
+2024-09-18 01:05:01.271 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662877:1662877:0
+2024-09-18 01:05:01.271 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:05:01.271 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:05:01.271 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:05:01.272 EMVControl Srv900[1964]:  module.system_time            = 4022310.250 s
+2024-09-18 01:05:01.272 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.72:24.80) V
+2024-09-18 01:05:01.272 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:05:01.275 EMVControl Srv900[1964]:  module.l900_rx                = 1667611
+2024-09-18 01:05:01.275 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:05:01.275 EMVControl Srv900[1964]:  module.l900_tx                = 1675097
+2024-09-18 01:05:01.275 EMVControl Srv900[1964]:  module.lm_temp                = 30.4 deg
+2024-09-18 01:06:40.111 EMVControl ntpd_log: stratum=4, drift=-25ppm, offset=-0.005302s poll=128
+2024-09-18 01:06:40.137 EMVControl ntpd_log: Inform voie about 'ntpd_ok'
+2024-09-18 01:06:40.151 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_9.txt
+2024-09-18 01:06:40.151 EMVControl Voie[1900]: Read event notification from 0_0: event #950, err OK
+2024-09-18 01:06:40.153 EMVControl Voie[1900]: Event #950
+2024-09-18 01:06:40.153 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 01:06:40.153 EMVControl Voie[1900]:     > AE0070011950
+2024-09-18 01:06:40.222 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_9.txt.old
+2024-09-18 01:07:01.348 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:07:01.348 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:07:01.348 EMVControl Srv900[1964]:  Frames from Module            = 1675239
+2024-09-18 01:07:01.348 EMVControl Srv900[1964]:  Frames to Module              = 1667351
+2024-09-18 01:07:01.348 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662901:1662901:0
+2024-09-18 01:07:01.348 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:07:01.348 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:07:01.348 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:07:01.348 EMVControl Srv900[1964]:  module.system_time            = 4022430.250 s
+2024-09-18 01:07:01.348 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.68:24.80) V
+2024-09-18 01:07:01.348 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:07:01.351 EMVControl Srv900[1964]:  module.l900_rx                = 1667635
+2024-09-18 01:07:01.351 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:07:01.351 EMVControl Srv900[1964]:  module.l900_tx                = 1675121
+2024-09-18 01:07:01.351 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 01:09:02.279 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:09:02.279 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:09:02.279 EMVControl Srv900[1964]:  Frames from Module            = 1675263
+2024-09-18 01:09:02.279 EMVControl Srv900[1964]:  Frames to Module              = 1667375
+2024-09-18 01:09:02.279 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662925:1662925:0
+2024-09-18 01:09:02.279 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:09:02.279 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:09:02.279 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:09:02.280 EMVControl Srv900[1964]:  module.system_time            = 4022550.000 s
+2024-09-18 01:09:02.280 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.68:24.80) V
+2024-09-18 01:09:02.280 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-18 01:09:02.283 EMVControl Srv900[1964]:  module.l900_rx                = 1667659
+2024-09-18 01:09:02.283 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:09:02.283 EMVControl Srv900[1964]:  module.l900_tx                = 1675145
+2024-09-18 01:09:02.283 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 01:10:29.621 EMVControl taskFtp2: Failed to read 2. ftp set: ip='' user='' filename=''
+2024-09-18 01:10:30.006 EMVControl taskFtp2: Inform voie about 'ftp2_no_connect'
+2024-09-18 01:10:30.019 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_2.txt
+2024-09-18 01:10:30.019 EMVControl Voie[1900]: Read event notification from 0_0: event #924, err OK
+2024-09-18 01:10:30.019 EMVControl Voie[1900]: Event #924
+2024-09-18 01:10:30.019 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 01:10:30.019 EMVControl Voie[1900]:     > AE0070011924
+2024-09-18 01:10:30.091 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_2.txt.old
+2024-09-18 01:11:03.301 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:11:03.301 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:11:03.301 EMVControl Srv900[1964]:  Frames from Module            = 1675287
+2024-09-18 01:11:03.301 EMVControl Srv900[1964]:  Frames to Module              = 1667399
+2024-09-18 01:11:03.301 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662949:1662949:0
+2024-09-18 01:11:03.301 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:11:03.301 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:11:03.301 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:11:03.301 EMVControl Srv900[1964]:  module.system_time            = 4022670.000 s
+2024-09-18 01:11:03.301 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 01:11:03.301 EMVControl Srv900[1964]:  module.adc_temp               = 35.8 deg
+2024-09-18 01:11:03.305 EMVControl Srv900[1964]:  module.l900_rx                = 1667683
+2024-09-18 01:11:03.305 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:11:03.305 EMVControl Srv900[1964]:  module.l900_tx                = 1675169
+2024-09-18 01:11:03.305 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 01:13:03.307 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:13:03.308 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:13:03.308 EMVControl Srv900[1964]:  Frames from Module            = 1675311
+2024-09-18 01:13:03.308 EMVControl Srv900[1964]:  Frames to Module              = 1667423
+2024-09-18 01:13:03.308 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662973:1662973:0
+2024-09-18 01:13:03.308 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:13:03.308 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:13:03.308 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:13:03.308 EMVControl Srv900[1964]:  module.system_time            = 4022790.250 s
+2024-09-18 01:13:03.308 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 01:13:03.308 EMVControl Srv900[1964]:  module.adc_temp               = 35.3 deg
+2024-09-18 01:13:03.314 EMVControl Srv900[1964]:  module.l900_rx                = 1667707
+2024-09-18 01:13:03.314 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:13:03.314 EMVControl Srv900[1964]:  module.l900_tx                = 1675193
+2024-09-18 01:13:03.315 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 01:15:04.259 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:15:04.259 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:15:04.259 EMVControl Srv900[1964]:  Frames from Module            = 1675335
+2024-09-18 01:15:04.259 EMVControl Srv900[1964]:  Frames to Module              = 1667448
+2024-09-18 01:15:04.259 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1662998:1662998:0
+2024-09-18 01:15:04.259 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:15:04.259 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:15:04.259 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:15:04.259 EMVControl Srv900[1964]:  module.system_time            = 4022915.000 s
+2024-09-18 01:15:04.259 EMVControl Srv900[1964]:  module.adc_24v                = (24.69:24.70:24.80) V
+2024-09-18 01:15:04.260 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:15:04.262 EMVControl Srv900[1964]:  module.l900_rx                = 1667732
+2024-09-18 01:15:04.263 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:15:04.263 EMVControl Srv900[1964]:  module.l900_tx                = 1675218
+2024-09-18 01:15:04.263 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 01:17:04.301 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:17:04.302 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:17:04.302 EMVControl Srv900[1964]:  Frames from Module            = 1675359
+2024-09-18 01:17:04.302 EMVControl Srv900[1964]:  Frames to Module              = 1667472
+2024-09-18 01:17:04.302 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663022:1663022:0
+2024-09-18 01:17:04.302 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:17:04.302 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:17:04.302 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:17:04.302 EMVControl Srv900[1964]:  module.system_time            = 4023035.250 s
+2024-09-18 01:17:04.302 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 01:17:04.302 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:17:04.305 EMVControl Srv900[1964]:  module.l900_rx                = 1667756
+2024-09-18 01:17:04.306 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:17:04.306 EMVControl Srv900[1964]:  module.l900_tx                = 1675242
+2024-09-18 01:17:04.306 EMVControl Srv900[1964]:  module.lm_temp                = 30.4 deg
+2024-09-18 01:18:10.952 EMVControl ntpd_log: stratum=4, drift=-25ppm, offset=-0.004000s poll=128
+2024-09-18 01:18:10.977 EMVControl ntpd_log: Inform voie about 'ntpd_ok'
+2024-09-18 01:18:10.993 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_9.txt
+2024-09-18 01:18:10.993 EMVControl Voie[1900]: Read event notification from 0_0: event #950, err OK
+2024-09-18 01:18:10.993 EMVControl Voie[1900]: Event #950
+2024-09-18 01:18:10.993 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 01:18:10.995 EMVControl Voie[1900]:     > AE0070011950
+2024-09-18 01:18:11.063 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_9.txt.old
+2024-09-18 01:19:04.303 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:19:04.303 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:19:04.303 EMVControl Srv900[1964]:  Frames from Module            = 1675383
+2024-09-18 01:19:04.303 EMVControl Srv900[1964]:  Frames to Module              = 1667496
+2024-09-18 01:19:04.303 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663046:1663046:0
+2024-09-18 01:19:04.303 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:19:04.303 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:19:04.303 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:19:04.303 EMVControl Srv900[1964]:  module.system_time            = 4023155.250 s
+2024-09-18 01:19:04.303 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.69:24.80) V
+2024-09-18 01:19:04.303 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:19:04.306 EMVControl Srv900[1964]:  module.l900_rx                = 1667780
+2024-09-18 01:19:04.306 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:19:04.306 EMVControl Srv900[1964]:  module.l900_tx                = 1675266
+2024-09-18 01:19:04.306 EMVControl Srv900[1964]:  module.lm_temp                = 30.4 deg
+2024-09-18 01:20:30.851 EMVControl taskFtp2: Ftp1 said i have to load new xml config
+2024-09-18 01:20:30.999 EMVControl taskFtp2: Failed to read 2. ftp set: ip='' user='' filename=''
+2024-09-18 01:21:04.344 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:21:04.344 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:21:04.344 EMVControl Srv900[1964]:  Frames from Module            = 1675407
+2024-09-18 01:21:04.344 EMVControl Srv900[1964]:  Frames to Module              = 1667520
+2024-09-18 01:21:04.344 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663070:1663070:0
+2024-09-18 01:21:04.345 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:21:04.345 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:21:04.345 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:21:04.345 EMVControl Srv900[1964]:  module.system_time            = 4023275.000 s
+2024-09-18 01:21:04.345 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.70:24.80) V
+2024-09-18 01:21:04.345 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:21:04.348 EMVControl Srv900[1964]:  module.l900_rx                = 1667804
+2024-09-18 01:21:04.348 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:21:04.348 EMVControl Srv900[1964]:  module.l900_tx                = 1675290
+2024-09-18 01:21:04.348 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 01:23:05.251 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:23:05.251 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:23:05.251 EMVControl Srv900[1964]:  Frames from Module            = 1675431
+2024-09-18 01:23:05.251 EMVControl Srv900[1964]:  Frames to Module              = 1667544
+2024-09-18 01:23:05.251 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663094:1663094:0
+2024-09-18 01:23:05.251 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:23:05.251 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:23:05.251 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:23:05.251 EMVControl Srv900[1964]:  module.system_time            = 4023395.000 s
+2024-09-18 01:23:05.251 EMVControl Srv900[1964]:  module.adc_24v                = (24.69:24.71:24.80) V
+2024-09-18 01:23:05.251 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:23:05.254 EMVControl Srv900[1964]:  module.l900_rx                = 1667828
+2024-09-18 01:23:05.254 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:23:05.254 EMVControl Srv900[1964]:  module.l900_tx                = 1675314
+2024-09-18 01:23:05.254 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 01:25:05.253 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:25:05.253 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:25:05.253 EMVControl Srv900[1964]:  Frames from Module            = 1675455
+2024-09-18 01:25:05.253 EMVControl Srv900[1964]:  Frames to Module              = 1667568
+2024-09-18 01:25:05.253 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663118:1663118:0
+2024-09-18 01:25:05.253 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:25:05.253 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:25:05.253 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:25:05.253 EMVControl Srv900[1964]:  module.system_time            = 4023515.250 s
+2024-09-18 01:25:05.253 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.69:24.80) V
+2024-09-18 01:25:05.253 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:25:05.256 EMVControl Srv900[1964]:  module.l900_rx                = 1667852
+2024-09-18 01:25:05.256 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:25:05.256 EMVControl Srv900[1964]:  module.l900_tx                = 1675338
+2024-09-18 01:25:05.256 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 01:27:05.334 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:27:05.334 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:27:05.334 EMVControl Srv900[1964]:  Frames from Module            = 1675479
+2024-09-18 01:27:05.334 EMVControl Srv900[1964]:  Frames to Module              = 1667592
+2024-09-18 01:27:05.335 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663142:1663142:0
+2024-09-18 01:27:05.335 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:27:05.335 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:27:05.335 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:27:05.335 EMVControl Srv900[1964]:  module.system_time            = 4023635.250 s
+2024-09-18 01:27:05.335 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.69:24.80) V
+2024-09-18 01:27:05.335 EMVControl Srv900[1964]:  module.adc_temp               = 33.8 deg
+2024-09-18 01:27:05.338 EMVControl Srv900[1964]:  module.l900_rx                = 1667876
+2024-09-18 01:27:05.338 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:27:05.338 EMVControl Srv900[1964]:  module.l900_tx                = 1675362
+2024-09-18 01:27:05.338 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 01:29:06.271 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:29:06.271 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:29:06.271 EMVControl Srv900[1964]:  Frames from Module            = 1675504
+2024-09-18 01:29:06.271 EMVControl Srv900[1964]:  Frames to Module              = 1667616
+2024-09-18 01:29:06.271 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663166:1663166:0
+2024-09-18 01:29:06.271 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:29:06.272 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:29:06.272 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:29:06.272 EMVControl Srv900[1964]:  module.system_time            = 4023755.000 s
+2024-09-18 01:29:06.272 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 01:29:06.272 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-18 01:29:06.275 EMVControl Srv900[1964]:  module.l900_rx                = 1667900
+2024-09-18 01:29:06.275 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:29:06.275 EMVControl Srv900[1964]:  module.l900_tx                = 1675386
+2024-09-18 01:29:06.275 EMVControl Srv900[1964]:  module.lm_temp                = 30.4 deg
+2024-09-18 01:29:59.779 EMVControl ntpd_log: stratum=4, drift=-25ppm, offset=-0.003963s poll=256
+2024-09-18 01:29:59.811 EMVControl ntpd_log: Inform voie about 'ntpd_ok'
+2024-09-18 01:29:59.821 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_9.txt
+2024-09-18 01:29:59.821 EMVControl Voie[1900]: Read event notification from 0_0: event #950, err OK
+2024-09-18 01:29:59.821 EMVControl Voie[1900]: Event #950
+2024-09-18 01:29:59.821 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 01:29:59.821 EMVControl Voie[1900]:     > AE0070011950
+2024-09-18 01:29:59.889 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_9.txt.old
+2024-09-18 01:30:01.116 EMVControl MagPara[6201]: Params are only 5 days old (<6)
+2024-09-18 01:30:01.117 EMVControl MagPara[6201]: Warning! Params becomes old (5 days >2) => new TLP is recommended
+2024-09-18 01:30:01.117 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg2_1.txt
+2024-09-18 01:30:01.117 EMVControl Voie[1900]: Read event notification from 2_1: event #24, err KO
+2024-09-18 01:30:01.117 EMVControl Voie[1900]: Event #24
+2024-09-18 01:30:01.117 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 01:30:01.117 EMVControl Voie[1900]:     > AE0070011024
+2024-09-18 01:30:01.184 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg2_1.txt.old
+2024-09-18 01:30:31.551 EMVControl taskFtp2: Failed to read 2. ftp set: ip='' user='' filename=''
+2024-09-18 01:30:31.949 EMVControl taskFtp2: Inform voie about 'ftp2_no_connect'
+2024-09-18 01:30:31.961 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_2.txt
+2024-09-18 01:30:31.961 EMVControl Voie[1900]: Read event notification from 0_0: event #924, err OK
+2024-09-18 01:30:31.961 EMVControl Voie[1900]: Event #924
+2024-09-18 01:30:31.961 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 01:30:31.961 EMVControl Voie[1900]:     > AE0070011924
+2024-09-18 01:30:32.028 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_2.txt.old
+2024-09-18 01:31:06.313 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:31:06.313 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:31:06.313 EMVControl Srv900[1964]:  Frames from Module            = 1675528
+2024-09-18 01:31:06.313 EMVControl Srv900[1964]:  Frames to Module              = 1667640
+2024-09-18 01:31:06.313 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663190:1663190:0
+2024-09-18 01:31:06.313 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:31:06.313 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:31:06.313 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:31:06.313 EMVControl Srv900[1964]:  module.system_time            = 4023875.000 s
+2024-09-18 01:31:06.313 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 01:31:06.313 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:31:06.317 EMVControl Srv900[1964]:  module.l900_rx                = 1667924
+2024-09-18 01:31:06.317 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:31:06.317 EMVControl Srv900[1964]:  module.l900_tx                = 1675410
+2024-09-18 01:31:06.317 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 01:32:01.838 EMVControl NfcPara[6395]: Params are only 4 days old (<6)
+2024-09-18 01:32:01.838 EMVControl NfcPara[6395]: Warning! Params becomes old (4 days >2) => new TLP is recommended
+2024-09-18 01:32:01.838 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg4_1.txt
+2024-09-18 01:32:01.838 EMVControl Voie[1900]: Read event notification from 4_1: event #26, err KO
+2024-09-18 01:32:01.838 EMVControl Voie[1900]: Event #26
+2024-09-18 01:32:01.838 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 01:32:01.838 EMVControl Voie[1900]:     > AE0070011026
+2024-09-18 01:32:01.906 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg4_1.txt.old
+2024-09-18 01:33:06.325 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:33:06.325 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:33:06.325 EMVControl Srv900[1964]:  Frames from Module            = 1675552
+2024-09-18 01:33:06.325 EMVControl Srv900[1964]:  Frames to Module              = 1667664
+2024-09-18 01:33:06.325 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663214:1663214:0
+2024-09-18 01:33:06.325 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:33:06.325 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:33:06.325 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:33:06.325 EMVControl Srv900[1964]:  module.system_time            = 4023995.250 s
+2024-09-18 01:33:06.325 EMVControl Srv900[1964]:  module.adc_24v                = (24.69:24.71:24.80) V
+2024-09-18 01:33:06.325 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:33:06.328 EMVControl Srv900[1964]:  module.l900_rx                = 1667948
+2024-09-18 01:33:06.329 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:33:06.329 EMVControl Srv900[1964]:  module.l900_tx                = 1675434
+2024-09-18 01:33:06.329 EMVControl Srv900[1964]:  module.lm_temp                = 30.4 deg
+2024-09-18 01:35:07.337 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:35:07.337 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:35:07.337 EMVControl Srv900[1964]:  Frames from Module            = 1675576
+2024-09-18 01:35:07.337 EMVControl Srv900[1964]:  Frames to Module              = 1667688
+2024-09-18 01:35:07.337 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663238:1663238:0
+2024-09-18 01:35:07.337 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:35:07.337 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:35:07.337 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:35:07.337 EMVControl Srv900[1964]:  module.system_time            = 4024115.000 s
+2024-09-18 01:35:07.337 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.73:24.80) V
+2024-09-18 01:35:07.337 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:35:07.340 EMVControl Srv900[1964]:  module.l900_rx                = 1667972
+2024-09-18 01:35:07.340 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:35:07.340 EMVControl Srv900[1964]:  module.l900_tx                = 1675458
+2024-09-18 01:35:07.340 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 01:37:08.277 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:37:08.277 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:37:08.277 EMVControl Srv900[1964]:  Frames from Module            = 1675600
+2024-09-18 01:37:08.277 EMVControl Srv900[1964]:  Frames to Module              = 1667712
+2024-09-18 01:37:08.277 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663262:1663262:0
+2024-09-18 01:37:08.277 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:37:08.277 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:37:08.279 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:37:08.280 EMVControl Srv900[1964]:  module.system_time            = 4024235.000 s
+2024-09-18 01:37:08.280 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.69:24.80) V
+2024-09-18 01:37:08.280 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-18 01:37:08.280 EMVControl Srv900[1964]:  module.l900_rx                = 1667996
+2024-09-18 01:37:08.280 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:37:08.280 EMVControl Srv900[1964]:  module.l900_tx                = 1675482
+2024-09-18 01:37:08.280 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 01:39:09.335 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:39:09.335 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:39:09.335 EMVControl Srv900[1964]:  Frames from Module            = 1675624
+2024-09-18 01:39:09.335 EMVControl Srv900[1964]:  Frames to Module              = 1667737
+2024-09-18 01:39:09.335 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663287:1663287:0
+2024-09-18 01:39:09.335 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:39:09.335 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:39:09.335 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:39:09.336 EMVControl Srv900[1964]:  module.system_time            = 4024360.250 s
+2024-09-18 01:39:09.336 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 01:39:09.336 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:39:09.339 EMVControl Srv900[1964]:  module.l900_rx                = 1668021
+2024-09-18 01:39:09.339 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:39:09.339 EMVControl Srv900[1964]:  module.l900_tx                = 1675507
+2024-09-18 01:39:09.339 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 01:40:32.972 EMVControl taskFtp2: Ftp1 said i have to load new xml config
+2024-09-18 01:40:33.121 EMVControl taskFtp2: Failed to read 2. ftp set: ip='' user='' filename=''
+2024-09-18 01:41:03.604 EMVControl ntpd_log: stratum=4, drift=-25ppm, offset=-0.004336s poll=256
+2024-09-18 01:41:03.676 EMVControl ntpd_log: Inform voie about 'ntpd_ok'
+2024-09-18 01:41:03.696 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_9.txt
+2024-09-18 01:41:03.697 EMVControl Voie[1900]: Read event notification from 0_0: event #950, err OK
+2024-09-18 01:41:03.697 EMVControl Voie[1900]: Event #950
+2024-09-18 01:41:03.697 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 01:41:03.697 EMVControl Voie[1900]:     > AE0070011950
+2024-09-18 01:41:03.767 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_9.txt.old
+2024-09-18 01:41:10.337 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:41:10.337 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:41:10.337 EMVControl Srv900[1964]:  Frames from Module            = 1675648
+2024-09-18 01:41:10.337 EMVControl Srv900[1964]:  Frames to Module              = 1667761
+2024-09-18 01:41:10.337 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663311:1663311:0
+2024-09-18 01:41:10.337 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:41:10.337 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:41:10.337 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:41:10.337 EMVControl Srv900[1964]:  module.system_time            = 4024480.000 s
+2024-09-18 01:41:10.337 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 01:41:10.337 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:41:10.341 EMVControl Srv900[1964]:  module.l900_rx                = 1668045
+2024-09-18 01:41:10.341 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:41:10.341 EMVControl Srv900[1964]:  module.l900_tx                = 1675531
+2024-09-18 01:41:10.341 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 01:43:11.259 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:43:11.259 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:43:11.259 EMVControl Srv900[1964]:  Frames from Module            = 1675673
+2024-09-18 01:43:11.259 EMVControl Srv900[1964]:  Frames to Module              = 1667785
+2024-09-18 01:43:11.259 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663335:1663335:0
+2024-09-18 01:43:11.259 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:43:11.259 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:43:11.259 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:43:11.259 EMVControl Srv900[1964]:  module.system_time            = 4024600.000 s
+2024-09-18 01:43:11.259 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 01:43:11.259 EMVControl Srv900[1964]:  module.adc_temp               = 33.8 deg
+2024-09-18 01:43:11.262 EMVControl Srv900[1964]:  module.l900_rx                = 1668069
+2024-09-18 01:43:11.262 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:43:11.262 EMVControl Srv900[1964]:  module.l900_tx                = 1675555
+2024-09-18 01:43:11.262 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 01:45:11.335 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:45:11.336 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:45:11.336 EMVControl Srv900[1964]:  Frames from Module            = 1675697
+2024-09-18 01:45:11.336 EMVControl Srv900[1964]:  Frames to Module              = 1667809
+2024-09-18 01:45:11.336 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663359:1663359:0
+2024-09-18 01:45:11.336 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:45:11.336 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:45:11.336 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:45:11.336 EMVControl Srv900[1964]:  module.system_time            = 4024720.250 s
+2024-09-18 01:45:11.336 EMVControl Srv900[1964]:  module.adc_24v                = (24.69:24.70:24.80) V
+2024-09-18 01:45:11.336 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-18 01:45:11.339 EMVControl Srv900[1964]:  module.l900_rx                = 1668093
+2024-09-18 01:45:11.339 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:45:11.339 EMVControl Srv900[1964]:  module.l900_tx                = 1675579
+2024-09-18 01:45:11.339 EMVControl Srv900[1964]:  module.lm_temp                = 30.4 deg
+2024-09-18 01:47:11.337 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:47:11.337 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:47:11.337 EMVControl Srv900[1964]:  Frames from Module            = 1675721
+2024-09-18 01:47:11.337 EMVControl Srv900[1964]:  Frames to Module              = 1667833
+2024-09-18 01:47:11.338 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663383:1663383:0
+2024-09-18 01:47:11.338 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:47:11.338 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:47:11.338 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:47:11.338 EMVControl Srv900[1964]:  module.system_time            = 4024840.250 s
+2024-09-18 01:47:11.338 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 01:47:11.338 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-18 01:47:11.341 EMVControl Srv900[1964]:  module.l900_rx                = 1668117
+2024-09-18 01:47:11.341 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:47:11.341 EMVControl Srv900[1964]:  module.l900_tx                = 1675603
+2024-09-18 01:47:11.341 EMVControl Srv900[1964]:  module.lm_temp                = 30.4 deg
+2024-09-18 01:48:35.244 EMVControl Srv900[1964]: WatchNfcRx jitter: -101ms
+2024-09-18 01:49:12.344 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:49:12.344 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:49:12.344 EMVControl Srv900[1964]:  Frames from Module            = 1675745
+2024-09-18 01:49:12.344 EMVControl Srv900[1964]:  Frames to Module              = 1667857
+2024-09-18 01:49:12.344 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663407:1663407:0
+2024-09-18 01:49:12.344 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:49:12.344 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:49:12.344 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:49:12.344 EMVControl Srv900[1964]:  module.system_time            = 4024960.000 s
+2024-09-18 01:49:12.345 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.69:24.80) V
+2024-09-18 01:49:12.345 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:49:12.347 EMVControl Srv900[1964]:  module.l900_rx                = 1668141
+2024-09-18 01:49:12.348 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:49:12.348 EMVControl Srv900[1964]:  module.l900_tx                = 1675627
+2024-09-18 01:49:12.348 EMVControl Srv900[1964]:  module.lm_temp                = 30.4 deg
+2024-09-18 01:50:33.671 EMVControl taskFtp2: Failed to read 2. ftp set: ip='' user='' filename=''
+2024-09-18 01:50:34.065 EMVControl taskFtp2: Inform voie about 'ftp2_no_connect'
+2024-09-18 01:50:34.079 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_2.txt
+2024-09-18 01:50:34.079 EMVControl Voie[1900]: Read event notification from 0_0: event #924, err OK
+2024-09-18 01:50:34.079 EMVControl Voie[1900]: Event #924
+2024-09-18 01:50:34.079 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 01:50:34.079 EMVControl Voie[1900]:     > AE0070011924
+2024-09-18 01:50:34.146 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_2.txt.old
+2024-09-18 01:51:13.256 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:51:13.256 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:51:13.256 EMVControl Srv900[1964]:  Frames from Module            = 1675769
+2024-09-18 01:51:13.256 EMVControl Srv900[1964]:  Frames to Module              = 1667881
+2024-09-18 01:51:13.256 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663431:1663431:0
+2024-09-18 01:51:13.256 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:51:13.256 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:51:13.256 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:51:13.256 EMVControl Srv900[1964]:  module.system_time            = 4025080.000 s
+2024-09-18 01:51:13.256 EMVControl Srv900[1964]:  module.adc_24v                = (24.66:24.69:24.80) V
+2024-09-18 01:51:13.256 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:51:13.259 EMVControl Srv900[1964]:  module.l900_rx                = 1668165
+2024-09-18 01:51:13.260 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:51:13.260 EMVControl Srv900[1964]:  module.l900_tx                = 1675651
+2024-09-18 01:51:13.260 EMVControl Srv900[1964]:  module.lm_temp                = 30.4 deg
+2024-09-18 01:52:06.323 EMVControl ntpd_log: stratum=4, drift=-25ppm, offset=-0.004339s poll=256
+2024-09-18 01:52:06.348 EMVControl ntpd_log: Inform voie about 'ntpd_ok'
+2024-09-18 01:52:06.358 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_9.txt
+2024-09-18 01:52:06.358 EMVControl Voie[1900]: Read event notification from 0_0: event #950, err OK
+2024-09-18 01:52:06.358 EMVControl Voie[1900]: Event #950
+2024-09-18 01:52:06.359 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-18 01:52:06.360 EMVControl Voie[1900]:     > AE0070011950
+2024-09-18 01:52:06.428 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_9.txt.old
+2024-09-18 01:53:13.303 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:53:13.303 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:53:13.303 EMVControl Srv900[1964]:  Frames from Module            = 1675793
+2024-09-18 01:53:13.303 EMVControl Srv900[1964]:  Frames to Module              = 1667905
+2024-09-18 01:53:13.303 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663455:1663455:0
+2024-09-18 01:53:13.303 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:53:13.303 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:53:13.303 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:53:13.303 EMVControl Srv900[1964]:  module.system_time            = 4025200.250 s
+2024-09-18 01:53:13.303 EMVControl Srv900[1964]:  module.adc_24v                = (24.69:24.70:24.80) V
+2024-09-18 01:53:13.303 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:53:13.307 EMVControl Srv900[1964]:  module.l900_rx                = 1668189
+2024-09-18 01:53:13.307 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:53:13.307 EMVControl Srv900[1964]:  module.l900_tx                = 1675675
+2024-09-18 01:53:13.307 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 01:55:13.319 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:55:13.319 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:55:13.320 EMVControl Srv900[1964]:  Frames from Module            = 1675817
+2024-09-18 01:55:13.320 EMVControl Srv900[1964]:  Frames to Module              = 1667929
+2024-09-18 01:55:13.320 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663479:1663479:0
+2024-09-18 01:55:13.320 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:55:13.320 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:55:13.320 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:55:13.320 EMVControl Srv900[1964]:  module.system_time            = 4025320.250 s
+2024-09-18 01:55:13.320 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 01:55:13.320 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-18 01:55:13.323 EMVControl Srv900[1964]:  module.l900_rx                = 1668213
+2024-09-18 01:55:13.323 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:55:13.323 EMVControl Srv900[1964]:  module.l900_tx                = 1675699
+2024-09-18 01:55:13.324 EMVControl Srv900[1964]:  module.lm_temp                = 30.6 deg
+2024-09-18 01:57:14.311 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:57:14.311 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:57:14.311 EMVControl Srv900[1964]:  Frames from Module            = 1675841
+2024-09-18 01:57:14.311 EMVControl Srv900[1964]:  Frames to Module              = 1667954
+2024-09-18 01:57:14.311 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663504:1663504:0
+2024-09-18 01:57:14.311 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:57:14.312 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:57:14.312 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:57:14.312 EMVControl Srv900[1964]:  module.system_time            = 4025445.000 s
+2024-09-18 01:57:14.312 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-18 01:57:14.312 EMVControl Srv900[1964]:  module.adc_temp               = 34.8 deg
+2024-09-18 01:57:14.315 EMVControl Srv900[1964]:  module.l900_rx                = 1668238
+2024-09-18 01:57:14.315 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:57:14.315 EMVControl Srv900[1964]:  module.l900_tx                = 1675724
+2024-09-18 01:57:14.315 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg
+2024-09-18 01:59:15.248 EMVControl Srv900[1964]: NFCL1 status
+2024-09-18 01:59:15.248 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-18 01:59:15.248 EMVControl Srv900[1964]:  Frames from Module            = 1675865
+2024-09-18 01:59:15.248 EMVControl Srv900[1964]:  Frames to Module              = 1667978
+2024-09-18 01:59:15.248 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1663528:1663528:0
+2024-09-18 01:59:15.248 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-18 01:59:15.248 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-18 01:59:15.248 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-18 01:59:15.248 EMVControl Srv900[1964]:  module.system_time            = 4025565.000 s
+2024-09-18 01:59:15.248 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.69:24.80) V
+2024-09-18 01:59:15.248 EMVControl Srv900[1964]:  module.adc_temp               = 34.3 deg
+2024-09-18 01:59:15.251 EMVControl Srv900[1964]:  module.l900_rx                = 1668262
+2024-09-18 01:59:15.251 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-18 01:59:15.251 EMVControl Srv900[1964]:  module.l900_tx                = 1675748
+2024-09-18 01:59:15.252 EMVControl Srv900[1964]:  module.lm_temp                = 30.5 deg

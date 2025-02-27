@@ -1,0 +1,1118 @@
+2024-09-16 17:30:01.919 EMVControl rsyslogd: [origin software="rsyslogd" swVersion="5.8.2" x-pid="1112" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+2024-09-16 17:30:01.925 EMVControl dpkg:     Name           Version
+2024-09-16 17:30:01.926 EMVControl dpkg: +++-==============-==============
+2024-09-16 17:30:01.926 EMVControl dpkg: ii  AsfUserApps    3.0.4-g6aa0499ca
+2024-09-16 17:30:04.897 EMVControl MagPara[6201]: Params are only 4 days old (<6)
+2024-09-16 17:30:04.897 EMVControl MagPara[6201]: Warning! Params becomes old (4 days >2) => new TLP is recommended
+2024-09-16 17:30:04.897 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg2_1.txt
+2024-09-16 17:30:04.897 EMVControl Voie[1900]: Read event notification from 2_1: event #24, err KO
+2024-09-16 17:30:04.897 EMVControl Voie[1900]: Event #24
+2024-09-16 17:30:04.897 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-16 17:30:04.897 EMVControl Voie[1900]:     > AE0070011024
+2024-09-16 17:30:04.964 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg2_1.txt.old
+2024-09-16 17:30:32.418 EMVControl Voie[1900]: RX << C: Fct [A] len=2
+2024-09-16 17:30:32.419 EMVControl Voie[1900]: 'A' abort cmd: (11)
+2024-09-16 17:30:32.419 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=NfcAbortRequest.txt
+2024-09-16 17:30:32.419 EMVControl Voie[1900]: TX >> A: Fct [A] - Len=5+1
+2024-09-16 17:30:32.419 EMVControl Voie[1900]:     > AA001\00
+2024-09-16 17:30:32.421 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=NfcAbortRequest.txt
+2024-09-16 17:30:32.421 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=NfcAbortRequest.txt.old
+2024-09-16 17:30:32.423 EMVControl NfcEp[6354]: OnFifoMessageReceived: DEACTIVATION_REQUEST - param=0x0
+2024-09-16 17:30:32.423 EMVControl NfcEp[6354]: DoAbortRequest: state (DoingSaleRequest) - next state (Idle)
+2024-09-16 17:30:32.423 EMVControl NfcEp[6354]: EpIfMessageSend: cFct='02'
+2024-09-16 17:30:32.423 EMVControl NfcEp[6354]: Thread Ep: OnFifoMessageReceived: NR_WF_CLT_REQUEST - param=0x2
+2024-09-16 17:30:32.424 EMVControl NfcEp[6354]: Deactivate the EP...
+2024-09-16 17:30:32.424 EMVControl NfcEp[6354]: Thread Ep: OnFifoMessageReceived: NR_WF_STOP - param=0x0
+2024-09-16 17:30:32.424 EMVControl NfcEp[6354]: Thread D:OnFifoMessageReceived: NR_WF_STOP - param=0x(nil)
+2024-09-16 17:30:32.424 EMVControl NfcEp[6354]: Thread D - Clear UI on STOP request
+2024-09-16 17:30:32.424 EMVControl NfcEp[6354]: Thread Ep: OnFifoMessageReceived: NR_WF_STOP_RSP - param=0x1
+2024-09-16 17:30:32.424 EMVControl NfcEp[6354]: Thread_UI stop response = 1
+2024-09-16 17:30:32.424 EMVControl NfcEp[6354]: Stop is waiting for: Thread_S
+2024-09-16 17:30:32.428 EMVControl NfcEp[6354]: Thread S: OnFifoMessageReceived: NR_WF_STOP - param=0x0
+2024-09-16 17:30:32.428 EMVControl NfcEp[6354]: OnStop: ready now state=2
+2024-09-16 17:30:32.428 EMVControl NfcEp[6354]: Thread Ep: OnFifoMessageReceived: NR_WF_STOP_RSP - param=0x1
+2024-09-16 17:30:32.428 EMVControl NfcEp[6354]: Thread_S stop response = 1
+2024-09-16 17:30:32.428 EMVControl NfcEp[6354]: Stop is waiting for:
+2024-09-16 17:30:32.428 EMVControl Srv900[1964]: 0>4: p|s=00h|0000h cmd=Z len=1 data=\08
+2024-09-16 17:30:32.448 EMVControl Srv900[1964]: 4>0: p|s=00h|0184h cmd=Z len=1 data=\00
+2024-09-16 17:30:32.448 EMVControl Srv900[1964]: S>C: cNFC_FIELD err=0
+2024-09-16 17:30:32.450 EMVControl NfcEp[6354]: OnFifoMessageReceived: EP_IF_MESSAGE_RECEIVED - param=0x2
+2024-09-16 17:30:32.450 EMVControl NfcEp[6354]: Deactivation done with(1) by the EP
+2024-09-16 17:30:32.450 EMVControl NfcEp[6354]: DoAbortResponse: state (DoingAbortRequest) - next state (Idle)
+2024-09-16 17:30:32.453 EMVControl Srv900[1964]: 4>0: p|s=00h|0984h
+2024-09-16 17:30:32.463 EMVControl Srv900[1964]: 4>0: p|s=00h|0984h cmd=l len=1 data=00
+2024-09-16 17:30:32.483 EMVControl Srv900[1964]: 4>0: p|s=00h|0884h
+2024-09-16 17:30:32.488 EMVControl Srv900[1964]: 4>0: p|s=00h|0084h
+2024-09-16 17:30:32.498 EMVControl Srv900[1964]: 4>0: p|s=00h|0084h cmd=l len=10 data=a246000000a603000000
+2024-09-16 17:31:00.328 EMVControl Srv900[1964]: NFCL1 status
+2024-09-16 17:31:00.328 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-16 17:31:00.328 EMVControl Srv900[1964]:  Frames from Module            = 1652232
+2024-09-16 17:31:00.328 EMVControl Srv900[1964]:  Frames to Module              = 1644520
+2024-09-16 17:31:00.328 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1640177:1640177:0
+2024-09-16 17:31:00.328 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-16 17:31:00.328 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-16 17:31:00.328 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-16 17:31:00.328 EMVControl Srv900[1964]:  module.system_time            = 3908671.250 s
+2024-09-16 17:31:00.328 EMVControl Srv900[1964]:  module.adc_24v                = (24.60:24.62:24.80) V
+2024-09-16 17:31:00.328 EMVControl Srv900[1964]:  module.adc_temp               = 38.8 deg
+2024-09-16 17:31:00.331 EMVControl Srv900[1964]:  module.l900_rx                = 1644795
+2024-09-16 17:31:00.332 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-16 17:31:00.332 EMVControl Srv900[1964]:  module.l900_tx                = 1652115
+2024-09-16 17:31:00.332 EMVControl Srv900[1964]:  module.lm_temp                = 34.9 deg
+2024-09-16 17:32:05.282 EMVControl NfcPara[6395]: Params are only 3 days old (<6)
+2024-09-16 17:32:05.282 EMVControl NfcPara[6395]: Warning! Params becomes old (3 days >2) => new TLP is recommended
+2024-09-16 17:32:05.283 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg4_1.txt
+2024-09-16 17:32:05.283 EMVControl Voie[1900]: Read event notification from 4_1: event #26, err KO
+2024-09-16 17:32:05.283 EMVControl Voie[1900]: Event #26
+2024-09-16 17:32:05.283 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-16 17:32:05.283 EMVControl Voie[1900]:     > AE0070011026
+2024-09-16 17:32:05.350 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg4_1.txt.old
+2024-09-16 17:32:14.081 EMVControl Voie[1900]: RX << C: Fct [A] len=44
+2024-09-16 17:32:14.081 EMVControl Voie[1900]: 'A' payment cmd: (10000670                                    )
+2024-09-16 17:32:14.081 EMVControl Voie[1900]: Idtp empty --> Try to start a new NFC transaction
+2024-09-16 17:32:14.081 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=NfcActivate.txt
+2024-09-16 17:32:14.081 EMVControl Voie[1900]: TX >> A: Fct [A] - Len=5+1
+2024-09-16 17:32:14.081 EMVControl Voie[1900]:     > AA001\00
+2024-09-16 17:32:14.085 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=NfcActivate.txt
+2024-09-16 17:32:14.085 EMVControl NfcEp[6354]: Successfully read: NfcActivate.txt
+2024-09-16 17:32:14.085 EMVControl NfcEp[6354]:  amount_cent = 670
+2024-09-16 17:32:14.085 EMVControl NfcEp[6354]: OnFifoMessageReceived: ACTIVATION_REQUEST - param=0x0
+2024-09-16 17:32:14.085 EMVControl NfcEp[6354]: OnActivationRequest
+2024-09-16 17:32:14.085 EMVControl NfcEp[6354]: DoSaleRequest: state (Idle) - next state (Idle)
+2024-09-16 17:32:14.085 EMVControl NfcEp[6354]: EpIfMessageSend: cFct='01'
+2024-09-16 17:32:14.087 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=NfcActivate.txt.old
+2024-09-16 17:32:14.088 EMVControl Voie[1900]: WD-event => wd=1, Ev=8, file=NfcActivateResult.txt
+2024-09-16 17:32:14.090 EMVControl NfcEp[6354]: Thread Ep: OnFifoMessageReceived: NR_WF_CLT_REQUEST - param=0x1
+2024-09-16 17:32:14.091 EMVControl NfcEp[6354]: Activate the EP...
+2024-09-16 17:32:14.091 EMVControl NfcEp[6354]: GetParm: failed to stat /etc/cfs/EMVControl/mpaa/appli/NFC/nfc/dbg_xfer_apdu_delay_s: No such file or directory
+2024-09-16 17:32:14.091 EMVControl NfcEp[6354]: Thread S: OnFifoMessageReceived: NR_WF_ACT - param=0x0
+2024-09-16 17:32:14.091 EMVControl NfcEp[6354]: Start (A) transaction - type (0) - amount (670) - currency (978)  - restart (0)
+2024-09-16 17:32:14.091 EMVControl NfcEp[6354]: Thread S: OnFifoMessageReceived: TS_WF_PRE_PROCESSING - param=0x0
+2024-09-16 17:32:14.091 EMVControl NfcEp[6354]: AddReaderCombination - Kernel Id (03) - Aid (A0000000032010) - reader cless floor limit exceeded ! Amount 670 >= reader floor limit 0
+2024-09-16 17:32:14.091 EMVControl NfcEp[6354]: TTQ updated according Book B - Req 3.1.1.9
+2024-09-16 17:32:14.091 EMVControl NfcEp[6354]: AddReaderCombination - Kernel Id (03) - Aid (A0000000422010) - reader cless floor limit exceeded ! Amount 670 >= reader floor limit 0
+2024-09-16 17:32:14.091 EMVControl NfcEp[6354]: TTQ updated according Book B - Req 3.1.1.9
+2024-09-16 17:32:14.091 EMVControl NfcEp[6354]: AddReaderCombination - Kernel Id (03) - Aid (A0000000425010) - reader cless floor limit exceeded ! Amount 670 >= reader floor limit 0
+2024-09-16 17:32:14.094 EMVControl NfcEp[6354]: TTQ updated according Book B - Req 3.1.1.9
+2024-09-16 17:32:14.095 EMVControl NfcEp[6354]: AddReaderCombination - Kernel Id (03) - Aid (A0000000426010) - reader cless floor limit exceeded ! Amount 670 >= reader floor limit 0
+2024-09-16 17:32:14.095 EMVControl NfcEp[6354]: TTQ updated according Book B - Req 3.1.1.9
+2024-09-16 17:32:14.095 EMVControl NfcEp[6354]: PreProcessing - cless_app_not_allowed false
+2024-09-16 17:32:14.095 EMVControl NfcEp[6354]: Thread S: OnFifoMessageReceived: TS_WF_PROTOCOL_ACTIVATION - param=0x0
+2024-09-16 17:32:14.098 EMVControl NfcEp[6354]: Thread D:OnFifoMessageReceived: NR_WF_MSG - param=0x0x475009e0
+2024-09-16 17:32:14.098 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=UiRequests.pb.tmp
+2024-09-16 17:32:14.098 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=80, file=UiRequests.pb
+2024-09-16 17:32:14.098 EMVControl NfcEp[6354]: ----- UI request for 0.0s -----
+2024-09-16 17:32:14.098 EMVControl NfcEp[6354]: -- msg       : (ID 15) Present card
+2024-09-16 17:32:14.098 EMVControl NfcEp[6354]: -- status    : Ready to read
+2024-09-16 17:32:14.098 EMVControl NfcEp[6354]: -- value     : 000000000000
+2024-09-16 17:32:14.098 EMVControl NfcEp[6354]: ----------------------
+2024-09-16 17:32:14.100 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=UiRequests.pb.tmp
+2024-09-16 17:32:14.100 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=UiRequests.pb
+2024-09-16 17:32:14.116 EMVControl Srv900[1964]: 0>4: p|s=00h|0000h cmd=E
+2024-09-16 17:32:14.131 EMVControl Srv900[1964]: 4>0: p|s=00h|0184h
+2024-09-16 17:32:14.131 EMVControl Srv900[1964]: S>C: cNFC_FIELD err=0
+2024-09-16 17:32:16.850 EMVControl Voie[1900]: RX << C: Fct [B] len=41
+2024-09-16 17:32:16.850 EMVControl Voie[1900]: 'B'<< 05017********4890=26049018428170000000   
+2024-09-16 17:32:16.850 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=BinsRequest.txt
+2024-09-16 17:32:16.851 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=BinsRequest.txt
+2024-09-16 17:32:16.870 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=BinsRequest.txt.old
+2024-09-16 17:32:16.890 EMVControl NfcPay[6321]: Bins: Interval Algo => 1 row(s) found
+2024-09-16 17:32:16.914 EMVControl NfcPay[6321]:   Found in row 220524 => Accept=0
+2024-09-16 17:32:16.917 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=BinsResult.txt
+2024-09-16 17:32:16.918 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=BinsResult.txt
+2024-09-16 17:32:16.924 EMVControl GestApp[6562]: cp /tmp/nfc/xfer/BinsResult.txt /tmp/voie
+2024-09-16 17:32:16.924 EMVControl Voie[1900]: WD-event => wd=1, Ev=8, file=BinsResult.txt
+2024-09-16 17:32:16.924 EMVControl Voie[1900]: BINs route => Bancaire
+2024-09-16 17:32:16.925 EMVControl Voie[1900]: TX >> A: Fct [B] - Len=5+2
+2024-09-16 17:32:16.925 EMVControl Voie[1900]:     > AB00200
+2024-09-16 17:32:16.925 EMVControl Voie[1900]: WD-event => wd=1, Ev=80, file=BinsResult.txt.old
+2024-09-16 17:32:17.191 EMVControl Voie[1900]: RX << C: Fct [T] len=87
+2024-09-16 17:32:17.191 EMVControl Voie[1900]: 'T'<< 00067020240916173217045540400029  /0/V/0/40P1105017********4890=26049018428170000000   
+2024-09-16 17:32:17.191 EMVControl Voie[1900]: Forcage Cinematic to 'P1'
+2024-09-16 17:32:17.191 EMVControl Voie[1900]: FileWriteTranParam
+2024-09-16 17:32:17.194 EMVControl GestApp[6562]: = = = = = Request 6,70 euro = = = = =
+2024-09-16 17:32:17.196 EMVControl Voie[1900]: WD-event => wd=1, Ev=8, file=TranParam.txt
+2024-09-16 17:32:17.196 EMVControl Voie[1900]: WD-event => wd=1, Ev=80, file=TranParam.txt.old
+2024-09-16 17:32:17.197 EMVControl GestApp[6562]: CThread[0x1e820]::Start: ok
+2024-09-16 17:32:17.204 EMVControl MagPay[6167]: WD-event => wd=1, Ev=8, file=TranParam.txt
+2024-09-16 17:32:17.205 EMVControl MagPay[6167]: IDTP voie = 20240916173217045540400029/0/V/0/4
+2024-09-16 17:32:17.223 EMVControl MagPay[6167]: INDICE = 200
+2024-09-16 17:32:17.224 EMVControl MagPay[6167]: WD-event => wd=1, Ev=8, file=IdxVal.txt
+2024-09-16 17:32:17.235 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=TranParam.txt
+2024-09-16 17:32:17.235 EMVControl NfcPay[6321]: GetParm: failed to stat /etc/cfs/EMVControl/mpaa/maintenance: No such file or directory
+2024-09-16 17:32:17.235 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=TranParam.txt
+2024-09-16 17:32:17.235 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=TranParam.txt.old
+2024-09-16 17:32:17.250 EMVControl NfcPay[6321]: INDICE = 0
+2024-09-16 17:32:17.254 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=IdxVal.txt
+2024-09-16 17:32:17.255 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=IdxVal.txt
+2024-09-16 17:32:17.257 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=IdxVal.txt.old
+2024-09-16 17:32:17.258 EMVControl MagPay[6167]: WD-event => wd=1, Ev=8, file=IdxExe.txt
+2024-09-16 17:32:17.265 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=IdxExe.txt
+2024-09-16 17:32:17.266 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=IdxExe.txt
+2024-09-16 17:32:17.267 EMVControl GestApp[6562]:   ** Operation 1 en 72 ms **
+2024-09-16 17:32:17.267 EMVControl GestApp[6562]: Select APP N.2
+2024-09-16 17:32:17.273 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=IdxExe.txt.old
+2024-09-16 17:32:17.288 EMVControl MagPay[6167]: Montant   :    6.70 EUR
+2024-09-16 17:32:17.295 EMVControl MagPay[6167]: << PISTE >>
+2024-09-16 17:32:17.299 EMVControl MagPay[6167]: Demande Controle au Smact
+2024-09-16 17:32:17.300 EMVControl MagPay[6167]: WD-event => wd=1, Ev=8, file=Auto1Dmd.txt
+2024-09-16 17:32:17.301 EMVControl MagPay[6167]: CThread[0x317d8]::Start: ok
+2024-09-16 17:32:17.317 EMVControl MagAuto[6133]:  try to connect to 10.250.247.30 - 20154
+2024-09-16 17:32:17.320 EMVControl MagAuto[6133]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:32:17.321 EMVControl MagAuto[6133]:  try to connect to 10.250.247.30 - 20254
+2024-09-16 17:32:17.323 EMVControl MagAuto[6133]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:32:17.324 EMVControl MagAuto[6133]:  Both Servers AUTO are unavailable
+2024-09-16 17:32:17.326 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Srv2_3.txt
+2024-09-16 17:32:17.326 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Srv2_3.txt.old
+2024-09-16 17:32:17.328 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg2_3.txt
+2024-09-16 17:32:17.328 EMVControl Voie[1900]: Read event notification from 2_3: event #1, err KO
+2024-09-16 17:32:17.328 EMVControl Voie[1900]: Mapping event #1 as alarm => on
+2024-09-16 17:32:17.328 EMVControl Voie[1900]: Alarm #1 => KO
+2024-09-16 17:32:17.328 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-16 17:32:17.328 EMVControl Voie[1900]:     > AE0070011001
+2024-09-16 17:32:17.344 EMVControl MagPay[6167]: Bins: Interval Algo => 1 row(s) found
+2024-09-16 17:32:17.355 EMVControl MagPay[6167]:   Found in row 220012 => Accept=0
+2024-09-16 17:32:17.356 EMVControl MagPay[6167]: BINS >>> 59 ms
+2024-09-16 17:32:17.396 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg2_3.txt.old
+2024-09-16 17:32:17.435 EMVControl MagPay[6167]: WD-event => wd=1, Ev=8, file=Auto1Ctrl.txt
+2024-09-16 17:32:17.502 EMVControl MagPay[6167]: SockAuto1::Wake= 0; bRead=ERR
+2024-09-16 17:32:17.503 EMVControl MagPay[6167]: CtrlSys => Sermon comm. err 2
+2024-09-16 17:32:17.503 EMVControl MagPay[6167]: BLACK LIST >>> 139 ms
+2024-09-16 17:32:17.503 EMVControl MagPay[6167]:  BINs code Trait=99
+2024-09-16 17:32:17.503 EMVControl MagPay[6167]:   Exceed mpa Floor = 0
+2024-09-16 17:32:17.503 EMVControl MagPay[6167]: Reason to go Authoriz: 1510
+2024-09-16 17:32:17.503 EMVControl MagPay[6167]: Risk Status=001
+2024-09-16 17:32:17.503 EMVControl MagPay[6167]: Got a rsp of the autho server to the last autho request --> Will do an autho
+2024-09-16 17:32:17.503 EMVControl MagPay[6167]: Conditions are not fulfilled to continue with a DAD. Will try an autho
+2024-09-16 17:32:17.503 EMVControl MagPay[6167]: WD-event => wd=1, Ev=8, file=AutoParam.txt
+2024-09-16 17:32:17.510 EMVControl MagPay[6167]: CThread[0x2c2bc]::Start: ok
+2024-09-16 17:32:17.520 EMVControl MagAuto[6133]: 'Online' autho requested by PayApp
+2024-09-16 17:32:17.520 EMVControl MagAuto[6133]: Demande d'auto. bancaire (ISO 102)
+2024-09-16 17:32:17.520 EMVControl MagAuto[6133]:  try to connect to 10.250.247.30 - 20154
+2024-09-16 17:32:17.523 EMVControl MagAuto[6133]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:32:17.523 EMVControl MagAuto[6133]:  try to connect to 10.250.247.30 - 20254
+2024-09-16 17:32:17.527 EMVControl MagAuto[6133]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:32:17.527 EMVControl MagAuto[6133]:  Both Servers AUTO are unavailable
+2024-09-16 17:32:17.527 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Srv2_3.txt
+2024-09-16 17:32:17.527 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg2_3.txt
+2024-09-16 17:32:17.527 EMVControl Voie[1900]: Read event notification from 2_3: event #1, err KO
+2024-09-16 17:32:17.527 EMVControl Voie[1900]: Mapping event #1 as alarm => on
+2024-09-16 17:32:17.527 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Srv2_3.txt.old
+2024-09-16 17:32:17.527 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg2_3.txt.old
+2024-09-16 17:32:17.631 EMVControl MagAuto[6133]: CBcom is not more connected for Autho 102 ! >> Abort
+2024-09-16 17:32:17.632 EMVControl MagPay[6167]: WD-event => wd=1, Ev=8, file=AutoResult.txt
+2024-09-16 17:32:17.632 EMVControl MagPay[6167]: Online completed; ok=0
+2024-09-16 17:32:17.691 EMVControl MagPay[6167]: No response from the autho server + DAD active --> Let' do a DAD
+2024-09-16 17:32:17.692 EMVControl MagPay[6167]: IncDadCnt - DAD #1
+2024-09-16 17:32:17.692 EMVControl MagPay[6167]: IsReasonToGoOnlineInExclusion - Reason(s) to go online not found into the DAD exclusion list.
+2024-09-16 17:32:17.692 EMVControl MagPay[6167]: No RPO required
+2024-09-16 17:32:17.692 EMVControl MagPay[6167]: Mag Transac 50176741XXXXXX90 /901 => OK
+2024-09-16 17:32:17.703 EMVControl MagPay[6167]:  Saved into Tran00000204.txt: crc=3A1B
+2024-09-16 17:32:17.705 EMVControl MagColl[6403]:  -> PAY RESULT: Tran00000204.txt
+2024-09-16 17:32:17.706 EMVControl MagPay[6167]: Result #1 => "Paiement ACCEPTE"
+2024-09-16 17:32:17.708 EMVControl MagPay[6167]: WD-event => wd=1, Ev=8, file=TranResult.txt
+2024-09-16 17:32:17.710 EMVControl GestApp[6562]: Chip Deactivation
+2024-09-16 17:32:17.710 EMVControl Srv900[1964]: mCountRuntimeMilliSecs = 37870
+2024-09-16 17:32:17.710 EMVControl Srv900[1964]: 0>5: p|s=00h|0000h cmd=C len=1 data=0
+2024-09-16 17:32:17.714 EMVControl Voie[1900]: WD-event => wd=1, Ev=8, file=Ticket2.txt
+2024-09-16 17:32:17.721 EMVControl Srv900[1964]: 5>0: p|s=00h|5080h cmd=C
+2024-09-16 17:32:17.721 EMVControl Srv900[1964]: L900Counter Operation Time = 12
+2024-09-16 17:32:17.721 EMVControl Srv900[1964]: mCountRuntimeMilliSecs = 37882
+2024-09-16 17:32:17.722 EMVControl Srv900[1964]: S>C: cCHIP_CONTACT err=0
+2024-09-16 17:32:17.785 EMVControl Voie[1900]: WD-event => wd=1, Ev=8, file=TranResult.txt
+2024-09-16 17:32:17.790 EMVControl Voie[1900]: WD-event => wd=1, Ev=80, file=TranResult.txt.old
+2024-09-16 17:32:17.791 EMVControl Voie[1900]: TX >> A: Fct [T] - Len=5+432
+2024-09-16 17:32:17.792 EMVControl Voie[1900]:     > AT432                 P11101FCD399E4CC91CDE30E84AF0F5AA475BB0E5D0D57A1CCC7F29FA5C552A49EFC2D5132351189950176741XXXXXX90                       00                                                     901                     000001S                
+2024-09-16 17:32:17.792 EMVControl Voie[1900]:     >                                 ASFMERCI DE VOTRE VISITE ET BONNE ROUTE                              AUTOROUTE DU SUD    VEDENE CEDEX        84278               57213999600167160924173217260499
+2024-09-16 17:32:17.795 EMVControl GestApp[6562]:   ** Operation 2 en 527 ms **
+2024-09-16 17:32:17.795 EMVControl GestApp[6562]: +++++ Approved +++++
+2024-09-16 17:32:17.796 EMVControl GestApp[6562]: Duree totale: 602 ms
+2024-09-16 17:32:17.797 EMVControl GestApp[6562]: Disconnect from Server900
+2024-09-16 17:32:17.860 EMVControl Voie[1900]: TX >> A: Fct [M] - Len=5+16
+2024-09-16 17:32:17.860 EMVControl Voie[1900]:     > AM016Paiement ACCEPTE
+2024-09-16 17:32:17.930 EMVControl Voie[1900]: TX >> A: Fct [M] - Len=5+17
+2024-09-16 17:32:17.930 EMVControl Voie[1900]:     > AM017  (Carte de Test)
+2024-09-16 17:32:18.115 EMVControl MagColl[6403]: Read /tmp/mag/coll_tranfiles/Tran00000204.txt
+2024-09-16 17:32:18.118 EMVControl MagColl[6403]: sql> BEGIN TRANSACTION
+2024-09-16 17:32:18.118 EMVControl MagColl[6403]: sql> Replace into T_TRANS (Collecte,Remise,Num,TDate,TTime,Pan,Approved,Amount) Values (0,56,1,'240916','173217','50176741XXXXXX90',1,670)
+2024-09-16 17:32:18.124 EMVControl MagColl[6403]: sql> Update T_TRANS Set Aid='MAG',PanHash='FCD399E4CC91CDE30E84AF0F5AA475BB0E5D0D57A1CCC7F29FA5C552A49EFC2D',Emv='50176741XXXXXX90=26049018428170000000',Iso2='2604;901' where rowid=1
+2024-09-16 17:32:18.126 EMVControl MagColl[6403]: sql> Update T_TRANS Set Online='0;;;;1510;0;0;0;;0',Prop='0;0' where rowid=1
+2024-09-16 17:32:18.128 EMVControl MagColl[6403]: sql> Update T_TRANS Set Name='1;1;045540401_110426005;57213999600167;;',Bank='4228590;51323511899;4784;;00100006;4228590',Tags='' where rowid=1
+2024-09-16 17:32:18.130 EMVControl MagColl[6403]: sql> Update T_TRANS Set Timings='0;0;198;111;0',IdVoie='20240916173217045540400029/0/V/0/4',Smact=2 where rowid=1
+2024-09-16 17:32:18.131 EMVControl MagColl[6403]: sql> COMMIT TRANSACTION
+2024-09-16 17:32:18.169 EMVControl MagColl[6403]: Transac 1 (remise #56) saved !
+2024-09-16 17:32:18.170 EMVControl MagColl[6403]: unused file -> Tran00000204.done
+2024-09-16 17:32:18.171 EMVControl MagColl[6403]: successfully renamed: /tmp/mag/coll_tranfiles/Tran00000204.done
+2024-09-16 17:32:18.172 EMVControl MagColl[6403]: NbTransac to be collected = 1
+2024-09-16 17:32:18.173 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Store2.txt
+2024-09-16 17:32:18.173 EMVControl Voie[1900]:  Receive Storage from APP 2 => 1 tr.
+2024-09-16 17:32:18.173 EMVControl Voie[1900]:  Total Storage: 1 tr. (Limit= 1)
+2024-09-16 17:32:18.177 EMVControl MagColl[6403]: GetParm: failed to stat /etc/cfs/EMVControl/mpaa/chk_db_every_nb: No such file or directory
+2024-09-16 17:32:18.182 EMVControl MagColl[6403]: *** ExecCollecte ***
+2024-09-16 17:32:18.183 EMVControl MagColl[6403]: sql> Select Remise,Num,TDate from T_TRANS where Collecte<=0 and Collecte>-8 and Remise>=55 ORDER BY Remise,Num LIMIT 1
+2024-09-16 17:32:18.187 EMVControl MagColl[6403]: sql> Replace into T_REMISE(Id,TDate,Done) values(56,'240916',0)
+2024-09-16 17:32:18.213 EMVControl MagColl[6403]: sql> Select Name,Bank,Tags from T_TRANS where Num=1 and Remise=56
+2024-09-16 17:32:18.215 EMVControl MagColl[6403]: sql> Select TDate,TTime,Approved,Collecte,Amount,Aid,Pan,Iso2,TacIac,Online,Emv,Prop,PanHash from T_TRANS where Num=1 and Remise=56
+2024-09-16 17:32:18.217 EMVControl MagColl[6403]: sql> Select IdVoie,Smact,Timings  from T_TRANS where Num=1 and Remise=56
+2024-09-16 17:32:18.223 EMVControl MagColl[6403]:  try to connect to 10.250.247.30 - 20154
+2024-09-16 17:32:18.246 EMVControl MagColl[6403]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:32:18.255 EMVControl MagColl[6403]:  try to connect to 10.250.247.30 - 20254
+2024-09-16 17:32:18.257 EMVControl MagColl[6403]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:32:18.258 EMVControl MagColl[6403]:  Both Servers TLC are unavailable
+2024-09-16 17:32:18.260 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Srv2_4.txt
+2024-09-16 17:32:18.260 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Srv2_4.txt.old
+2024-09-16 17:32:18.262 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg2_4.txt
+2024-09-16 17:32:18.262 EMVControl Voie[1900]: Read event notification from 2_4: event #2, err KO
+2024-09-16 17:32:18.262 EMVControl Voie[1900]: Mapping event #2 as alarm => on
+2024-09-16 17:32:18.262 EMVControl Voie[1900]: Alarm #2 => KO
+2024-09-16 17:32:18.262 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-16 17:32:18.262 EMVControl Voie[1900]:     > AE0070011002
+2024-09-16 17:32:18.330 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg2_4.txt.old
+2024-09-16 17:32:18.372 EMVControl MagColl[6403]: sql> Select count(*) from T_TRANS where Collecte<=0 and Collecte>-3
+2024-09-16 17:32:18.372 EMVControl MagColl[6403]: NbTransac to be collected = 1
+2024-09-16 17:32:18.372 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Store2.txt
+2024-09-16 17:32:18.372 EMVControl Voie[1900]:  Receive Storage from APP 2 => 1 tr.
+2024-09-16 17:32:18.372 EMVControl Voie[1900]:  Total Storage: 1 tr. (Limit= 1)
+2024-09-16 17:32:18.372 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg2_4.txt
+2024-09-16 17:32:18.372 EMVControl Voie[1900]: Read event notification from 2_4: event #27, err KO
+2024-09-16 17:32:18.372 EMVControl Voie[1900]: Event #27
+2024-09-16 17:32:18.372 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-16 17:32:18.372 EMVControl Voie[1900]:     > AE0070011027
+2024-09-16 17:32:18.440 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg2_4.txt.old
+2024-09-16 17:32:18.586 EMVControl Voie[1900]: RX << C: Fct [A] len=2
+2024-09-16 17:32:18.586 EMVControl Voie[1900]: 'A' abort cmd: (11)
+2024-09-16 17:32:18.586 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=NfcAbortRequest.txt
+2024-09-16 17:32:18.586 EMVControl Voie[1900]: TX >> A: Fct [A] - Len=5+1
+2024-09-16 17:32:18.586 EMVControl Voie[1900]:     > AA001\00
+2024-09-16 17:32:18.588 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=NfcAbortRequest.txt
+2024-09-16 17:32:18.589 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=NfcAbortRequest.txt.old
+2024-09-16 17:32:18.591 EMVControl NfcEp[6354]: OnFifoMessageReceived: DEACTIVATION_REQUEST - param=0x0
+2024-09-16 17:32:18.591 EMVControl NfcEp[6354]: DoAbortRequest: state (DoingSaleRequest) - next state (Idle)
+2024-09-16 17:32:18.592 EMVControl NfcEp[6354]: EpIfMessageSend: cFct='02'
+2024-09-16 17:32:18.592 EMVControl NfcEp[6354]: Thread Ep: OnFifoMessageReceived: NR_WF_CLT_REQUEST - param=0x2
+2024-09-16 17:32:18.592 EMVControl NfcEp[6354]: Deactivate the EP...
+2024-09-16 17:32:18.592 EMVControl NfcEp[6354]: Thread Ep: OnFifoMessageReceived: NR_WF_STOP - param=0x0
+2024-09-16 17:32:18.592 EMVControl NfcEp[6354]: Thread D:OnFifoMessageReceived: NR_WF_STOP - param=0x(nil)
+2024-09-16 17:32:18.592 EMVControl NfcEp[6354]: Thread D - Clear UI on STOP request
+2024-09-16 17:32:18.592 EMVControl NfcEp[6354]: Thread Ep: OnFifoMessageReceived: NR_WF_STOP_RSP - param=0x1
+2024-09-16 17:32:18.592 EMVControl NfcEp[6354]: Thread_UI stop response = 1
+2024-09-16 17:32:18.592 EMVControl NfcEp[6354]: Stop is waiting for: Thread_S
+2024-09-16 17:32:18.596 EMVControl NfcEp[6354]: Thread S: OnFifoMessageReceived: NR_WF_STOP - param=0x0
+2024-09-16 17:32:18.596 EMVControl NfcEp[6354]: OnStop: ready now state=2
+2024-09-16 17:32:18.596 EMVControl NfcEp[6354]: Thread Ep: OnFifoMessageReceived: NR_WF_STOP_RSP - param=0x1
+2024-09-16 17:32:18.596 EMVControl NfcEp[6354]: Thread_S stop response = 1
+2024-09-16 17:32:18.596 EMVControl NfcEp[6354]: Stop is waiting for:
+2024-09-16 17:32:18.596 EMVControl Srv900[1964]: 0>4: p|s=00h|0000h cmd=Z len=1 data=\08
+2024-09-16 17:32:18.617 EMVControl Srv900[1964]: 4>0: p|s=00h|0184h cmd=Z len=1 data=\00
+2024-09-16 17:32:18.617 EMVControl Srv900[1964]: S>C: cNFC_FIELD err=0
+2024-09-16 17:32:18.617 EMVControl NfcEp[6354]: OnFifoMessageReceived: EP_IF_MESSAGE_RECEIVED - param=0x2
+2024-09-16 17:32:18.617 EMVControl NfcEp[6354]: Deactivation done with(1) by the EP
+2024-09-16 17:32:18.617 EMVControl NfcEp[6354]: DoAbortResponse: state (DoingAbortRequest) - next state (Idle)
+2024-09-16 17:32:18.620 EMVControl Srv900[1964]: 4>0: p|s=00h|0984h
+2024-09-16 17:32:18.625 EMVControl Srv900[1964]: 4>0: p|s=00h|0984h cmd=l len=1 data=00
+2024-09-16 17:32:18.650 EMVControl Srv900[1964]: 4>0: p|s=00h|0884h
+2024-09-16 17:32:18.655 EMVControl Voie[1900]: RX << C: Fct [M] len=1
+2024-09-16 17:32:18.656 EMVControl Srv900[1964]: 4>0: p|s=00h|0084h
+2024-09-16 17:32:18.669 EMVControl Srv900[1964]: 4>0: p|s=00h|0084h cmd=l len=10 data=a246000000a603000000
+2024-09-16 17:32:18.715 EMVControl Voie[1900]: RX << C: Fct [M] len=1
+2024-09-16 17:32:40.775 EMVControl Voie[1900]: RX << C: Fct [A] len=44
+2024-09-16 17:32:40.775 EMVControl Voie[1900]: 'A' payment cmd: (10000670                                    )
+2024-09-16 17:32:40.776 EMVControl Voie[1900]: Idtp empty --> Try to start a new NFC transaction
+2024-09-16 17:32:40.776 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=NfcActivate.txt
+2024-09-16 17:32:40.776 EMVControl Voie[1900]: TX >> A: Fct [A] - Len=5+1
+2024-09-16 17:32:40.776 EMVControl Voie[1900]:     > AA001\00
+2024-09-16 17:32:40.779 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=NfcActivate.txt
+2024-09-16 17:32:40.779 EMVControl NfcEp[6354]: Successfully read: NfcActivate.txt
+2024-09-16 17:32:40.779 EMVControl NfcEp[6354]:  amount_cent = 670
+2024-09-16 17:32:40.779 EMVControl NfcEp[6354]: OnFifoMessageReceived: ACTIVATION_REQUEST - param=0x0
+2024-09-16 17:32:40.779 EMVControl NfcEp[6354]: OnActivationRequest
+2024-09-16 17:32:40.779 EMVControl NfcEp[6354]: DoSaleRequest: state (Idle) - next state (Idle)
+2024-09-16 17:32:40.779 EMVControl NfcEp[6354]: EpIfMessageSend: cFct='01'
+2024-09-16 17:32:40.781 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=NfcActivate.txt.old
+2024-09-16 17:32:40.782 EMVControl Voie[1900]: WD-event => wd=1, Ev=8, file=NfcActivateResult.txt
+2024-09-16 17:32:40.785 EMVControl NfcEp[6354]: Thread Ep: OnFifoMessageReceived: NR_WF_CLT_REQUEST - param=0x1
+2024-09-16 17:32:40.785 EMVControl NfcEp[6354]: Activate the EP...
+2024-09-16 17:32:40.785 EMVControl NfcEp[6354]: GetParm: failed to stat /etc/cfs/EMVControl/mpaa/appli/NFC/nfc/dbg_xfer_apdu_delay_s: No such file or directory
+2024-09-16 17:32:40.785 EMVControl NfcEp[6354]: Thread S: OnFifoMessageReceived: NR_WF_ACT - param=0x0
+2024-09-16 17:32:40.785 EMVControl NfcEp[6354]: Start (A) transaction - type (0) - amount (670) - currency (978)  - restart (0)
+2024-09-16 17:32:40.785 EMVControl NfcEp[6354]: Thread S: OnFifoMessageReceived: TS_WF_PRE_PROCESSING - param=0x0
+2024-09-16 17:32:40.785 EMVControl NfcEp[6354]: AddReaderCombination - Kernel Id (03) - Aid (A0000000032010) - reader cless floor limit exceeded ! Amount 670 >= reader floor limit 0
+2024-09-16 17:32:40.785 EMVControl NfcEp[6354]: TTQ updated according Book B - Req 3.1.1.9
+2024-09-16 17:32:40.785 EMVControl NfcEp[6354]: AddReaderCombination - Kernel Id (03) - Aid (A0000000422010) - reader cless floor limit exceeded ! Amount 670 >= reader floor limit 0
+2024-09-16 17:32:40.785 EMVControl NfcEp[6354]: TTQ updated according Book B - Req 3.1.1.9
+2024-09-16 17:32:40.785 EMVControl NfcEp[6354]: AddReaderCombination - Kernel Id (03) - Aid (A0000000425010) - reader cless floor limit exceeded ! Amount 670 >= reader floor limit 0
+2024-09-16 17:32:40.789 EMVControl NfcEp[6354]: TTQ updated according Book B - Req 3.1.1.9
+2024-09-16 17:32:40.789 EMVControl NfcEp[6354]: AddReaderCombination - Kernel Id (03) - Aid (A0000000426010) - reader cless floor limit exceeded ! Amount 670 >= reader floor limit 0
+2024-09-16 17:32:40.789 EMVControl NfcEp[6354]: TTQ updated according Book B - Req 3.1.1.9
+2024-09-16 17:32:40.789 EMVControl NfcEp[6354]: PreProcessing - cless_app_not_allowed false
+2024-09-16 17:32:40.789 EMVControl NfcEp[6354]: Thread S: OnFifoMessageReceived: TS_WF_PROTOCOL_ACTIVATION - param=0x0
+2024-09-16 17:32:40.792 EMVControl NfcEp[6354]: Thread D:OnFifoMessageReceived: NR_WF_MSG - param=0x0x475009e0
+2024-09-16 17:32:40.792 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=UiRequests.pb.tmp
+2024-09-16 17:32:40.792 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=80, file=UiRequests.pb
+2024-09-16 17:32:40.792 EMVControl NfcEp[6354]: ----- UI request for 0.0s -----
+2024-09-16 17:32:40.793 EMVControl NfcEp[6354]: -- msg       : (ID 15) Present card
+2024-09-16 17:32:40.793 EMVControl NfcEp[6354]: -- status    : Ready to read
+2024-09-16 17:32:40.793 EMVControl NfcEp[6354]: -- value     : 000000000000
+2024-09-16 17:32:40.793 EMVControl NfcEp[6354]: ----------------------
+2024-09-16 17:32:40.794 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=UiRequests.pb.tmp
+2024-09-16 17:32:40.794 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=UiRequests.pb
+2024-09-16 17:32:40.805 EMVControl Srv900[1964]: 0>4: p|s=00h|0000h cmd=E
+2024-09-16 17:32:40.820 EMVControl Srv900[1964]: 4>0: p|s=00h|0184h
+2024-09-16 17:32:40.820 EMVControl Srv900[1964]: S>C: cNFC_FIELD err=0
+2024-09-16 17:32:42.979 EMVControl Srv900[1964]: 4>0: p|s=00h|0384h
+2024-09-16 17:32:42.991 EMVControl Srv900[1964]: 4>0: p|s=00h|0784h
+2024-09-16 17:32:42.991 EMVControl Srv900[1964]: NfcEvent(04) completed as 04 by 9d
+2024-09-16 17:32:42.991 EMVControl NfcEp[6354]: Thread S: OnFifoMessageReceived: TS_WF_PROTOCOL_ACTIVATION_CONT - param=0x1
+2024-09-16 17:32:42.991 EMVControl NfcEp[6354]: Thread S: OnFifoMessageReceived: TS_WF_COMBINATION_SELECTION - param=0x0
+2024-09-16 17:32:42.991 EMVControl Srv900[1964]: mCountRuntimeMilliSecs = 37882
+2024-09-16 17:32:42.991 EMVControl Srv900[1964]: 0>4: p|s=00h|0000h cmd=X len=20 data=\00\a4\04\00\0e2PAY\2eSYS\2eDDF01\00
+2024-09-16 17:32:43.061 EMVControl Srv900[1964]: 4>0: p|s=00h|0784h cmd=X len=99 data=o\5f\84\0e2PAY\2eSYS\2eDDF01\a5M\bf\0cJa\1fO\07\a0\00\00\00B\10\10P\02CB\87\01\01\9f\2a\01\03\9f\0a\08\00\01\05\01\00\00\00\00a\27O\07\a0\00\00\00\03\10\10P\0aVISA\20DEBIT\87\01\02\9f\2a\01\03\9f\0a\08\00\01\05\01\00\00\00\00\90\00
+2024-09-16 17:32:43.061 EMVControl Srv900[1964]: L900Counter Operation Time = 69
+2024-09-16 17:32:43.061 EMVControl Srv900[1964]: mCountRuntimeMilliSecs = 37951
+2024-09-16 17:32:43.061 EMVControl Srv900[1964]: S>C: cNFC_XFER err=0
+2024-09-16 17:32:43.061 EMVControl NfcEp[6354]: GetDirectoryEntryFromBf0c - found aid 'A0000000421010' in the card
+2024-09-16 17:32:43.062 EMVControl NfcEp[6354]: GetDirectoryEntryFromBf0c - found aid 'A0000000031010' in the card
+2024-09-16 17:32:43.062 EMVControl NfcEp[6354]: AddCandidates - reader_comb[0] rid=(A0000000041010) doesn't match
+2024-09-16 17:32:43.062 EMVControl NfcEp[6354]: AddCandidates - reader_comb[1] rid=(A0000000043060) doesn't match
+2024-09-16 17:32:43.062 EMVControl NfcEp[6354]: AddCandidates - reader_comb[2] kernel_id mismatch (02)
+2024-09-16 17:32:43.062 EMVControl NfcEp[6354]: AddCandidates - reader_comb[3] rid=(A0000000422010) doesn't match
+2024-09-16 17:32:43.062 EMVControl NfcEp[6354]: AddCandidates - reader_comb[4] rid=(A0000000424010) doesn't match
+2024-09-16 17:32:43.066 EMVControl NfcEp[6354]: AddCandidates - reader_comb[5] rid=(A0000000425010) doesn't match
+2024-09-16 17:32:43.066 EMVControl NfcEp[6354]: AddCandidates - reader_comb[6] rid=(A0000000426010) doesn't match
+2024-09-16 17:32:43.066 EMVControl NfcEp[6354]: AddCandidates - reader_comb[7] rid=(A0000000031010) doesn't match
+2024-09-16 17:32:43.066 EMVControl NfcEp[6354]: AddCandidates - reader_comb[8] rid=(A0000000032010) doesn't match
+2024-09-16 17:32:43.066 EMVControl NfcEp[6354]: AddCandidates - reader_comb[9] is a candidate
+2024-09-16 17:32:43.066 EMVControl NfcEp[6354]: AddCandidates - reader_comb[10] rid=(A0000000422010) doesn't match
+2024-09-16 17:32:43.066 EMVControl NfcEp[6354]: AddCandidates - reader_comb[11] rid=(A0000000424010) doesn't match
+2024-09-16 17:32:43.066 EMVControl NfcEp[6354]: AddCandidates - reader_comb[12] rid=(A0000000425010) doesn't match
+2024-09-16 17:32:43.066 EMVControl NfcEp[6354]: AddCandidates - reader_comb[13] rid=(A0000000426010) doesn't match
+2024-09-16 17:32:43.066 EMVControl NfcEp[6354]: AddCandidates - reader_comb[0] rid=(A0000000041010) doesn't match
+2024-09-16 17:32:43.066 EMVControl NfcEp[6354]: AddCandidates - reader_comb[1] rid=(A0000000043060) doesn't match
+2024-09-16 17:32:43.070 EMVControl NfcEp[6354]: AddCandidates - reader_comb[2] rid=(A0000000421010) doesn't match
+2024-09-16 17:32:43.070 EMVControl NfcEp[6354]: AddCandidates - reader_comb[3] rid=(A0000000422010) doesn't match
+2024-09-16 17:32:43.070 EMVControl NfcEp[6354]: AddCandidates - reader_comb[4] rid=(A0000000424010) doesn't match
+2024-09-16 17:32:43.070 EMVControl NfcEp[6354]: AddCandidates - reader_comb[5] rid=(A0000000425010) doesn't match
+2024-09-16 17:32:43.070 EMVControl NfcEp[6354]: AddCandidates - reader_comb[6] rid=(A0000000426010) doesn't match
+2024-09-16 17:32:43.070 EMVControl NfcEp[6354]: AddCandidates - reader_comb[7] is a candidate
+2024-09-16 17:32:43.070 EMVControl NfcEp[6354]: AddCandidates - reader_comb[8] rid=(A0000000032010) doesn't match
+2024-09-16 17:32:43.070 EMVControl NfcEp[6354]: AddCandidates - reader_comb[9] rid=(A0000000421010) doesn't match
+2024-09-16 17:32:43.070 EMVControl NfcEp[6354]: AddCandidates - reader_comb[10] rid=(A0000000422010) doesn't match
+2024-09-16 17:32:43.070 EMVControl NfcEp[6354]: AddCandidates - reader_comb[11] rid=(A0000000424010) doesn't match
+2024-09-16 17:32:43.070 EMVControl NfcEp[6354]: AddCandidates - reader_comb[12] rid=(A0000000425010) doesn't match
+2024-09-16 17:32:43.072 EMVControl NfcEp[6354]: AddCandidates - reader_comb[13] rid=(A0000000426010) doesn't match
+2024-09-16 17:32:43.072 EMVControl NfcEp[6354]: Selecting aid A0000000421010
+2024-09-16 17:32:43.072 EMVControl Srv900[1964]: mCountRuntimeMilliSecs = 37951
+2024-09-16 17:32:43.072 EMVControl Srv900[1964]: 0>4: p|s=00h|0000h cmd=X len=13 data=\00\a4\04\00\07\a0\00\00\00B\10\10\00
+2024-09-16 17:32:43.139 EMVControl Srv900[1964]: 4>0: p|s=00h|0784h cmd=X len=84 data=oP\84\07\a0\00\00\00B\10\10\a5EP\02CB\87\01\01\5f\2d\08frendees\9f8\1e\9ff\04\9f\02\06\9f\03\06\9f\1a\02\95\05\5f\2a\02\9a\03\9c\01\9f7\04\9fN\14\9f\21\03\bf\0c\0f\dfa\01\03\9f\0a\08\00\01\05\01\00\00\00\00\90\00
+2024-09-16 17:32:43.139 EMVControl Srv900[1964]: L900Counter Operation Time = 63
+2024-09-16 17:32:43.139 EMVControl Srv900[1964]: mCountRuntimeMilliSecs = 38014
+2024-09-16 17:32:43.139 EMVControl Srv900[1964]: S>C: cNFC_XFER err=0
+2024-09-16 17:32:43.139 EMVControl NfcEp[6354]: Requested Kernel Identifier (03)
+2024-09-16 17:32:43.139 EMVControl NfcEp[6354]: No Card Program ID. No DRL processing
+2024-09-16 17:32:43.139 EMVControl NfcEp[6354]: Thread S: OnFifoMessageReceived: TS_WF_KERNEL_ACTIVATION - param=0x0
+2024-09-16 17:32:43.139 EMVControl NfcEp[6354]: Thread K - C3 - NR_WF_ACT 
+2024-09-16 17:32:43.139 EMVControl NfcEp[6354]: C3::OnAct: called
+2024-09-16 17:32:43.139 EMVControl Srv900[1964]: mCountRuntimeMilliSecs = 38014
+2024-09-16 17:32:43.139 EMVControl Srv900[1964]: 0>4: p|s=00h|0000h cmd=X len=64 data=\80\a8\00\00\3a\838\20\00\40\00\00\00\00\00\06p\00\00\00\00\00\00\02P\00\00\00\00\00\09x\24\09\16\00\81\07\b1\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\172C\00
+2024-09-16 17:32:43.267 EMVControl Srv900[1964]: 4>0: p|s=00h|0784h cmd=X len=74 data=wF\82\02\00\00W\13P\17gAP\13H\90\d2\60I\01\84\28\17\00\00\00\0f\5f4\01\00\9f\10\07\06\00\12\03\a0\20\00\9f\26\086\d5\dd\9e\b3\15\b3\18\9f\27\01\80\9f6\02\00\22\9fl\02\20\00\94\04\18\04\04\00\90\00
+2024-09-16 17:32:43.267 EMVControl Srv900[1964]: L900Counter Operation Time = 127
+2024-09-16 17:32:43.267 EMVControl Srv900[1964]: mCountRuntimeMilliSecs = 38141
+2024-09-16 17:32:43.267 EMVControl Srv900[1964]: S>C: cNFC_XFER err=0
+2024-09-16 17:32:43.267 EMVControl NfcEp[6354]: Store(9F6C): format not defined
+2024-09-16 17:32:43.267 EMVControl Srv900[1964]: mCountRuntimeMilliSecs = 38141
+2024-09-16 17:32:43.267 EMVControl Srv900[1964]: 0>4: p|s=00h|0000h cmd=X len=5 data=\00\b2\04\1c\00
+2024-09-16 17:32:43.306 EMVControl Srv900[1964]: 4>0: p|s=00h|0784h cmd=X len=16 data=p\0c\5f\20\02\2a\2f\9fn\04\20p\00\00\90\00
+2024-09-16 17:32:43.306 EMVControl Srv900[1964]: L900Counter Operation Time = 38
+2024-09-16 17:32:43.306 EMVControl Srv900[1964]: mCountRuntimeMilliSecs = 38179
+2024-09-16 17:32:43.306 EMVControl Srv900[1964]: S>C: cNFC_XFER err=0
+2024-09-16 17:32:43.306 EMVControl NfcEp[6354]: Store(9F6E): format not defined
+2024-09-16 17:32:43.306 EMVControl NfcEp[6354]: CardReadComplete - CID (80) --> ARQC requested by the card
+2024-09-16 17:32:43.306 EMVControl NfcEp[6354]: IsArqcRequiredByReader:false
+2024-09-16 17:32:43.307 EMVControl NfcEp[6354]: No offline data auth performed as online required = 1 and decline required 0
+2024-09-16 17:32:43.307 EMVControl NfcEp[6354]: IsCvmRequired:false
+2024-09-16 17:32:43.307 EMVControl NfcEp[6354]: IsOnlinePinRequired:false
+2024-09-16 17:32:43.307 EMVControl NfcEp[6354]: IsConsumerDeviceCvmPerformed:false
+2024-09-16 17:32:43.311 EMVControl NfcEp[6354]: IsSignatureRequired:false
+2024-09-16 17:32:43.311 EMVControl NfcEp[6354]: IsCvmRequired:false
+2024-09-16 17:32:43.311 EMVControl NfcEp[6354]: CardholderVerification - CVM requested (No Cvm)
+2024-09-16 17:32:43.311 EMVControl NfcEp[6354]: OnlineProcessing - Online requested
+2024-09-16 17:32:43.311 EMVControl NfcEp[6354]: Thread S: OnFifoMessageReceived: NR_WF_OUT - param=0x0
+2024-09-16 17:32:43.311 EMVControl NfcEp[6354]: Thread Ep: OnFifoMessageReceived: NR_WF_OUT - param=0x0
+2024-09-16 17:32:43.311 EMVControl Srv900[1964]: 0>4: p|s=00h|0000h cmd=Z len=1 data=\09
+2024-09-16 17:32:43.313 EMVControl NfcEp[6354]: Thread D:OnFifoMessageReceived: NR_WF_MSG - param=0x0xf7ee8
+2024-09-16 17:32:43.313 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=UiRequests.pb.tmp
+2024-09-16 17:32:43.313 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=80, file=UiRequests.pb
+2024-09-16 17:32:43.313 EMVControl NfcEp[6354]: ----- UI request for 0.0s -----
+2024-09-16 17:32:43.313 EMVControl NfcEp[6354]: -- msg       : (ID 1B) Authorising. Please wait
+2024-09-16 17:32:43.313 EMVControl NfcEp[6354]: -- status    : N/A
+2024-09-16 17:32:43.313 EMVControl NfcEp[6354]: -- value     : 000000000000
+2024-09-16 17:32:43.313 EMVControl NfcEp[6354]: ----------------------
+2024-09-16 17:32:43.314 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=UiRequests.pb.tmp
+2024-09-16 17:32:43.314 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=UiRequests.pb
+2024-09-16 17:32:43.333 EMVControl Srv900[1964]: 4>0: p|s=00h|0784h cmd=Z len=1 data=\00
+2024-09-16 17:32:43.333 EMVControl Srv900[1964]: S>C: cNFC_FIELD err=0
+2024-09-16 17:32:43.333 EMVControl NfcEp[6354]: AddXacTimingInfos
+2024-09-16 17:32:43.333 EMVControl NfcEp[6354]: AddXacTimingInfos - EP processing duration in ms 339
+2024-09-16 17:32:43.333 EMVControl NfcEp[6354]: nb chrono items 26
+2024-09-16 17:32:43.333 EMVControl NfcEp[6354]: AddXacTimingInfos - Apdu xfer duration in ms 312
+2024-09-16 17:32:43.333 EMVControl NfcEp[6354]: Msg size 1195
+2024-09-16 17:32:43.334 EMVControl NfcEp[6354]: OnFifoMessageReceived: EP_IF_MESSAGE_RECEIVED - param=0x3
+2024-09-16 17:32:43.334 EMVControl NfcEp[6354]: Sale response - nb of bytes (1195) forwarded
+2024-09-16 17:32:43.334 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=NfcSaleResponse.txt
+2024-09-16 17:32:43.334 EMVControl NfcEp[6354]: -------- outcome tlv dump -------- 
+2024-09-16 17:32:43.338 EMVControl NfcEp[6354]: -- Status = Online requested
+2024-09-16 17:32:43.338 EMVControl NfcEp[6354]: -- Start = N/A
+2024-09-16 17:32:43.338 EMVControl NfcEp[6354]: -- Online rsp data = N/A
+2024-09-16 17:32:43.338 EMVControl NfcEp[6354]: -- Cvm = No CVM
+2024-09-16 17:32:43.338 EMVControl NfcEp[6354]: -- Ui request on outcome
+2024-09-16 17:32:43.338 EMVControl NfcEp[6354]: ---- Msg = Authorising. Please wait
+2024-09-16 17:32:43.338 EMVControl NfcEp[6354]: ---- Status = N/A
+2024-09-16 17:32:43.338 EMVControl NfcEp[6354]: -- Data record present = TRUE
+2024-09-16 17:32:43.338 EMVControl NfcEp[6354]: -- Discretionnary record present = FALSE
+2024-09-16 17:32:43.338 EMVControl NfcEp[6354]: -- Alternate interface = N/A
+2024-09-16 17:32:43.338 EMVControl NfcEp[6354]: -- Receipt = 0
+2024-09-16 17:32:43.343 EMVControl Voie[1900]: WD-event => wd=1, Ev=8, file=NfcCardTapped.txt
+2024-09-16 17:32:43.343 EMVControl NfcEp[6354]: -- Field off = 0
+2024-09-16 17:32:43.343 EMVControl NfcEp[6354]: -- Removal timeout = 0
+2024-09-16 17:32:43.343 EMVControl NfcEp[6354]: -- Cardholder data
+2024-09-16 17:32:43.343 EMVControl NfcEp[6354]: 0050 : 002 : 4342
+2024-09-16 17:32:43.343 EMVControl NfcEp[6354]: 9f06 : 007 : A0000000_421010
+2024-09-16 17:32:43.343 EMVControl NfcEp[6354]: 0084 : 007 : A0000000_421010
+2024-09-16 17:32:43.343 EMVControl NfcEp[6354]: 0057 : 019 : 50xxxxxx_xxxxx890_D2604901_84281700_00000F
+2024-09-16 17:32:43.343 EMVControl NfcEp[6354]: 5f2a : 002 : 0978
+2024-09-16 17:32:43.343 EMVControl NfcEp[6354]: 5f2d : 008 : 6672656E_64656573
+2024-09-16 17:32:43.343 EMVControl NfcEp[6354]: 5f34 : 001 : 00
+2024-09-16 17:32:43.343 EMVControl Voie[1900]: WD-event => wd=1, Ev=80, file=NfcCardTapped.txt.old
+2024-09-16 17:32:43.347 EMVControl NfcEp[6354]: 0082 : 002 : 0000
+2024-09-16 17:32:43.347 EMVControl NfcEp[6354]: 0095 : 005 : 00000000_00
+2024-09-16 17:32:43.347 EMVControl NfcEp[6354]: 9f10 : 007 : 06001203_A02000
+2024-09-16 17:32:43.347 EMVControl NfcEp[6354]: 9f0a : 008 : 00010501_00000000
+2024-09-16 17:32:43.347 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=NfcSaleResponse.txt
+2024-09-16 17:32:43.347 EMVControl Voie[1900]: CARD_TAPPED: outcome_status = 5
+2024-09-16 17:32:43.347 EMVControl Voie[1900]: TX >> A: Fct [A] - Len=5+1
+2024-09-16 17:32:43.347 EMVControl Voie[1900]:     > AA001\10
+2024-09-16 17:32:43.350 EMVControl NfcEp[6354]: 9f26 : 008 : 36D5DD9E_B315B318
+2024-09-16 17:32:43.350 EMVControl NfcEp[6354]: 9f27 : 001 : 80
+2024-09-16 17:32:43.350 EMVControl NfcEp[6354]: 9f36 : 002 : 0022
+2024-09-16 17:32:43.350 EMVControl NfcEp[6354]: 9f37 : 004 : 8107B100
+2024-09-16 17:32:43.350 EMVControl NfcEp[6354]: 9f66 : 004 : 20004000
+2024-09-16 17:32:43.350 EMVControl NfcEp[6354]: 9f6c : 002 : 2000
+2024-09-16 17:32:43.350 EMVControl NfcEp[6354]: 9f6e : 004 : 20700000
+2024-09-16 17:32:43.350 EMVControl NfcEp[6354]: 9f2a : 001 : 03
+2024-09-16 17:32:43.350 EMVControl NfcEp[6354]: 009a : 003 : 240916
+2024-09-16 17:32:43.350 EMVControl NfcEp[6354]: 9f02 : 006 : 00000000_0670
+2024-09-16 17:32:43.350 EMVControl NfcEp[6354]: 9f1a : 002 : 0250
+2024-09-16 17:32:43.351 EMVControl NfcEp[6354]: 00d7 : 008 : 03000000_00000000
+2024-09-16 17:32:43.351 EMVControl NfcEp[6354]: -- Discretionnary data
+2024-09-16 17:32:43.351 EMVControl NfcEp[6354]: -- Transaction timings info
+2024-09-16 17:32:43.351 EMVControl NfcEp[6354]: |- CombinationSelection
+2024-09-16 17:32:43.351 EMVControl NfcEp[6354]: |-- Select PPSE
+2024-09-16 17:32:43.351 EMVControl NfcEp[6354]: |--- apdu xfer >>>> 69 ms
+2024-09-16 17:32:43.351 EMVControl NfcEp[6354]: |-- Final select
+2024-09-16 17:32:43.352 EMVControl NfcEp[6354]: |--- apdu xfer >>>> 64 ms
+2024-09-16 17:32:43.352 EMVControl NfcEp[6354]: |- CombinationSelection >>>> 145 ms
+2024-09-16 17:32:43.352 EMVControl NfcEp[6354]: |- KernelActivation
+2024-09-16 17:32:43.352 EMVControl NfcEp[6354]: |- KernelActivation >>>> 0 ms
+2024-09-16 17:32:43.353 EMVControl NfcEp[6354]: |- GetProcessingOptions
+2024-09-16 17:32:43.353 EMVControl NfcEp[6354]: |-- GPO
+2024-09-16 17:32:43.353 EMVControl NfcEp[6354]: |--- apdu xfer >>>> 127 ms
+2024-09-16 17:32:43.353 EMVControl NfcEp[6354]: |- GetProcessingOptions >>>> 128 ms
+2024-09-16 17:32:43.353 EMVControl NfcEp[6354]: |- ReadApplicationData
+2024-09-16 17:32:43.353 EMVControl NfcEp[6354]: |-- Read record
+2024-09-16 17:32:43.353 EMVControl NfcEp[6354]: |--- apdu xfer >>>> 39 ms
+2024-09-16 17:32:43.353 EMVControl NfcEp[6354]: |- ReadApplicationData >>>> 39 ms
+2024-09-16 17:32:43.353 EMVControl NfcEp[6354]: |- CardReadComplete
+2024-09-16 17:32:43.353 EMVControl NfcEp[6354]: |- CardReadComplete >>>> 0 ms
+2024-09-16 17:32:43.353 EMVControl NfcEp[6354]: |- ProcessingRestrictions
+2024-09-16 17:32:43.359 EMVControl NfcEp[6354]: |- ProcessingRestrictions >>>> 0 ms
+2024-09-16 17:32:43.359 EMVControl NfcEp[6354]: |- OfflineDataAuthentication
+2024-09-16 17:32:43.359 EMVControl NfcEp[6354]: |- OfflineDataAuthentication >>>> 0 ms
+2024-09-16 17:32:43.359 EMVControl NfcEp[6354]: |- CardholderVerification
+2024-09-16 17:32:43.359 EMVControl NfcEp[6354]: |- CardholderVerification >>>> 3 ms
+2024-09-16 17:32:43.359 EMVControl NfcEp[6354]: |- OnlineProcessing
+2024-09-16 17:32:43.359 EMVControl NfcEp[6354]: |- Time needed to complete the xac by the kernel >>>> 340 ms
+2024-09-16 17:32:43.359 EMVControl NfcEp[6354]: ---------------------------------- 
+2024-09-16 17:32:43.363 EMVControl Srv900[1964]: 4>0: p|s=00h|0b84h
+2024-09-16 17:32:43.405 EMVControl Srv900[1964]: 4>0: p|s=00h|0b84h cmd=l len=237 data=00065c34fbe8130341010012800400002301c72200000000460000000043024400420000000017047020bcee0a5d34fbe8065d34fbe8130341010012800400002301c427025000220000000044421000000017040020bcee0a5e34fbe8066334fbe81303420000125c2000002301c42703050008220000000044421000000017042010bbee0a6534fbe8066b34fbe8130341010012800400002301c72200000000460000000043024400420000000017048280baee0a6c34fbe8066c34fbe8130341010012800400002301c5270293202200000000460000000043058805849b92420000000017048280b9ee0a
+2024-09-16 17:32:43.470 EMVControl Srv900[1964]: 4>0: p|s=00h|0b84h cmd=l len=237 data=6d34fbe8066d34fbe8130341000012800400002301c4270793708805849b9222000000004600000000430364dc74420000000017049380b9ee0a6f34fbe8066f34fbe8130341010012800400002301c527029520220000000046000000004305acdc9200e2420000000017049380b9ee0a7034fbe8067034fbe8130341000012800400002301c427079570acdc9200e222000000004600000000430360f832420000000017049380b8ee0a7234fbe8067234fbe8130341000112007e02002301c42702e08022000000004600000000430c0a788074032063cb3220a80c420000000017048390b8ee0a7534fbe8
+2024-09-16 17:32:43.535 EMVControl Srv900[1964]: 4>0: p|s=00h|0b84h cmd=l len=237 data=068b34fbe813030000011200c008002301c427150200a404000e325041592e5359532e44444630310022000000005046000000004366026f5f840e325041592e5359532e4444463031a54dbf0c4a611f4f07a0000000421010500243428701019f2a01039f0a08000105010000000061274f07a0000000031010500a564953412044454249548701029f2a01039f0a0800010501000000009000e5ff42000000001704a5a1aef30a9834fbe806da34fbe813030000011200c008002301c4270e0300a4040007a00000004210100022000000005046000000004357036f508407a0000000421010a54550024342
+2024-09-16 17:32:43.570 EMVControl Voie[1900]: RX << C: Fct [A] len=44
+2024-09-16 17:32:43.570 EMVControl Voie[1900]: 'A' payment cmd: (1000067020240916173243045540400030  /0/V/0/4)
+2024-09-16 17:32:43.570 EMVControl Voie[1900]: Idtp not empty --> Try to continue the NFC transaction
+2024-09-16 17:32:43.570 EMVControl Voie[1900]: TX >> A: Fct [A] - Len=5+1
+2024-09-16 17:32:43.570 EMVControl Voie[1900]:     > AA001\00
+2024-09-16 17:32:43.605 EMVControl Srv900[1964]: 4>0: p|s=00h|0b84h cmd=l len=237 data=8701015f2d086672656e646565739f381e9f66049f02069f03069f1a0295055f2a029a039c019f37049f4e149f2103bf0c0fdf6101039f0a0800010501000000009000e47f42000000001704c7a292ff0ae834fbe8063135fbe813030000011200c008002301c427410280a800003a833820004000000000000670000000000000025000000000000978240916008107b10000000000000000000000000000000000000000001732430020220000000046000000004304f201914042000000001704c8a480ff0a5735fbe8065735fbe813030000011200c008002301c42702f201220000000050460000000043
+2024-09-16 17:32:43.640 EMVControl Voie[1900]: FileWriteTranParam
+2024-09-16 17:32:43.640 EMVControl Voie[1900]: WD-event => wd=1, Ev=8, file=TranParam.txt
+2024-09-16 17:32:43.643 EMVControl GestApp[6562]: = = = = = Request 6,70 euro = = = = =
+2024-09-16 17:32:43.643 EMVControl Voie[1900]: WD-event => wd=1, Ev=80, file=TranParam.txt.old
+2024-09-16 17:32:43.644 EMVControl GestApp[6562]: CThread[0x1e820]::Start: ok
+2024-09-16 17:32:43.654 EMVControl MagPay[6167]: WD-event => wd=1, Ev=8, file=TranParam.txt
+2024-09-16 17:32:43.654 EMVControl MagPay[6167]: IDTP voie = 20240916173243045540400030/0/V/0/4
+2024-09-16 17:32:43.659 EMVControl Srv900[1964]: 4>0: p|s=00h|0b84h cmd=l len=167 data=4d027746820200005713XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX5f3401009f100706001203a020009f260836d5dd9eb315b3189f2701809f360200229f6c02200094041804040090001c8042000000001704c8a47eff0a6e35fbe8069a35fbe813030000011200c008002301c427060300b2041c0022000000004600000000431303700c5f20022a2f9f6e04207000009000d79142000000001704d9a476ff0aa635fbe8
+2024-09-16 17:32:43.667 EMVControl MagPay[6167]: INDICE = 0
+2024-09-16 17:32:43.668 EMVControl MagPay[6167]: WD-event => wd=1, Ev=8, file=IdxVal.txt
+2024-09-16 17:32:43.674 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=TranParam.txt
+2024-09-16 17:32:43.674 EMVControl NfcPay[6321]: GetParm: failed to stat /etc/cfs/EMVControl/mpaa/maintenance: No such file or directory
+2024-09-16 17:32:43.674 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=TranParam.txt
+2024-09-16 17:32:43.674 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=TranParam.txt.old
+2024-09-16 17:32:43.697 EMVControl NfcPay[6321]: INDICE = 254
+2024-09-16 17:32:43.698 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=IdxVal.txt
+2024-09-16 17:32:43.699 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=IdxVal.txt
+2024-09-16 17:32:43.702 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=IdxVal.txt.old
+2024-09-16 17:32:43.704 EMVControl MagPay[6167]: WD-event => wd=1, Ev=8, file=IdxExe.txt
+2024-09-16 17:32:43.706 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=IdxExe.txt
+2024-09-16 17:32:43.706 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=IdxExe.txt
+2024-09-16 17:32:43.707 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=IdxExe.txt.old
+2024-09-16 17:32:43.709 EMVControl GestApp[6562]:   ** Operation 1 en 66 ms **
+2024-09-16 17:32:43.710 EMVControl GestApp[6562]: Select APP N.4
+2024-09-16 17:32:43.728 EMVControl NfcPay[6321]: Montant   :    6.70 EUR
+2024-09-16 17:32:43.735 EMVControl NfcPay[6321]: << E M V 2  NFC >>
+2024-09-16 17:32:43.735 EMVControl NfcPay[6321]: DoClessPayment
+2024-09-16 17:32:43.735 EMVControl NfcPay[6321]: sale_response_length (1195)
+2024-09-16 17:32:43.735 EMVControl NfcPay[6321]: Tag 9F12 is empty. Using tag 50 instead
+2024-09-16 17:32:43.736 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=NfcSaleResponse.txt.old
+2024-09-16 17:32:43.739 EMVControl NfcPay[6321]: Add Aid
+2024-09-16 17:32:43.739 EMVControl NfcPay[6321]: Add Application Name
+2024-09-16 17:32:43.739 EMVControl NfcPay[6321]: Create Current App
+2024-09-16 17:32:43.742 EMVControl NfcPay[6321]: GetContactLessCardData - 5A not present in the cardholder data. Will use the one from tag 57
+2024-09-16 17:32:43.743 EMVControl NfcPay[6321]: GetContactLessCardData - 5F2A not present in the cardholder data. Will use the one from tag 57
+2024-09-16 17:32:43.744 EMVControl NfcPay[6321]: GetContactLessCardData - 5F30 not present in the cardholder data. Will use the one from tag 57
+2024-09-16 17:32:43.748 EMVControl NfcPay[6321]: Check the outcome
+2024-09-16 17:32:43.748 EMVControl NfcPay[6321]: Online requested by the EP
+2024-09-16 17:32:43.748 EMVControl NfcPay[6321]: Emv2_OnRiskManage1
+2024-09-16 17:32:43.749 EMVControl NfcPay[6321]: CThread[0x68918]::Start: ok
+2024-09-16 17:32:43.750 EMVControl NfcPay[6321]: ProcessVisaSpecificVerification - Visa xac --> Will execute Visa specific processing
+2024-09-16 17:32:43.750 EMVControl NfcPay[6321]: Emv2_OnRiskManage2
+2024-09-16 17:32:43.770 EMVControl NfcPay[6321]: Demande Controle au Smact
+2024-09-16 17:32:43.770 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=Auto1Dmd.txt
+2024-09-16 17:32:43.771 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=Auto1Dmd.txt
+2024-09-16 17:32:43.772 EMVControl NfcPay[6321]: CThread[0x6e2bc]::Start: ok
+2024-09-16 17:32:43.773 EMVControl NfcPay[6321]: BINS >>> 3 ms
+2024-09-16 17:32:43.779 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=Auto1Dmd.txt.old
+2024-09-16 17:32:43.784 EMVControl NfcAuto[6259]:  try to connect to 10.250.247.30 - 20155
+2024-09-16 17:32:43.786 EMVControl NfcAuto[6259]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:32:43.786 EMVControl NfcAuto[6259]:  try to connect to 10.250.247.30 - 20155
+2024-09-16 17:32:43.789 EMVControl NfcAuto[6259]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:32:43.789 EMVControl NfcAuto[6259]:  Both Servers AUTO are unavailable
+2024-09-16 17:32:43.789 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Srv4_3.txt
+2024-09-16 17:32:43.791 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg4_3.txt
+2024-09-16 17:32:43.791 EMVControl Voie[1900]: Read event notification from 4_3: event #1, err KO
+2024-09-16 17:32:43.791 EMVControl Voie[1900]: Mapping event #1 as alarm => on
+2024-09-16 17:32:43.792 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Srv4_3.txt.old
+2024-09-16 17:32:43.792 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg4_3.txt.old
+2024-09-16 17:32:43.889 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=Auto1Ctrl.txt
+2024-09-16 17:32:43.890 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=Auto1Ctrl.txt
+2024-09-16 17:32:43.954 EMVControl NfcPay[6321]: SockAuto1::Wake= 0; bRead=ERR
+2024-09-16 17:32:43.954 EMVControl NfcPay[6321]: CtrlSys => Sermon comm. err 2
+2024-09-16 17:32:43.954 EMVControl NfcPay[6321]: BLACK LIST >>> 176 ms
+2024-09-16 17:32:43.954 EMVControl NfcPay[6321]: Rand = 98 / P=1
+2024-09-16 17:32:43.959 EMVControl NfcPay[6321]: Terminal => TC: Offline approved
+2024-09-16 17:32:43.959 EMVControl NfcPay[6321]: Icc => ARQC: Online requested
+2024-09-16 17:32:43.959 EMVControl NfcPay[6321]: bSkipOnline (0) - ! (mpaRiskFlags & MPA_TRM_POSITIVE) (1)
+2024-09-16 17:32:43.959 EMVControl NfcPay[6321]: Emv2_OnOnlineAuthorization
+2024-09-16 17:32:43.959 EMVControl NfcPay[6321]: Reason to go Authoriz: 1660
+2024-09-16 17:32:43.961 EMVControl NfcPay[6321]: Emv2_OnOnlineAuthorization - Reason to go online (1660) and DAD is active => A RPO is required
+2024-09-16 17:32:43.961 EMVControl NfcPay[6321]: Got a rsp of the autho server to the last autho request --> Will do an autho
+2024-09-16 17:32:43.962 EMVControl NfcPay[6321]: Conditions are not fulfilled to continue with a DAD. Will try an autho
+2024-09-16 17:32:43.963 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=AutoParam.txt
+2024-09-16 17:32:43.964 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=AutoParam.txt
+2024-09-16 17:32:43.965 EMVControl NfcPay[6321]: CThread[0x66614]::Start: ok
+2024-09-16 17:32:43.979 EMVControl NfcAuto[6259]: 'Online' autho requested by PayApp
+2024-09-16 17:32:43.979 EMVControl NfcAuto[6259]: Demande d'auto. bancaire (ISO 102)
+2024-09-16 17:32:43.979 EMVControl NfcAuto[6259]:  try to connect to 10.250.247.30 - 20155
+2024-09-16 17:32:43.980 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=AutoParam.txt.old
+2024-09-16 17:32:43.983 EMVControl NfcAuto[6259]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:32:43.983 EMVControl NfcAuto[6259]:  try to connect to 10.250.247.30 - 20155
+2024-09-16 17:32:43.987 EMVControl NfcAuto[6259]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:32:43.987 EMVControl NfcAuto[6259]:  Both Servers AUTO are unavailable
+2024-09-16 17:32:43.987 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Srv4_3.txt
+2024-09-16 17:32:43.987 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg4_3.txt
+2024-09-16 17:32:43.987 EMVControl Voie[1900]: Read event notification from 4_3: event #1, err KO
+2024-09-16 17:32:43.987 EMVControl Voie[1900]: Mapping event #1 as alarm => on
+2024-09-16 17:32:43.987 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Srv4_3.txt.old
+2024-09-16 17:32:43.987 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg4_3.txt.old
+2024-09-16 17:32:44.090 EMVControl NfcAuto[6259]: CBcom is not more connected for Autho 102 ! >> Abort
+2024-09-16 17:32:44.090 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=AutoResult.txt
+2024-09-16 17:32:44.090 EMVControl NfcPay[6321]: Online completed; ok=0
+2024-09-16 17:32:44.091 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=AutoResult.txt
+2024-09-16 17:32:44.156 EMVControl NfcPay[6321]: No response from the autho server + DAD active --> Let' do a DAD
+2024-09-16 17:32:44.156 EMVControl NfcPay[6321]: IncDadCnt - DAD #1
+2024-09-16 17:32:44.156 EMVControl NfcPay[6321]: IsReasonToGoOnlineInExclusion - Reason(s) to go online not found into the DAD exclusion list.
+2024-09-16 17:32:44.156 EMVControl NfcPay[6321]: DoDad - RPO required --> will approved the xac
+2024-09-16 17:32:44.156 EMVControl NfcPay[6321]: DoClessPayment rc (1)
+2024-09-16 17:32:44.156 EMVControl NfcPay[6321]: NFC Transac with A0000000421010 => OK
+2024-09-16 17:32:44.156 EMVControl NfcPay[6321]: PAN = 50176741XXXXXX90
+2024-09-16 17:32:44.156 EMVControl NfcPay[6321]: TVR = 00 00 00 00 00
+2024-09-16 17:32:44.156 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=AutoResult.txt.old
+2024-09-16 17:32:44.159 EMVControl Voie[1900]: WD-event => wd=1, Ev=8, file=Ticket4.txt
+2024-09-16 17:32:44.174 EMVControl NfcPay[6321]:  Saved into Tran00000307.txt: crc=D356
+2024-09-16 17:32:44.191 EMVControl NfcColl[6523]:  -> PAY RESULT: Tran00000307.txt
+2024-09-16 17:32:44.192 EMVControl NfcPay[6321]: Result #1 => "Paiement ACCEPTE"
+2024-09-16 17:32:44.194 EMVControl NfcPay[6321]: La PUCE ne contient pas le tag 5F28: Code Pays
+2024-09-16 17:32:44.195 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=TranResult.txt
+2024-09-16 17:32:44.196 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=TranResult.txt
+2024-09-16 17:32:44.197 EMVControl GestApp[6562]: Chip Deactivation
+2024-09-16 17:32:44.197 EMVControl Srv900[1964]: mCountRuntimeMilliSecs = 38179
+2024-09-16 17:32:44.198 EMVControl Srv900[1964]: 0>5: p|s=00h|0000h cmd=C len=1 data=0
+2024-09-16 17:32:44.210 EMVControl Srv900[1964]: 5>0: p|s=00h|5080h cmd=C
+2024-09-16 17:32:44.210 EMVControl Srv900[1964]: L900Counter Operation Time = 13
+2024-09-16 17:32:44.211 EMVControl Srv900[1964]: mCountRuntimeMilliSecs = 38192
+2024-09-16 17:32:44.211 EMVControl Srv900[1964]: S>C: cCHIP_CONTACT err=0
+2024-09-16 17:32:44.278 EMVControl Voie[1900]: WD-event => wd=1, Ev=8, file=TranResult.txt
+2024-09-16 17:32:44.278 EMVControl Voie[1900]: TX >> A: Fct [T] - Len=5+432
+2024-09-16 17:32:44.280 EMVControl Voie[1900]:     > AT432                 P10001FCD399E4CC91CDE30E84AF0F5AA475BB0E5D0D57A1CCC7F29FA5C552A49EFC2D5132351189950176741XXXXXX90              ??     Y319                     A0000000421010                  90136D5DD9EB315B318     000001C                
+2024-09-16 17:32:44.280 EMVControl Voie[1900]:     >                                                                                                      AUTOROUTE DU SUD    VEDENE CEDEX        84278               57213999600167160924173243260499
+2024-09-16 17:32:44.280 EMVControl Voie[1900]: WD-event => wd=1, Ev=80, file=TranResult.txt.old
+2024-09-16 17:32:44.283 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=TranResult.txt.old
+2024-09-16 17:32:44.283 EMVControl GestApp[6562]:   ** Operation 2 en 574 ms **
+2024-09-16 17:32:44.284 EMVControl GestApp[6562]: +++++ Approved +++++
+2024-09-16 17:32:44.285 EMVControl GestApp[6562]: Duree totale: 642 ms
+2024-09-16 17:32:44.286 EMVControl GestApp[6562]: Disconnect from Server900
+2024-09-16 17:32:44.336 EMVControl NfcEp[6354]: Thread D:OnFifoMessageReceived: NR_WF_MSG - param=0x0x10e220
+2024-09-16 17:32:44.336 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=UiRequests.pb.tmp
+2024-09-16 17:32:44.336 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=80, file=UiRequests.pb
+2024-09-16 17:32:44.336 EMVControl NfcEp[6354]: ----- UI request for 0.0s -----
+2024-09-16 17:32:44.336 EMVControl NfcEp[6354]: -- msg       : (ID 14) Welcome
+2024-09-16 17:32:44.336 EMVControl NfcEp[6354]: -- status    : Idle
+2024-09-16 17:32:44.336 EMVControl NfcEp[6354]: -- value     : 000000000000
+2024-09-16 17:32:44.336 EMVControl NfcEp[6354]: ----------------------
+2024-09-16 17:32:44.338 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=UiRequests.pb.tmp
+2024-09-16 17:32:44.338 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=UiRequests.pb
+2024-09-16 17:32:44.344 EMVControl Voie[1900]: TX >> A: Fct [M] - Len=5+16
+2024-09-16 17:32:44.344 EMVControl Voie[1900]:     > AM016Paiement ACCEPTE
+2024-09-16 17:32:44.384 EMVControl Srv900[1964]: 4>0: p|s=00h|0984h
+2024-09-16 17:32:44.399 EMVControl Srv900[1964]: 4>0: p|s=00h|0884h
+2024-09-16 17:32:44.404 EMVControl Srv900[1964]: 4>0: p|s=00h|0084h
+2024-09-16 17:32:44.414 EMVControl Voie[1900]: TX >> A: Fct [M] - Len=5+13
+2024-09-16 17:32:44.414 EMVControl Voie[1900]:     > AM013RETIREZ Carte
+2024-09-16 17:32:44.444 EMVControl Srv900[1964]: 4>0: p|s=00h|0084h cmd=l len=130 data=06d139fbe8130341010012800400002301c7220000000044421000000017040020bdee0ad139fbe806da39fbe8130341010012800400002301c7220000000044421000000017040020bdee0ada39fbe806e339fbe8130341010012800400002301c7220000000044421000000017040020bdee0ae439fbe8a262000000a603000000
+2024-09-16 17:32:44.599 EMVControl NfcColl[6523]: Read /tmp/nfc/coll_tranfiles/Tran00000307.txt
+2024-09-16 17:32:44.599 EMVControl NfcEp[6354]: WD-event => wd=2, Ev=8, file=TranInfo.tmp
+2024-09-16 17:32:44.602 EMVControl NfcColl[6523]: sql> BEGIN TRANSACTION
+2024-09-16 17:32:44.603 EMVControl NfcColl[6523]: sql> Replace into T_TRANS (Collecte,Remise,Num,TDate,TTime,Pan,Approved,Amount) Values (0,45,1,'240916','173243','50176741XXXXXX90',1,670)
+2024-09-16 17:32:44.628 EMVControl NfcColl[6523]: sql> Update T_TRANS Set Aid='A0000000421010',PanHash='FCD399E4CC91CDE30E84AF0F5AA475BB0E5D0D57A1CCC7F29FA5C552A49EFC2D',Emv='0000000000;08;;8107B100;0000;;260430;;;06001203A02000;36D5DD9EB315B318;80;0022;00;9F6E0420700000;;20004000;0000000000;03;;50176741XXXXXX90D26049018428170000000F;0001050100000000',Iso2='' where rowid=1
+2024-09-16 17:32:44.630 EMVControl NfcColl[6523]: sql> Update T_TRANS Set Online='0;??;Y3;;1660;0;0;0;;1',Prop='0;0' where rowid=1
+2024-09-16 17:32:44.631 EMVControl NfcColl[6523]: sql> Update T_TRANS Set TACIAC='B000C00000;0000008800;0000008800;0040000000;0800000000;0800000000' where rowid=1
+2024-09-16 17:32:44.634 EMVControl NfcColl[6523]: sql> Update T_TRANS Set Name='1;1;045540401_110426005;57213999600167;AUTOROUTE DU SUD    VEDENE CEDEX        84278               ;',Bank='4228592;51323511899;4784;;00100004;4228592',Tags='FF0DFF0EFF0F008E9F0D9F0E9F0F9F339F34' where rowid=1
+2024-09-16 17:32:44.643 EMVControl NfcColl[6523]: sql> Update T_TRANS Set Timings='0;50;179;111;0',IdVoie='20240916173243045540400030/0/V/0/4',Smact=2 where rowid=1
+2024-09-16 17:32:44.645 EMVControl NfcColl[6523]: sql> COMMIT TRANSACTION
+2024-09-16 17:32:44.676 EMVControl NfcColl[6523]: Transac 1 (remise #45) saved !
+2024-09-16 17:32:44.678 EMVControl NfcColl[6523]: unused file -> Tran00000307.done
+2024-09-16 17:32:44.678 EMVControl NfcColl[6523]: successfully renamed: /tmp/nfc/coll_tranfiles/Tran00000307.done
+2024-09-16 17:32:44.679 EMVControl NfcColl[6523]: NbTransac to be collected = 1
+2024-09-16 17:32:44.681 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Store4.txt
+2024-09-16 17:32:44.681 EMVControl Voie[1900]:  Receive Storage from APP 4 => 1 tr.
+2024-09-16 17:32:44.681 EMVControl Voie[1900]:  Total Storage: 2 tr. (Limit= 1)
+2024-09-16 17:32:44.681 EMVControl Voie[1900]: Alarm #3 => KO
+2024-09-16 17:32:44.681 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-16 17:32:44.681 EMVControl Voie[1900]:     > AE0070011003
+2024-09-16 17:32:44.683 EMVControl NfcColl[6523]: GetParm: failed to stat /etc/cfs/EMVControl/mpaa/chk_db_every_nb: No such file or directory
+2024-09-16 17:32:44.687 EMVControl NfcColl[6523]: *** ExecCollecte ***
+2024-09-16 17:32:44.688 EMVControl NfcColl[6523]: sql> Select Remise,Num,TDate from T_TRANS where Collecte<=0 and Collecte>-8 and Remise>=44 ORDER BY Remise,Num LIMIT 1
+2024-09-16 17:32:44.693 EMVControl NfcColl[6523]: sql> Replace into T_REMISE(Id,TDate,Done) values(45,'240916',0)
+2024-09-16 17:32:44.721 EMVControl NfcColl[6523]: sql> Select Name,Bank,Tags from T_TRANS where Num=1 and Remise=45
+2024-09-16 17:32:44.723 EMVControl NfcColl[6523]: sql> Select TDate,TTime,Approved,Collecte,Amount,Aid,Pan,Iso2,TacIac,Online,Emv,Prop,PanHash from T_TRANS where Num=1 and Remise=45
+2024-09-16 17:32:44.725 EMVControl NfcColl[6523]: sql> Select IdVoie,Smact,Timings  from T_TRANS where Num=1 and Remise=45
+2024-09-16 17:32:44.731 EMVControl NfcColl[6523]:  try to connect to 10.250.247.30 - 20155
+2024-09-16 17:32:44.734 EMVControl NfcColl[6523]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:32:44.735 EMVControl NfcColl[6523]:  try to connect to 10.250.247.30 - 20155
+2024-09-16 17:32:44.737 EMVControl NfcColl[6523]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:32:44.738 EMVControl NfcColl[6523]:  Both Servers TLC are unavailable
+2024-09-16 17:32:44.751 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Srv4_4.txt
+2024-09-16 17:32:44.751 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg4_4.txt
+2024-09-16 17:32:44.751 EMVControl Voie[1900]: Read event notification from 4_4: event #2, err KO
+2024-09-16 17:32:44.751 EMVControl Voie[1900]: Mapping event #2 as alarm => on
+2024-09-16 17:32:44.751 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Srv4_4.txt.old
+2024-09-16 17:32:44.751 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg4_4.txt.old
+2024-09-16 17:32:44.849 EMVControl NfcColl[6523]: sql> Select count(*) from T_TRANS where Collecte<=0 and Collecte>-3
+2024-09-16 17:32:44.849 EMVControl NfcColl[6523]: NbTransac to be collected = 1
+2024-09-16 17:32:44.849 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Store4.txt
+2024-09-16 17:32:44.852 EMVControl Voie[1900]:  Receive Storage from APP 4 => 1 tr.
+2024-09-16 17:32:44.852 EMVControl Voie[1900]:  Total Storage: 2 tr. (Limit= 1)
+2024-09-16 17:32:44.852 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg4_4.txt
+2024-09-16 17:32:44.852 EMVControl Voie[1900]: Read event notification from 4_4: event #29, err KO
+2024-09-16 17:32:44.852 EMVControl Voie[1900]: Event #29
+2024-09-16 17:32:44.852 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-16 17:32:44.852 EMVControl Voie[1900]:     > AE0070011029
+2024-09-16 17:32:44.919 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg4_4.txt.old
+2024-09-16 17:32:45.060 EMVControl Voie[1900]: RX << C: Fct [A] len=2
+2024-09-16 17:32:45.060 EMVControl Voie[1900]: 'A' abort cmd: (11)
+2024-09-16 17:32:45.060 EMVControl NfcPay[6321]: WD-event => wd=1, Ev=8, file=NfcAbortRequest.txt
+2024-09-16 17:32:45.060 EMVControl Voie[1900]: TX >> A: Fct [A] - Len=5+1
+2024-09-16 17:32:45.060 EMVControl Voie[1900]:     > AA001\00
+2024-09-16 17:32:45.062 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=8, file=NfcAbortRequest.txt
+2024-09-16 17:32:45.062 EMVControl NfcEp[6354]: WD-event => wd=1, Ev=80, file=NfcAbortRequest.txt.old
+2024-09-16 17:32:45.065 EMVControl NfcEp[6354]: OnFifoMessageReceived: DEACTIVATION_REQUEST - param=0x0
+2024-09-16 17:32:45.065 EMVControl NfcEp[6354]: DoAbortRequest: state (Idle) - next state (Idle)
+2024-09-16 17:32:45.065 EMVControl NfcEp[6354]: EpIfMessageSend: cFct='02'
+2024-09-16 17:32:45.065 EMVControl NfcEp[6354]: Thread Ep: OnFifoMessageReceived: NR_WF_CLT_REQUEST - param=0x2
+2024-09-16 17:32:45.065 EMVControl NfcEp[6354]: Deactivate the EP...
+2024-09-16 17:32:45.065 EMVControl NfcEp[6354]: Thread Ep: OnFifoMessageReceived: NR_WF_STOP - param=0x0
+2024-09-16 17:32:45.065 EMVControl NfcEp[6354]: Thread D:OnFifoMessageReceived: NR_WF_STOP - param=0x(nil)
+2024-09-16 17:32:45.065 EMVControl NfcEp[6354]: Thread D - Clear UI on STOP request
+2024-09-16 17:32:45.065 EMVControl NfcEp[6354]: Thread Ep: OnFifoMessageReceived: NR_WF_STOP_RSP - param=0x1
+2024-09-16 17:32:45.065 EMVControl NfcEp[6354]: Thread_UI stop response = 1
+2024-09-16 17:32:45.065 EMVControl NfcEp[6354]: Stop is waiting for: Thread_S
+2024-09-16 17:32:45.069 EMVControl NfcEp[6354]: Thread S: OnFifoMessageReceived: NR_WF_STOP - param=0x0
+2024-09-16 17:32:45.069 EMVControl NfcEp[6354]: OnStop: ready now state=0
+2024-09-16 17:32:45.069 EMVControl NfcEp[6354]: Thread Ep: OnFifoMessageReceived: NR_WF_STOP_RSP - param=0x1
+2024-09-16 17:32:45.069 EMVControl NfcEp[6354]: Thread_S stop response = 1
+2024-09-16 17:32:45.071 EMVControl NfcEp[6354]: Stop is waiting for:
+2024-09-16 17:32:45.071 EMVControl Srv900[1964]: NFC_L1 field is already off!
+2024-09-16 17:32:45.071 EMVControl Srv900[1964]: 0>4: p|s=00h|0000h cmd=Z len=1 data=\08
+2024-09-16 17:32:45.090 EMVControl Srv900[1964]: 4>0: p|s=00h|0084h cmd=Z len=1 data=\00
+2024-09-16 17:32:45.091 EMVControl Srv900[1964]: S>C: cNFC_FIELD err=0
+2024-09-16 17:32:45.091 EMVControl NfcEp[6354]: OnFifoMessageReceived: EP_IF_MESSAGE_RECEIVED - param=0x2
+2024-09-16 17:32:45.091 EMVControl NfcEp[6354]: Deactivation done with(1) by the EP
+2024-09-16 17:32:45.091 EMVControl NfcEp[6354]: DoAbortResponse: state (DoingAbortRequest) - next state (Idle)
+2024-09-16 17:32:45.129 EMVControl Voie[1900]: RX << C: Fct [M] len=1
+2024-09-16 17:32:45.189 EMVControl Voie[1900]: RX << C: Fct [M] len=1
+2024-09-16 17:33:01.264 EMVControl Srv900[1964]: NFCL1 status
+2024-09-16 17:33:01.265 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-16 17:33:01.265 EMVControl Srv900[1964]:  Frames from Module            = 1652280
+2024-09-16 17:33:01.266 EMVControl Srv900[1964]:  Frames to Module              = 1644551
+2024-09-16 17:33:01.266 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1640199:1640199:0
+2024-09-16 17:33:01.267 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-16 17:33:01.267 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-16 17:33:01.268 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-16 17:33:01.269 EMVControl Srv900[1964]:  module.system_time            = 3908794.250 s
+2024-09-16 17:33:01.270 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.72:24.80) V
+2024-09-16 17:33:01.270 EMVControl Srv900[1964]:  module.adc_temp               = 37.3 deg
+2024-09-16 17:33:01.271 EMVControl Srv900[1964]:  module.l900_rx                = 1644828
+2024-09-16 17:33:01.271 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-16 17:33:01.272 EMVControl Srv900[1964]:  module.l900_tx                = 1652163
+2024-09-16 17:33:01.272 EMVControl Srv900[1964]:  module.lm_temp                = 32.7 deg
+2024-09-16 17:33:17.928 EMVControl MagAuto[6133]:  Autoriz disconnection !
+2024-09-16 17:33:21.578 EMVControl MagColl[6403]:  Cbcom disconnection !
+2024-09-16 17:33:44.388 EMVControl NfcAuto[6259]:  Autoriz disconnection !
+2024-09-16 17:33:48.052 EMVControl NfcColl[6523]:  Cbcom disconnection !
+2024-09-16 17:35:01.316 EMVControl Srv900[1964]: NFCL1 status
+2024-09-16 17:35:01.316 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-16 17:35:01.316 EMVControl Srv900[1964]:  Frames from Module            = 1652304
+2024-09-16 17:35:01.316 EMVControl Srv900[1964]:  Frames to Module              = 1644575
+2024-09-16 17:35:01.317 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1640223:1640223:0
+2024-09-16 17:35:01.317 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-16 17:35:01.317 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-16 17:35:01.317 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-16 17:35:01.317 EMVControl Srv900[1964]:  module.system_time            = 3908914.500 s
+2024-09-16 17:35:01.317 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-16 17:35:01.317 EMVControl Srv900[1964]:  module.adc_temp               = 36.8 deg
+2024-09-16 17:35:01.320 EMVControl Srv900[1964]:  module.l900_rx                = 1644852
+2024-09-16 17:35:01.320 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-16 17:35:01.320 EMVControl Srv900[1964]:  module.l900_tx                = 1652187
+2024-09-16 17:35:01.320 EMVControl Srv900[1964]:  module.lm_temp                = 32.0 deg
+2024-09-16 17:37:02.323 EMVControl Srv900[1964]: NFCL1 status
+2024-09-16 17:37:02.323 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-16 17:37:02.323 EMVControl Srv900[1964]:  Frames from Module            = 1652328
+2024-09-16 17:37:02.323 EMVControl Srv900[1964]:  Frames to Module              = 1644599
+2024-09-16 17:37:02.323 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1640247:1640247:0
+2024-09-16 17:37:02.323 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-16 17:37:02.324 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-16 17:37:02.324 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-16 17:37:02.324 EMVControl Srv900[1964]:  module.system_time            = 3909034.500 s
+2024-09-16 17:37:02.324 EMVControl Srv900[1964]:  module.adc_24v                = (24.69:24.71:24.80) V
+2024-09-16 17:37:02.324 EMVControl Srv900[1964]:  module.adc_temp               = 36.8 deg
+2024-09-16 17:37:02.327 EMVControl Srv900[1964]:  module.l900_rx                = 1644876
+2024-09-16 17:37:02.327 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-16 17:37:02.327 EMVControl Srv900[1964]:  module.l900_tx                = 1652211
+2024-09-16 17:37:02.327 EMVControl Srv900[1964]:  module.lm_temp                = 31.7 deg
+2024-09-16 17:37:04.760 EMVControl taskFtp2: Ftp1 said i have to load new xml config
+2024-09-16 17:37:04.908 EMVControl taskFtp2: Failed to read 2. ftp set: ip='' user='' filename=''
+2024-09-16 17:37:18.975 EMVControl MagColl[6403]: *** ExecCollecte ***
+2024-09-16 17:37:18.975 EMVControl MagColl[6403]: sql> Select Remise,Num,TDate from T_TRANS where Collecte<=0 and Collecte>-8 and Remise>=56 ORDER BY Remise,Num LIMIT 1
+2024-09-16 17:37:18.975 EMVControl MagColl[6403]: sql> Select Name,Bank,Tags from T_TRANS where Num=1 and Remise=56
+2024-09-16 17:37:18.975 EMVControl MagColl[6403]: sql> Select TDate,TTime,Approved,Collecte,Amount,Aid,Pan,Iso2,TacIac,Online,Emv,Prop,PanHash from T_TRANS where Num=1 and Remise=56
+2024-09-16 17:37:18.975 EMVControl MagColl[6403]: sql> Select IdVoie,Smact,Timings  from T_TRANS where Num=1 and Remise=56
+2024-09-16 17:37:18.975 EMVControl MagColl[6403]:  try to connect to 10.250.247.30 - 20154
+2024-09-16 17:37:18.989 EMVControl MagColl[6403]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:37:18.990 EMVControl MagColl[6403]:  try to connect to 10.250.247.30 - 20254
+2024-09-16 17:37:19.007 EMVControl MagColl[6403]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:37:19.007 EMVControl MagColl[6403]:  Both Servers TLC are unavailable
+2024-09-16 17:37:19.007 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Srv2_4.txt
+2024-09-16 17:37:19.007 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg2_4.txt
+2024-09-16 17:37:19.007 EMVControl Voie[1900]: Read event notification from 2_4: event #2, err KO
+2024-09-16 17:37:19.007 EMVControl Voie[1900]: Mapping event #2 as alarm => on
+2024-09-16 17:37:19.009 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Srv2_4.txt.old
+2024-09-16 17:37:19.009 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg2_4.txt.old
+2024-09-16 17:37:19.110 EMVControl MagColl[6403]: sql> Select count(*) from T_TRANS where Collecte<=0 and Collecte>-3
+2024-09-16 17:37:19.110 EMVControl MagColl[6403]: NbTransac to be collected = 1
+2024-09-16 17:37:19.110 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Store2.txt
+2024-09-16 17:37:19.111 EMVControl Voie[1900]:  Receive Storage from APP 2 => 1 tr.
+2024-09-16 17:37:19.111 EMVControl Voie[1900]:  Total Storage: 2 tr. (Limit= 1)
+2024-09-16 17:37:19.111 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg2_4.txt
+2024-09-16 17:37:19.111 EMVControl Voie[1900]: Read event notification from 2_4: event #27, err KO
+2024-09-16 17:37:19.111 EMVControl Voie[1900]: Event #27
+2024-09-16 17:37:19.111 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-16 17:37:19.111 EMVControl Voie[1900]:     > AE0070011027
+2024-09-16 17:37:19.177 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg2_4.txt.old
+2024-09-16 17:37:45.449 EMVControl NfcColl[6523]: *** ExecCollecte ***
+2024-09-16 17:37:45.449 EMVControl NfcColl[6523]: sql> Select Remise,Num,TDate from T_TRANS where Collecte<=0 and Collecte>-8 and Remise>=45 ORDER BY Remise,Num LIMIT 1
+2024-09-16 17:37:45.449 EMVControl NfcColl[6523]: sql> Select Name,Bank,Tags from T_TRANS where Num=1 and Remise=45
+2024-09-16 17:37:45.449 EMVControl NfcColl[6523]: sql> Select TDate,TTime,Approved,Collecte,Amount,Aid,Pan,Iso2,TacIac,Online,Emv,Prop,PanHash from T_TRANS where Num=1 and Remise=45
+2024-09-16 17:37:45.449 EMVControl NfcColl[6523]: sql> Select IdVoie,Smact,Timings  from T_TRANS where Num=1 and Remise=45
+2024-09-16 17:37:45.449 EMVControl NfcColl[6523]:  try to connect to 10.250.247.30 - 20155
+2024-09-16 17:37:45.455 EMVControl NfcColl[6523]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:37:45.455 EMVControl NfcColl[6523]:  try to connect to 10.250.247.30 - 20155
+2024-09-16 17:37:45.460 EMVControl NfcColl[6523]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:37:45.460 EMVControl NfcColl[6523]:  Both Servers TLC are unavailable
+2024-09-16 17:37:45.460 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Srv4_4.txt
+2024-09-16 17:37:45.460 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg4_4.txt
+2024-09-16 17:37:45.460 EMVControl Voie[1900]: Read event notification from 4_4: event #2, err KO
+2024-09-16 17:37:45.460 EMVControl Voie[1900]: Mapping event #2 as alarm => on
+2024-09-16 17:37:45.460 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Srv4_4.txt.old
+2024-09-16 17:37:45.460 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg4_4.txt.old
+2024-09-16 17:37:45.565 EMVControl NfcColl[6523]: sql> Select count(*) from T_TRANS where Collecte<=0 and Collecte>-3
+2024-09-16 17:37:45.565 EMVControl NfcColl[6523]: NbTransac to be collected = 1
+2024-09-16 17:37:45.565 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Store4.txt
+2024-09-16 17:37:45.565 EMVControl Voie[1900]:  Receive Storage from APP 4 => 1 tr.
+2024-09-16 17:37:45.565 EMVControl Voie[1900]:  Total Storage: 2 tr. (Limit= 1)
+2024-09-16 17:37:45.565 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg4_4.txt
+2024-09-16 17:37:45.565 EMVControl Voie[1900]: Read event notification from 4_4: event #29, err KO
+2024-09-16 17:37:45.565 EMVControl Voie[1900]: Event #29
+2024-09-16 17:37:45.565 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-16 17:37:45.565 EMVControl Voie[1900]:     > AE0070011029
+2024-09-16 17:37:45.631 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg4_4.txt.old
+2024-09-16 17:38:22.316 EMVControl MagColl[6403]:  Cbcom disconnection !
+2024-09-16 17:38:48.770 EMVControl NfcColl[6523]:  Cbcom disconnection !
+2024-09-16 17:39:03.265 EMVControl Srv900[1964]: NFCL1 status
+2024-09-16 17:39:03.265 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-16 17:39:03.265 EMVControl Srv900[1964]:  Frames from Module            = 1652353
+2024-09-16 17:39:03.265 EMVControl Srv900[1964]:  Frames to Module              = 1644623
+2024-09-16 17:39:03.265 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1640271:1640271:0
+2024-09-16 17:39:03.265 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-16 17:39:03.265 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-16 17:39:03.266 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-16 17:39:03.266 EMVControl Srv900[1964]:  module.system_time            = 3909154.250 s
+2024-09-16 17:39:03.266 EMVControl Srv900[1964]:  module.adc_24v                = (24.69:24.70:24.80) V
+2024-09-16 17:39:03.266 EMVControl Srv900[1964]:  module.adc_temp               = 36.3 deg
+2024-09-16 17:39:03.269 EMVControl Srv900[1964]:  module.l900_rx                = 1644900
+2024-09-16 17:39:03.269 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-16 17:39:03.269 EMVControl Srv900[1964]:  module.l900_tx                = 1652235
+2024-09-16 17:39:03.269 EMVControl Srv900[1964]:  module.lm_temp                = 31.7 deg
+2024-09-16 17:41:03.292 EMVControl Srv900[1964]: NFCL1 status
+2024-09-16 17:41:03.292 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-16 17:41:03.292 EMVControl Srv900[1964]:  Frames from Module            = 1652377
+2024-09-16 17:41:03.292 EMVControl Srv900[1964]:  Frames to Module              = 1644647
+2024-09-16 17:41:03.292 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1640295:1640295:0
+2024-09-16 17:41:03.292 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-16 17:41:03.292 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-16 17:41:03.293 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-16 17:41:03.293 EMVControl Srv900[1964]:  module.system_time            = 3909274.250 s
+2024-09-16 17:41:03.293 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-16 17:41:03.293 EMVControl Srv900[1964]:  module.adc_temp               = 36.8 deg
+2024-09-16 17:41:03.296 EMVControl Srv900[1964]:  module.l900_rx                = 1644924
+2024-09-16 17:41:03.296 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-16 17:41:03.296 EMVControl Srv900[1964]:  module.l900_tx                = 1652259
+2024-09-16 17:41:03.296 EMVControl Srv900[1964]:  module.lm_temp                = 31.5 deg
+2024-09-16 17:42:19.712 EMVControl MagColl[6403]: *** ExecCollecte ***
+2024-09-16 17:42:19.712 EMVControl MagColl[6403]: sql> Select Remise,Num,TDate from T_TRANS where Collecte<=0 and Collecte>-8 and Remise>=56 ORDER BY Remise,Num LIMIT 1
+2024-09-16 17:42:19.712 EMVControl MagColl[6403]: sql> Select Name,Bank,Tags from T_TRANS where Num=1 and Remise=56
+2024-09-16 17:42:19.713 EMVControl MagColl[6403]: sql> Select TDate,TTime,Approved,Collecte,Amount,Aid,Pan,Iso2,TacIac,Online,Emv,Prop,PanHash from T_TRANS where Num=1 and Remise=56
+2024-09-16 17:42:19.713 EMVControl MagColl[6403]: sql> Select IdVoie,Smact,Timings  from T_TRANS where Num=1 and Remise=56
+2024-09-16 17:42:19.713 EMVControl MagColl[6403]:  try to connect to 10.250.247.30 - 20154
+2024-09-16 17:42:19.715 EMVControl MagColl[6403]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:42:19.716 EMVControl MagColl[6403]:  try to connect to 10.250.247.30 - 20254
+2024-09-16 17:42:19.719 EMVControl MagColl[6403]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:42:19.719 EMVControl MagColl[6403]:  Both Servers TLC are unavailable
+2024-09-16 17:42:19.719 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Srv2_4.txt
+2024-09-16 17:42:19.719 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg2_4.txt
+2024-09-16 17:42:19.722 EMVControl Voie[1900]: Read event notification from 2_4: event #2, err KO
+2024-09-16 17:42:19.722 EMVControl Voie[1900]: Mapping event #2 as alarm => on
+2024-09-16 17:42:19.722 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Srv2_4.txt.old
+2024-09-16 17:42:19.722 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg2_4.txt.old
+2024-09-16 17:42:19.823 EMVControl MagColl[6403]: The 'Collecte' process is aborted
+2024-09-16 17:42:19.823 EMVControl MagColl[6403]: sql> Select count(*) from T_TRANS where Collecte<=0 and Collecte>-3
+2024-09-16 17:42:19.823 EMVControl MagColl[6403]: NbTransac to be collected = 1
+2024-09-16 17:42:19.823 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Store2.txt
+2024-09-16 17:42:19.823 EMVControl Voie[1900]:  Receive Storage from APP 2 => 1 tr.
+2024-09-16 17:42:19.823 EMVControl Voie[1900]:  Total Storage: 2 tr. (Limit= 1)
+2024-09-16 17:42:19.823 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg2_4.txt
+2024-09-16 17:42:19.823 EMVControl Voie[1900]: Read event notification from 2_4: event #27, err KO
+2024-09-16 17:42:19.823 EMVControl Voie[1900]: Event #27
+2024-09-16 17:42:19.823 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-16 17:42:19.823 EMVControl Voie[1900]:     > AE0070011027
+2024-09-16 17:42:19.889 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg2_4.txt.old
+2024-09-16 17:42:46.167 EMVControl NfcColl[6523]: *** ExecCollecte ***
+2024-09-16 17:42:46.167 EMVControl NfcColl[6523]: sql> Select Remise,Num,TDate from T_TRANS where Collecte<=0 and Collecte>-8 and Remise>=45 ORDER BY Remise,Num LIMIT 1
+2024-09-16 17:42:46.167 EMVControl NfcColl[6523]: sql> Select Name,Bank,Tags from T_TRANS where Num=1 and Remise=45
+2024-09-16 17:42:46.167 EMVControl NfcColl[6523]: sql> Select TDate,TTime,Approved,Collecte,Amount,Aid,Pan,Iso2,TacIac,Online,Emv,Prop,PanHash from T_TRANS where Num=1 and Remise=45
+2024-09-16 17:42:46.167 EMVControl NfcColl[6523]: sql> Select IdVoie,Smact,Timings  from T_TRANS where Num=1 and Remise=45
+2024-09-16 17:42:46.167 EMVControl NfcColl[6523]:  try to connect to 10.250.247.30 - 20155
+2024-09-16 17:42:46.170 EMVControl NfcColl[6523]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:42:46.170 EMVControl NfcColl[6523]:  try to connect to 10.250.247.30 - 20155
+2024-09-16 17:42:46.174 EMVControl NfcColl[6523]:  CSocketClient::TcpConnect >> Err. Code 111 is received
+2024-09-16 17:42:46.175 EMVControl NfcColl[6523]:  Both Servers TLC are unavailable
+2024-09-16 17:42:46.175 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Srv4_4.txt
+2024-09-16 17:42:46.175 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg4_4.txt
+2024-09-16 17:42:46.175 EMVControl Voie[1900]: Read event notification from 4_4: event #2, err KO
+2024-09-16 17:42:46.175 EMVControl Voie[1900]: Mapping event #2 as alarm => on
+2024-09-16 17:42:46.175 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Srv4_4.txt.old
+2024-09-16 17:42:46.175 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg4_4.txt.old
+2024-09-16 17:42:46.277 EMVControl NfcColl[6523]: The 'Collecte' process is aborted
+2024-09-16 17:42:46.277 EMVControl NfcColl[6523]: sql> Select count(*) from T_TRANS where Collecte<=0 and Collecte>-3
+2024-09-16 17:42:46.277 EMVControl NfcColl[6523]: NbTransac to be collected = 1
+2024-09-16 17:42:46.277 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Store4.txt
+2024-09-16 17:42:46.277 EMVControl Voie[1900]:  Receive Storage from APP 4 => 1 tr.
+2024-09-16 17:42:46.277 EMVControl Voie[1900]:  Total Storage: 2 tr. (Limit= 1)
+2024-09-16 17:42:46.277 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg4_4.txt
+2024-09-16 17:42:46.277 EMVControl Voie[1900]: Read event notification from 4_4: event #29, err KO
+2024-09-16 17:42:46.277 EMVControl Voie[1900]: Event #29
+2024-09-16 17:42:46.278 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-16 17:42:46.278 EMVControl Voie[1900]:     > AE0070011029
+2024-09-16 17:42:46.344 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg4_4.txt.old
+2024-09-16 17:43:04.324 EMVControl Srv900[1964]: NFCL1 status
+2024-09-16 17:43:04.324 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-16 17:43:04.324 EMVControl Srv900[1964]:  Frames from Module            = 1652401
+2024-09-16 17:43:04.324 EMVControl Srv900[1964]:  Frames to Module              = 1644671
+2024-09-16 17:43:04.324 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1640319:1640319:0
+2024-09-16 17:43:04.324 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-16 17:43:04.324 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-16 17:43:04.324 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-16 17:43:04.324 EMVControl Srv900[1964]:  module.system_time            = 3909394.500 s
+2024-09-16 17:43:04.325 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-16 17:43:04.325 EMVControl Srv900[1964]:  module.adc_temp               = 35.8 deg
+2024-09-16 17:43:04.327 EMVControl Srv900[1964]:  module.l900_rx                = 1644948
+2024-09-16 17:43:04.328 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-16 17:43:04.328 EMVControl Srv900[1964]:  module.l900_tx                = 1652283
+2024-09-16 17:43:04.328 EMVControl Srv900[1964]:  module.lm_temp                = 31.6 deg
+2024-09-16 17:43:23.033 EMVControl MagColl[6403]:  Cbcom disconnection !
+2024-09-16 17:43:49.482 EMVControl NfcColl[6523]:  Cbcom disconnection !
+2024-09-16 17:45:05.311 EMVControl Srv900[1964]: NFCL1 status
+2024-09-16 17:45:05.311 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-16 17:45:05.311 EMVControl Srv900[1964]:  Frames from Module            = 1652425
+2024-09-16 17:45:05.311 EMVControl Srv900[1964]:  Frames to Module              = 1644695
+2024-09-16 17:45:05.311 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1640343:1640343:0
+2024-09-16 17:45:05.311 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-16 17:45:05.311 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-16 17:45:05.311 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-16 17:45:05.311 EMVControl Srv900[1964]:  module.system_time            = 3909514.250 s
+2024-09-16 17:45:05.311 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-16 17:45:05.312 EMVControl Srv900[1964]:  module.adc_temp               = 36.8 deg
+2024-09-16 17:45:05.315 EMVControl Srv900[1964]:  module.l900_rx                = 1644972
+2024-09-16 17:45:05.315 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-16 17:45:05.315 EMVControl Srv900[1964]:  module.l900_tx                = 1652307
+2024-09-16 17:45:05.315 EMVControl Srv900[1964]:  module.lm_temp                = 31.2 deg
+2024-09-16 17:47:05.460 EMVControl taskFtp2: Failed to read 2. ftp set: ip='' user='' filename=''
+2024-09-16 17:47:05.844 EMVControl taskFtp2: Inform voie about 'ftp2_no_connect'
+2024-09-16 17:47:05.864 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_2.txt
+2024-09-16 17:47:05.865 EMVControl Voie[1900]: Read event notification from 0_0: event #924, err OK
+2024-09-16 17:47:05.865 EMVControl Voie[1900]: Event #924
+2024-09-16 17:47:05.865 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-16 17:47:05.865 EMVControl Voie[1900]:     > AE0070011924
+2024-09-16 17:47:05.932 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_2.txt.old
+2024-09-16 17:47:06.308 EMVControl Srv900[1964]: NFCL1 status
+2024-09-16 17:47:06.308 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-16 17:47:06.308 EMVControl Srv900[1964]:  Frames from Module            = 1652449
+2024-09-16 17:47:06.308 EMVControl Srv900[1964]:  Frames to Module              = 1644720
+2024-09-16 17:47:06.308 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1640368:1640368:0
+2024-09-16 17:47:06.308 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-16 17:47:06.308 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-16 17:47:06.308 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-16 17:47:06.308 EMVControl Srv900[1964]:  module.system_time            = 3909639.500 s
+2024-09-16 17:47:06.308 EMVControl Srv900[1964]:  module.adc_24v                = (24.69:24.71:24.80) V
+2024-09-16 17:47:06.309 EMVControl Srv900[1964]:  module.adc_temp               = 35.3 deg
+2024-09-16 17:47:06.311 EMVControl Srv900[1964]:  module.l900_rx                = 1644997
+2024-09-16 17:47:06.312 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-16 17:47:06.312 EMVControl Srv900[1964]:  module.l900_tx                = 1652332
+2024-09-16 17:47:06.312 EMVControl Srv900[1964]:  module.lm_temp                = 31.5 deg
+2024-09-16 17:48:56.985 EMVControl ntpd_log: stratum=4, drift=-26ppm, offset=0.018592s poll=4096
+2024-09-16 17:48:57.016 EMVControl ntpd_log: Inform voie about 'ntpd_ok'
+2024-09-16 17:48:57.028 EMVControl Voie[1900]: WD-event => wd=2, Ev=8, file=Msg0_9.txt
+2024-09-16 17:48:57.028 EMVControl Voie[1900]: Read event notification from 0_0: event #950, err OK
+2024-09-16 17:48:57.028 EMVControl Voie[1900]: Event #950
+2024-09-16 17:48:57.028 EMVControl Voie[1900]: TX >> A: Fct [E] - Len=5+7
+2024-09-16 17:48:57.028 EMVControl Voie[1900]:     > AE0070011950
+2024-09-16 17:48:57.094 EMVControl Voie[1900]: WD-event => wd=2, Ev=80, file=Msg0_9.txt.old
+2024-09-16 17:49:07.310 EMVControl Srv900[1964]: NFCL1 status
+2024-09-16 17:49:07.310 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-16 17:49:07.310 EMVControl Srv900[1964]:  Frames from Module            = 1652473
+2024-09-16 17:49:07.310 EMVControl Srv900[1964]:  Frames to Module              = 1644744
+2024-09-16 17:49:07.310 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1640392:1640392:0
+2024-09-16 17:49:07.310 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-16 17:49:07.310 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-16 17:49:07.310 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-16 17:49:07.310 EMVControl Srv900[1964]:  module.system_time            = 3909759.250 s
+2024-09-16 17:49:07.310 EMVControl Srv900[1964]:  module.adc_24v                = (24.69:24.70:24.80) V
+2024-09-16 17:49:07.311 EMVControl Srv900[1964]:  module.adc_temp               = 35.3 deg
+2024-09-16 17:49:07.313 EMVControl Srv900[1964]:  module.l900_rx                = 1645021
+2024-09-16 17:49:07.314 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-16 17:49:07.314 EMVControl Srv900[1964]:  module.l900_tx                = 1652356
+2024-09-16 17:49:07.314 EMVControl Srv900[1964]:  module.lm_temp                = 31.4 deg
+2024-09-16 17:51:08.317 EMVControl Srv900[1964]: NFCL1 status
+2024-09-16 17:51:08.317 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-16 17:51:08.317 EMVControl Srv900[1964]:  Frames from Module            = 1652498
+2024-09-16 17:51:08.317 EMVControl Srv900[1964]:  Frames to Module              = 1644768
+2024-09-16 17:51:08.317 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1640416:1640416:0
+2024-09-16 17:51:08.317 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-16 17:51:08.317 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-16 17:51:08.317 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-16 17:51:08.317 EMVControl Srv900[1964]:  module.system_time            = 3909879.250 s
+2024-09-16 17:51:08.318 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-16 17:51:08.318 EMVControl Srv900[1964]:  module.adc_temp               = 36.3 deg
+2024-09-16 17:51:08.321 EMVControl Srv900[1964]:  module.l900_rx                = 1645045
+2024-09-16 17:51:08.321 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-16 17:51:08.321 EMVControl Srv900[1964]:  module.l900_tx                = 1652380
+2024-09-16 17:51:08.321 EMVControl Srv900[1964]:  module.lm_temp                = 31.2 deg
+2024-09-16 17:53:09.314 EMVControl Srv900[1964]: NFCL1 status
+2024-09-16 17:53:09.314 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-16 17:53:09.314 EMVControl Srv900[1964]:  Frames from Module            = 1652522
+2024-09-16 17:53:09.314 EMVControl Srv900[1964]:  Frames to Module              = 1644792
+2024-09-16 17:53:09.314 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1640440:1640440:0
+2024-09-16 17:53:09.314 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-16 17:53:09.314 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-16 17:53:09.314 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-16 17:53:09.314 EMVControl Srv900[1964]:  module.system_time            = 3909999.250 s
+2024-09-16 17:53:09.314 EMVControl Srv900[1964]:  module.adc_24v                = (24.69:24.73:24.80) V
+2024-09-16 17:53:09.314 EMVControl Srv900[1964]:  module.adc_temp               = 35.8 deg
+2024-09-16 17:53:09.317 EMVControl Srv900[1964]:  module.l900_rx                = 1645069
+2024-09-16 17:53:09.318 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-16 17:53:09.318 EMVControl Srv900[1964]:  module.l900_tx                = 1652404
+2024-09-16 17:53:09.318 EMVControl Srv900[1964]:  module.lm_temp                = 31.2 deg
+2024-09-16 17:55:09.341 EMVControl Srv900[1964]: NFCL1 status
+2024-09-16 17:55:09.341 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-16 17:55:09.341 EMVControl Srv900[1964]:  Frames from Module            = 1652546
+2024-09-16 17:55:09.341 EMVControl Srv900[1964]:  Frames to Module              = 1644816
+2024-09-16 17:55:09.341 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1640464:1640464:0
+2024-09-16 17:55:09.341 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-16 17:55:09.341 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-16 17:55:09.341 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-16 17:55:09.342 EMVControl Srv900[1964]:  module.system_time            = 3910119.500 s
+2024-09-16 17:55:09.342 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-16 17:55:09.342 EMVControl Srv900[1964]:  module.adc_temp               = 35.8 deg
+2024-09-16 17:55:09.345 EMVControl Srv900[1964]:  module.l900_rx                = 1645093
+2024-09-16 17:55:09.345 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-16 17:55:09.345 EMVControl Srv900[1964]:  module.l900_tx                = 1652428
+2024-09-16 17:55:09.345 EMVControl Srv900[1964]:  module.lm_temp                = 31.4 deg
+2024-09-16 17:57:06.979 EMVControl taskFtp2: Ftp1 said i have to load new xml config
+2024-09-16 17:57:07.125 EMVControl taskFtp2: Failed to read 2. ftp set: ip='' user='' filename=''
+2024-09-16 17:57:10.284 EMVControl Srv900[1964]: NFCL1 status
+2024-09-16 17:57:10.284 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-16 17:57:10.284 EMVControl Srv900[1964]:  Frames from Module            = 1652570
+2024-09-16 17:57:10.284 EMVControl Srv900[1964]:  Frames to Module              = 1644840
+2024-09-16 17:57:10.284 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1640488:1640488:0
+2024-09-16 17:57:10.284 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-16 17:57:10.284 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-16 17:57:10.284 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-16 17:57:10.284 EMVControl Srv900[1964]:  module.system_time            = 3910239.250 s
+2024-09-16 17:57:10.284 EMVControl Srv900[1964]:  module.adc_24v                = (24.68:24.71:24.80) V
+2024-09-16 17:57:10.284 EMVControl Srv900[1964]:  module.adc_temp               = 35.3 deg
+2024-09-16 17:57:10.288 EMVControl Srv900[1964]:  module.l900_rx                = 1645117
+2024-09-16 17:57:10.288 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-16 17:57:10.288 EMVControl Srv900[1964]:  module.l900_tx                = 1652452
+2024-09-16 17:57:10.288 EMVControl Srv900[1964]:  module.lm_temp                = 31.4 deg
+2024-09-16 17:59:10.300 EMVControl Srv900[1964]: NFCL1 status
+2024-09-16 17:59:10.300 EMVControl Srv900[1964]:  Frames with bad CS            = 2
+2024-09-16 17:59:10.300 EMVControl Srv900[1964]:  Frames from Module            = 1652594
+2024-09-16 17:59:10.300 EMVControl Srv900[1964]:  Frames to Module              = 1644864
+2024-09-16 17:59:10.300 EMVControl Srv900[1964]:  Ping:Pong:delta               = 1640512:1640512:0
+2024-09-16 17:59:10.300 EMVControl Srv900[1964]:  module.serial_number          = NFC190919040
+2024-09-16 17:59:10.300 EMVControl Srv900[1964]:  module.rcm_srs10              = 0482
+2024-09-16 17:59:10.300 EMVControl Srv900[1964]:  module.custom_reset_byte      = 0
+2024-09-16 17:59:10.300 EMVControl Srv900[1964]:  module.system_time            = 3910359.250 s
+2024-09-16 17:59:10.300 EMVControl Srv900[1964]:  module.adc_24v                = (24.69:24.71:24.80) V
+2024-09-16 17:59:10.300 EMVControl Srv900[1964]:  module.adc_temp               = 35.3 deg
+2024-09-16 17:59:10.304 EMVControl Srv900[1964]:  module.l900_rx                = 1645141
+2024-09-16 17:59:10.304 EMVControl Srv900[1964]:  module.l900_rx_broken         = 0
+2024-09-16 17:59:10.304 EMVControl Srv900[1964]:  module.l900_tx                = 1652476
+2024-09-16 17:59:10.304 EMVControl Srv900[1964]:  module.lm_temp                = 31.2 deg
