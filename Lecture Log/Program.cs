@@ -19,7 +19,7 @@ public class Program
     public static Regex recupTramePattern = new ConstantVar().RECUP_TRAME_PATTERN;
     public static string[] bannedChar = new ConstantVar().BANNED_CHAR;
 
-    private static void CreateBdd()
+    private static async Task CreateBdd()
     {
         string settings = "Data Source=log_info.db;Version=3";
         Console.WriteLine(":: [*] BDD Connection.");
@@ -27,11 +27,12 @@ public class Program
         {
             using (SQLiteConnection connection = new SQLiteConnection(settings))
             {
-                connection.Open();
+                await connection.OpenAsync(); // OpenAsync pour que l'on puisse ouvrir la bdd sans attendre que la ligne s'exécute 
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
+                    // Création de la BDD
                     command.CommandText = TblChar.CREATE_BDD;
-                    command.ExecuteNonQuery();
+                    await command.ExecuteNonQueryAsync();
                     Console.WriteLine(":: [+] BDD Connection OK !\r\n::");
                     using (StreamReader reader = new StreamReader(finalFile))
                     {
@@ -41,8 +42,7 @@ public class Program
                         while ((line = reader.ReadLine()) != null)
                         {
                             command.CommandText = line;
-                            command.ExecuteNonQuery();  // Exécuter la commande SQL
-                            //Console.WriteLine($"Requête exécutée : {line} \r\n");
+                            await command.ExecuteNonQueryAsync();  // Exécuter la commande SQL de manière asynchrone
                         }
                         Console.WriteLine(":: [+] Queries executed successfully !");
                     }
@@ -196,8 +196,8 @@ public class Program
 
         ReadAllFile();
         FileManagement();
-        CreateBdd();
-        
+        _ = CreateBdd(); // "_ =" sert à ce que la valeur retournée est ignorée
+
         // Arrête le chronomètre
         stopwatch.Stop();
 
@@ -205,6 +205,6 @@ public class Program
         TimeSpan elapsed = stopwatch.Elapsed;
         DisplayRuntime(elapsed);
 
-        BDDValueCheck.CBDDValueCheck.MainBDD();
+        //BDDValueCheck.CBDDValueCheck.MainBDD();
     }
 }
