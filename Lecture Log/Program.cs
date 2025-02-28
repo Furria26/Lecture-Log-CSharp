@@ -34,17 +34,32 @@ public class Program
                     command.CommandText = TblChar.CREATE_BDD;
                     await command.ExecuteNonQueryAsync();
                     Console.WriteLine(":: [+] BDD Connection OK !\r\n::");
-                    using (StreamReader reader = new StreamReader(finalFile))
+
+                    using (var transaction = connection.BeginTransaction())
                     {
-                        string? line;
-                        Console.WriteLine(":: [*] Execute SQL queries.");
-                        // Lire chaque ligne du fichier
-                        while ((line = reader.ReadLine()) != null)
+                        using (StreamReader reader = new StreamReader(finalFile))
                         {
-                            command.CommandText = line;
-                            await command.ExecuteNonQueryAsync();  // Exécuter la commande SQL de manière asynchrone
+                            string? line;
+                            Console.WriteLine(":: [*] Execute SQL queries.");
+                            //command.CommandText =
+                            //        @"
+                            //        INSERT INTO T_TRANS 
+                            //        (Collecte,Remise,Num,TDate,TTime,Pan,Approved,Amount,Aid,PanHash,Emv,Iso2,
+                            //        Online,Prop,TACIAC,Name,Bank,Tags,Timings,IdVoie,Smact)
+                            //        VALUES ($)
+                            //        ";
+                            // Parameters
+
+                            // Lire chaque ligne du fichier
+                            while ((line = reader.ReadLine()) != null)
+                            {
+                                command.CommandText = line;
+                                command.ExecuteNonQuery();  // Exécuter la commande SQL de manière asynchrone
+                            }
+                            //await transaction.CommitAsync();
+                            transaction.Commit();
+                            Console.WriteLine(":: [+] Queries executed successfully !");
                         }
-                        Console.WriteLine(":: [+] Queries executed successfully !");
                     }
                 }
             }// Close BDD 
@@ -174,7 +189,7 @@ public class Program
     {
         // Affiche le temps écoulé en format minute:seconde:milliseconde
         Console.WriteLine("::---------------------------------------------------------------------------------------------------");
-        Console.WriteLine(":: Temps écoulé: {0:D2}min {1:D2}sec {2:D3}mm",
+        Console.WriteLine(":: Temps écoulé: {0:D2}min {1:D2}sec {2:D3}ms",
             elapsed.Minutes,          // Minutes
             elapsed.Seconds,          // Secondes
             elapsed.Milliseconds);    // Millisecondes
