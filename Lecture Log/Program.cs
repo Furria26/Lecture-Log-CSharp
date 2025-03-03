@@ -19,10 +19,9 @@ public class Program
     public static Regex recupTramePattern = new ConstantVar().RECUP_TRAME_PATTERN;
     public static string[] bannedChar = new ConstantVar().BANNED_CHAR;
 
-    private static async Task CreateBdd()
+    private static async Task BddManager()
     {
         string settings = "Data Source=log_info.db;Version=3";
-        Console.WriteLine(":: [*] BDD Connection.");
         try
         {
             using (SQLiteConnection connection = new SQLiteConnection(settings))
@@ -30,11 +29,6 @@ public class Program
                 await connection.OpenAsync(); // OpenAsync pour que l'on puisse ouvrir la bdd sans attendre que la ligne s'exécute 
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
-                    // Création de la BDD
-                    command.CommandText = TblChar.CREATE_BDD;
-                    await command.ExecuteNonQueryAsync();
-                    Console.WriteLine(":: [+] BDD Connection OK !\r\n::");
-
                     using (var transaction = connection.BeginTransaction())
                     {
                         using (StreamReader reader = new StreamReader(finalFile))
@@ -54,6 +48,7 @@ public class Program
                             while ((line = reader.ReadLine()) != null)
                             {
                                 command.CommandText = line;
+                                //Console.WriteLine(line);
                                 command.ExecuteNonQuery();  // Exécuter la commande SQL de manière asynchrone
                             }
                             //await transaction.CommitAsync();
@@ -178,6 +173,37 @@ public class Program
         }
     }
 
+    private static void CreateBdd()
+    {
+        string settings = "Data Source=log_info.db;Version=3";
+        Console.WriteLine(":: [*] BDD Connection.");
+
+        using (SQLiteConnection connection = new SQLiteConnection(settings))
+        {
+            connection.OpenAsync(); // OpenAsync pour que l'on puisse ouvrir la bdd sans attendre que la ligne s'exécute 
+            using (SQLiteCommand command = new SQLiteCommand(connection))
+            {
+                if (!File.Exists(fileBdd))
+                {
+                    // Création de la table T_TRANS
+                    command.CommandText = TblChar.CREATE_BDD;
+                    command.ExecuteNonQueryAsync();
+                    Console.WriteLine(":: [+] BDD Connection OK !\r\n::");
+                }
+                else
+                {
+                    // Réinitialisation de la table 
+                    command.CommandText = "DROP TABLE T_TRANS";
+                    command.ExecuteNonQueryAsync();
+
+                    command.CommandText = TblChar.CREATE_BDD;
+                    command.ExecuteNonQueryAsync();
+                    Console.WriteLine(":: [+] BDD Connection OK !\r\n::");
+                }
+            }
+        }  
+    }
+
     private static void OutputTitle()
     {
         Console.WriteLine("::---------------------------------------------------------------------------------------------------");
@@ -204,14 +230,16 @@ public class Program
         Stopwatch stopwatch = new Stopwatch();
         stopwatch.Start();
 
+        CreateBdd();
+
         // Delete files before execution
         if (File.Exists(fileData)) File.Delete(fileData);
         if (File.Exists(finalFile)) File.Delete(finalFile);
-        if (File.Exists(fileBdd)) File.Delete(fileBdd);
+        //if (File.Exists(fileBdd)) File.Delete(fileBdd);
 
         ReadAllFile();
         FileManagement();
-        _ = CreateBdd(); // "_ =" sert à ce que la valeur retournée est ignorée
+        _ = BddManager(); // "_ =" sert à ce que la valeur retournée soit ignorée
 
         // Arrête le chronomètre
         stopwatch.Stop();
