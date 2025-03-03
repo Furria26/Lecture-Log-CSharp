@@ -7,7 +7,6 @@ using static System.Net.Mime.MediaTypeNames;
 using System.Data.SQLite;
 using System.Diagnostics;
 using Var;
-
 using BDDValueCheck;
 
 public class Program
@@ -35,14 +34,6 @@ public class Program
                         {
                             string? line;
                             Console.WriteLine(":: [*] Execute SQL queries.");
-                            //command.CommandText =
-                            //        @"
-                            //        INSERT INTO T_TRANS 
-                            //        (Collecte,Remise,Num,TDate,TTime,Pan,Approved,Amount,Aid,PanHash,Emv,Iso2,
-                            //        Online,Prop,TACIAC,Name,Bank,Tags,Timings,IdVoie,Smact)
-                            //        VALUES ($)
-                            //        ";
-                            // Parameters
 
                             // Lire chaque ligne du fichier
                             while ((line = reader.ReadLine()) != null)
@@ -65,43 +56,58 @@ public class Program
         }
     }
 
+
+
     private static void FileManagement()
     {
         Console.WriteLine(":: [*] Creating SQL queries.");
         using (StreamReader reader = new StreamReader(fileData))
         {
-            List<string> tblCommandSQL = new List<string>();
-            string? line;
-            while ((line = reader.ReadLine()) != null)
+            using (StreamWriter writer = new StreamWriter(finalFile, true))
             {
-                if (Regex.IsMatch(line, @"^insert"))
+                // Tableau qui contient une requête SQL
+                List<string> tblCommandSQL = new List<string>();
+                // Tableau qui contient toutes les requêtes SQL
+                List<string> allCommandSQL = new List<string>();
+                string? line;
+                while ((line = reader.ReadLine()) != null)
                 {
-                    // SI la taille == 0 ALORS j'ajoute la ligne dans le tableau 
-                    if (tblCommandSQL.Count == 0)
+                    if (Regex.IsMatch(line, @"^insert"))
                     {
-                        tblCommandSQL.Add(line);
+                        // SI la taille == 0 ALORS j'ajoute la ligne dans le tableau 
+                        if (tblCommandSQL.Count == 0)
+                        {
+                            tblCommandSQL.Add(line);
+                        }
+                        else
+                        {
+                            string? commandSQL = string.Join("", tblCommandSQL);
+                            allCommandSQL.Add(commandSQL);
+                            //writer.WriteLine(commandSQL);
+                            tblCommandSQL.Clear();
+                            tblCommandSQL.Add(line);
+                        }
                     }
                     else
                     {
-                        string? commandSQL = string.Join("", tblCommandSQL);
-                        using (StreamWriter writer = new StreamWriter(finalFile, true))
-                        {
-                            writer.WriteLine(commandSQL);
-                        }
-                        tblCommandSQL.Clear();
                         tblCommandSQL.Add(line);
                     }
                 }
-                else
+                string? lastCommandSQL = string.Join("", tblCommandSQL);
+                allCommandSQL.Add(lastCommandSQL);
+
+                for (int i = 0; i < allCommandSQL.Count; i++)
                 {
-                    tblCommandSQL.Add(line);
+                    if (i % 10 == 0)
+                    {
+                        // Faire en sorte de transformer une requête pour 10 
+                    }
                 }
-            }
-            string? lastCommandSQL = string.Join("", tblCommandSQL);
-            using (StreamWriter writer = new StreamWriter(finalFile, true))
-            {
-                writer.WriteLine(lastCommandSQL);
-            }
+
+                //string? test = string.Join(";", allCommandSQL);
+                //writer.WriteLine(lastCommandSQL);
+                //writer.WriteLine(test);
+            } 
         }
         Console.WriteLine(":: [+] SQL queries created !\r\n::");
     }
@@ -201,7 +207,7 @@ public class Program
                     Console.WriteLine(":: [+] BDD Connection OK !\r\n::");
                 }
             }
-        }  
+        }
     }
 
     private static void OutputTitle()
@@ -239,7 +245,7 @@ public class Program
 
         ReadAllFile();
         FileManagement();
-        _ = BddManager(); // "_ =" sert à ce que la valeur retournée soit ignorée
+        //_ = BddManager(); // "_ =" sert à ce que la valeur retournée soit ignorée
 
         // Arrête le chronomètre
         stopwatch.Stop();
