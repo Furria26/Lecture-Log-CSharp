@@ -7,8 +7,10 @@ namespace Var
     public class FileName
     {
         public string FILE_BDD = "log_info.db";
+        //public string FILE_BDD = "toto.db";
         public string FILE_DATA = DateTime.Now.ToString("yyyyMMdd") + ".log";
         public string FINAL_FILE = "file_command_sql.txt";
+        //public string FINAL_FILE = "test_key_primaire.sql";
     }
 
     public class ConstantVar
@@ -60,6 +62,31 @@ namespace Var
         "$1,"
         };
 
+        //public static string CREATE_BDD = @"
+        //CREATE TABLE T_TRANS (
+        //    TDate char(6),
+        //    Remise integer,
+        //    Num integer,
+        //    TTime char(6),
+        //    Approved integer,
+        //    Collecte integer,
+        //    Amount integer,
+        //    Aid char(32),
+        //    Pan char(19),
+        //    Iso2 char(8),
+        //    TacIac char(66),
+        //    Online char(80),
+        //    Emv text(400),
+        //    Prop char(20),
+        //    PanHash char(64),
+        //    Name char(48),
+        //    Bank char(64),
+        //    Tags char(40),
+        //    IdVoie char(40),
+        //    Smact integer,
+        //    Timings char(30),
+        //    PRIMARY KEY( Remise, Num )
+        //);
         public static string CREATE_BDD = @"
         CREATE TABLE T_TRANS (
             TDate char(6),
@@ -82,8 +109,7 @@ namespace Var
             Tags char(40),
             IdVoie char(40),
             Smact integer,
-            Timings char(30),
-            PRIMARY KEY( Remise, Num )
+            Timings char(30)
         );
     ";
     }

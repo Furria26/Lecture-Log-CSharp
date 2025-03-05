@@ -8,15 +8,19 @@ using System.Data.SQLite;
 using System.Diagnostics;
 using Var;
 using BDDValueCheck;
+using System.Threading.Tasks;
+using System.ComponentModel.Design;
 
 public class Program
 {
-    public static string fileData = new FileName().FILE_DATA;
     public static string finalFile = new FileName().FINAL_FILE;
     public static string fileBdd = new FileName().FILE_BDD;
     public static string log_dir = new ConstantVar().LOG_DIRECTORY;
     public static Regex recupTramePattern = new ConstantVar().RECUP_TRAME_PATTERN;
     public static string[] bannedChar = new ConstantVar().BANNED_CHAR;
+
+    // C'est une variable non static
+    //public List<string> linesRecovered = new List<string>();
 
     private static async Task BddManager()
     {
@@ -28,25 +32,27 @@ public class Program
                 await connection.OpenAsync(); // OpenAsync pour que l'on puisse ouvrir la bdd sans attendre que la ligne s'exécute 
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
-                    using (var transaction = connection.BeginTransaction())
+                    Console.WriteLine(":: [*] Execute SQL queries.");
+                    for (int i = 0; i < 100; i++) //TEST
                     {
-                        using (StreamReader reader = new StreamReader(finalFile))
+                        using (var transaction = connection.BeginTransaction())
                         {
-                            string? line;
-                            Console.WriteLine(":: [*] Execute SQL queries.");
-
-                            // Lire chaque ligne du fichier
-                            while ((line = reader.ReadLine()) != null)
+                            using (StreamReader reader = new StreamReader(finalFile))
                             {
-                                command.CommandText = line;
-                                //Console.WriteLine(line);
-                                command.ExecuteNonQuery();  // Exécuter la commande SQL de manière asynchrone
+                                string? line;
+                                // Lire chaque ligne du fichier
+                                while ((line = reader.ReadLine()) != null)
+                                {
+                                    command.CommandText = line;
+                                    //Console.WriteLine(line + "\r\n");
+                                    command.ExecuteNonQuery();
+                                }
+                                //await transaction.CommitAsync();
+                                transaction.Commit();
                             }
-                            //await transaction.CommitAsync();
-                            transaction.Commit();
-                            Console.WriteLine(":: [+] Queries executed successfully !");
                         }
                     }
+                    Console.WriteLine(":: [+] Queries executed successfully !");
                 }
             }// Close BDD 
         }
@@ -56,63 +62,47 @@ public class Program
         }
     }
 
-
-
-    private static void FileManagement()
+    private static void InsertInToFileSQL(StreamWriter writer, List<string> allCommandSQL)
     {
-        Console.WriteLine(":: [*] Creating SQL queries.");
-        using (StreamReader reader = new StreamReader(fileData))
+        List<string> hundredCommandSQL = new List<string>();
+        for (int i = 0; i < allCommandSQL.Count; i++)
         {
-            using (StreamWriter writer = new StreamWriter(finalFile, true))
+            if (i == 0)
             {
-                // Tableau qui contient une requête SQL
-                List<string> tblCommandSQL = new List<string>();
-                // Tableau qui contient toutes les requêtes SQL
-                List<string> allCommandSQL = new List<string>();
-                string? line;
-                while ((line = reader.ReadLine()) != null)
+                hundredCommandSQL.Add(allCommandSQL[i]);
+            }
+            else if (i % 100 == 0 && i != 0)
+            {
+                string? stringCmdSQL = string.Join(",", hundredCommandSQL);
+                writer.Write(stringCmdSQL + "\r\n");
+                hundredCommandSQL.Clear();
+                stringCmdSQL = "";
+                hundredCommandSQL.Add(allCommandSQL[i]);
+            }
+            else
+            {
+                if (i == allCommandSQL.Count - 1)
                 {
-                    if (Regex.IsMatch(line, @"^insert"))
-                    {
-                        // SI la taille == 0 ALORS j'ajoute la ligne dans le tableau 
-                        if (tblCommandSQL.Count == 0)
-                        {
-                            tblCommandSQL.Add(line);
-                        }
-                        else
-                        {
-                            string? commandSQL = string.Join("", tblCommandSQL);
-                            allCommandSQL.Add(commandSQL);
-                            //writer.WriteLine(commandSQL);
-                            tblCommandSQL.Clear();
-                            tblCommandSQL.Add(line);
-                        }
-                    }
-                    else
-                    {
-                        tblCommandSQL.Add(line);
-                    }
+                    allCommandSQL[i] = allCommandSQL[i].Substring(157);
+                    string? stringCmdSQL = string.Join(",", hundredCommandSQL);
+                    writer.Write(stringCmdSQL + "," + allCommandSQL[i] + "\r\n");
+                    hundredCommandSQL.Clear();
                 }
-                string? lastCommandSQL = string.Join("", tblCommandSQL);
-                allCommandSQL.Add(lastCommandSQL);
-
-                for (int i = 0; i < allCommandSQL.Count; i++)
+                else
                 {
-                    if (i % 10 == 0)
-                    {
-                        // Faire en sorte de transformer une requête pour 10 
-                    }
+                    allCommandSQL[i] = allCommandSQL[i].Substring(157);
+                    hundredCommandSQL.Add(allCommandSQL[i]);
                 }
-
-                //string? test = string.Join(";", allCommandSQL);
-                //writer.WriteLine(lastCommandSQL);
-                //writer.WriteLine(test);
-            } 
+            }
         }
-        Console.WriteLine(":: [+] SQL queries created !\r\n::");
+        if (hundredCommandSQL.Count > 0)
+        {
+            string stringCmdSQL = string.Join(",", hundredCommandSQL);
+            writer.Write(stringCmdSQL + "\r\n");
+        }
     }
 
-    private static void WriteLogFile(string lineLog, StreamWriter writer)
+    private static void WriteLogFile(string lineLog, StreamWriter writer, List<string> linesRecovered, List<string> allCommandSQL)
     {
         try
         {
@@ -135,7 +125,15 @@ public class Program
                         {
                             lineLog = Regex.Replace(lineLog, TblChar.SEARCH_CHAR[count], TblChar.REPLACE_CHAR[count]);
                         }
-                        writer.WriteLine(lineLog.Trim());
+                        linesRecovered.Add(lineLog);
+                        if (linesRecovered.Count == 6)
+                        {
+                            // Création de la requête sql simple
+                            string? oneSQLCommand = string.Join("", linesRecovered);
+                            allCommandSQL.Add(oneSQLCommand);
+                            //Console.WriteLine(oneSQLCommand);
+                            linesRecovered.Clear();
+                        }
                     }
                 }
             }
@@ -152,25 +150,27 @@ public class Program
         {
             // Parcourir tous les fichiers du dossier
             string[] fichiers = Directory.GetFiles(log_dir);
-
-            using (StreamWriter writer = new StreamWriter(fileData, true)) // Ouvre le fichier une seule fois
+            using (StreamWriter writer = new StreamWriter(finalFile, true)) // Ouvre le fichier une seule fois
             {
                 Console.WriteLine(":: [*] Reading files.");
+                // Tableau pour les Lignes récupérées
+                List<string> linesRecovered = new List<string>();
+                // Tableau contenant toutes les requêtes SQL
+                List<string> allCommandSQL = new List<string>();
                 foreach (string fichier in fichiers)
                 {
-                    //Console.WriteLine($"Traitement du fichier : {fichier}");
                     using (StreamReader reader = new StreamReader(fichier))
                     {
-                        //Console.WriteLine($":: Lecture du fichier : {fichier}"); 
                         string? line;
                         // Lire chaque ligne du fichier
                         while ((line = reader.ReadLine()) != null)
                         {
-                            WriteLogFile(line, writer);
+                            WriteLogFile(line, writer, linesRecovered, allCommandSQL);
                         }
                     }
                 }
                 Console.WriteLine(":: [+] Files are read !\r\n::");
+                InsertInToFileSQL(writer, allCommandSQL);
             }
         }
         else
@@ -199,7 +199,7 @@ public class Program
                 else
                 {
                     // Réinitialisation de la table 
-                    command.CommandText = "DROP TABLE T_TRANS";
+                    command.CommandText = "DROP TABLE IF EXISTS T_TRANS";
                     command.ExecuteNonQueryAsync();
 
                     command.CommandText = TblChar.CREATE_BDD;
@@ -239,13 +239,10 @@ public class Program
         CreateBdd();
 
         // Delete files before execution
-        if (File.Exists(fileData)) File.Delete(fileData);
-        if (File.Exists(finalFile)) File.Delete(finalFile);
-        //if (File.Exists(fileBdd)) File.Delete(fileBdd);
+        //if (File.Exists(finalFile)) File.Delete(finalFile);
 
         ReadAllFile();
-        FileManagement();
-        //_ = BddManager(); // "_ =" sert à ce que la valeur retournée soit ignorée
+        _ = BddManager(); // "_ =" sert à ce que la valeur retournée soit ignorée
 
         // Arrête le chronomètre
         stopwatch.Stop();
