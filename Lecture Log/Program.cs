@@ -33,7 +33,7 @@ public class Program
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
                     Console.WriteLine(":: [*] Execute SQL queries.");
-                    for (int i = 0; i < 100; i++) //TEST
+                    for (int i = 0; i < 1; i++) //TEST
                     {
                         using (var transaction = connection.BeginTransaction())
                         {
@@ -85,7 +85,12 @@ public class Program
                 {
                     allCommandSQL[i] = allCommandSQL[i].Substring(157);
                     string? stringCmdSQL = string.Join(",", hundredCommandSQL);
+                    //for (global::System.Int32 j = 0; j < 100000; j++)
+                    //{
+                    //    writer.Write(stringCmdSQL + "," + allCommandSQL[i] + "\r\n");
+                    //}
                     writer.Write(stringCmdSQL + "," + allCommandSQL[i] + "\r\n");
+                    
                     hundredCommandSQL.Clear();
                 }
                 else
@@ -130,8 +135,8 @@ public class Program
                         {
                             // Création de la requête sql simple
                             string? oneSQLCommand = string.Join("", linesRecovered);
+                            //writer.WriteLine(oneSQLCommand);
                             allCommandSQL.Add(oneSQLCommand);
-                            //Console.WriteLine(oneSQLCommand);
                             linesRecovered.Clear();
                         }
                     }
@@ -239,7 +244,7 @@ public class Program
         CreateBdd();
 
         // Delete files before execution
-        //if (File.Exists(finalFile)) File.Delete(finalFile);
+        if (File.Exists(finalFile)) File.Delete(finalFile);
 
         ReadAllFile();
         _ = BddManager(); // "_ =" sert à ce que la valeur retournée soit ignorée
@@ -252,5 +257,11 @@ public class Program
         DisplayRuntime(elapsed);
 
         //BDDValueCheck.CBDDValueCheck.MainBDD();
+
+
+        //string sqlitePath = @"C:\sqlite\sqlite3.exe"; // Remplacez par le chemin réel de sqlite3
+        //string arguments = @"log_info.db "".import --csv file_command_sql_2.csv T_TRANS""";
+
+        //Process.Start(sqlitePath, arguments);
     }
 }

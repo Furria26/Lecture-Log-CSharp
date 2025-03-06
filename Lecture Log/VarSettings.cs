@@ -9,6 +9,7 @@ namespace Var
         public string FILE_BDD = "log_info.db";
         //public string FILE_BDD = "toto.db";
         public string FILE_DATA = DateTime.Now.ToString("yyyyMMdd") + ".log";
+        //public string FINAL_FILE = "file_command_sql.txt";
         public string FINAL_FILE = "file_command_sql.txt";
         //public string FINAL_FILE = "test_key_primaire.sql";
     }
