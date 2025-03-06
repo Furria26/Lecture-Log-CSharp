@@ -7,8 +7,17 @@ namespace Var
 {
     public class FileName
     {
+<<<<<<< HEAD
         public static string FILE_BDD = "log_info.db";
         public static string FINAL_FILE = "file_command_sql.csv";
+=======
+        public string FILE_BDD = "log_info.db";
+        //public string FILE_BDD = "toto.db";
+        public string FILE_DATA = DateTime.Now.ToString("yyyyMMdd") + ".log";
+        //public string FINAL_FILE = "file_command_sql.txt";
+        public string FINAL_FILE = "file_command_sql.txt";
+        //public string FINAL_FILE = "test_key_primaire.sql";
+>>>>>>> 66c9d4e89a548de3e04c951030c695f941f798cd
     }
 
     public class ConstantVar

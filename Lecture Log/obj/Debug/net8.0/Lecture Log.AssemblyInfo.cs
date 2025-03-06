@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lecture Log")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d34f3b7acad0bdf4c7a94618ea3b02bfc13ea331")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6004ab7260b2e84e1f5069b3365a008ba5c3b7bf")]
+>>>>>>> 66c9d4e89a548de3e04c951030c695f941f798cd
 [assembly: System.Reflection.AssemblyProductAttribute("Lecture Log")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lecture Log")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
