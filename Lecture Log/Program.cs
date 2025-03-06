@@ -7,105 +7,70 @@ using static System.Net.Mime.MediaTypeNames;
 using System.Data.SQLite;
 using System.Diagnostics;
 using Var;
-
 using BDDValueCheck;
+using System.Threading.Tasks;
+using System.ComponentModel.Design;
+using System.Security.Cryptography;
+using System.Xml.Linq;
 
 public class Program
 {
-    public static string fileData = new FileName().FILE_DATA;
-    public static string finalFile = new FileName().FINAL_FILE;
-    public static string fileBdd = new FileName().FILE_BDD;
-    public static string log_dir = new ConstantVar().LOG_DIRECTORY;
-    public static Regex recupTramePattern = new ConstantVar().RECUP_TRAME_PATTERN;
-    public static string[] bannedChar = new ConstantVar().BANNED_CHAR;
-
-    private static void CreateBdd()
+    private static void WriteCommandFile(string lineLog, StreamWriter writer, List<string> linesRecovered)
     {
-        string settings = "Data Source=log_info.db;Version=3";
-        Console.WriteLine(":: [*] BDD Connection.");
-        try
-        {
-            using (SQLiteConnection connection = new SQLiteConnection(settings))
-            {
-                connection.Open();
-                using (SQLiteCommand command = new SQLiteCommand(connection))
-                {
-                    command.CommandText = TblChar.CREATE_BDD;
-                    command.ExecuteNonQuery();
-                    Console.WriteLine(":: [+] BDD Connection OK !\r\n::");
-                    using (StreamReader reader = new StreamReader(finalFile))
-                    {
-                        string? line;
-                        Console.WriteLine(":: [*] Execute SQL queries.");
-                        // Lire chaque ligne du fichier
-                        while ((line = reader.ReadLine()) != null)
-                        {
-                            command.CommandText = line;
-                            command.ExecuteNonQuery();  // Exécuter la commande SQL
-                            //Console.WriteLine($"Requête exécutée : {line} \r\n");
-                        }
-                        Console.WriteLine(":: [+] Queries executed successfully !");
-                    }
-                }
-            }// Close BDD 
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(":: [-] " + e.Message);
-        }
+        // Variable contenant la requête SQL
+        string oneSQLCommand = string.Join("", linesRecovered);
+
+        string requiredValue = "Values (";
+        int index = oneSQLCommand.IndexOf(requiredValue);
+        int LengthToDeleted = index + requiredValue.Length;
+
+        // Supprimer les caractères pour avec que les valeurs
+        lineLog = oneSQLCommand.Substring(LengthToDeleted, oneSQLCommand.Length - (LengthToDeleted + 1));
+        // Créer un tableau de valeur
+        string[] lineValue = lineLog.Split(',');
+
+
+        ValueBDD.Collecte = Convert.ToInt32(lineValue[0]);
+        ValueBDD.Remise = Convert.ToInt32(lineValue[1]);
+        ValueBDD.Num = Convert.ToInt32(lineValue[2]);
+        ValueBDD.TDate = lineValue[3];
+        ValueBDD.TTime = lineValue[4];
+        ValueBDD.Pan = lineValue[5];
+        ValueBDD.Approved = Convert.ToInt32(lineValue[6]);
+        ValueBDD.Amount = Convert.ToInt32(lineValue[7]);
+        ValueBDD.Aid = lineValue[8];
+        ValueBDD.PanHash = lineValue[9];
+        ValueBDD.Emv = lineValue[10];
+        ValueBDD.Iso2 = lineValue[11];
+        ValueBDD.Online = lineValue[12];
+        ValueBDD.Prop = lineValue[13];
+        ValueBDD.TACIAC = lineValue[14];
+        ValueBDD.Name = lineValue[15];
+        ValueBDD.Bank = lineValue[16];
+        ValueBDD.Tags = lineValue[17];
+        ValueBDD.Timings = lineValue[18];
+        ValueBDD.IdVoie = lineValue[19];
+        ValueBDD.Smact = Convert.ToInt32(lineValue[20]);
+
+        writer.WriteLine(ValueBDD.TDate + "," + ValueBDD.Remise + "," + ValueBDD.Num + "," + ValueBDD.TTime + "," +
+                    ValueBDD.Approved + "," + ValueBDD.Collecte + "," + ValueBDD.Amount + "," + ValueBDD.Aid + "," +
+                    ValueBDD.Pan + "," + ValueBDD.Iso2 + "," + ValueBDD.TACIAC + "," + ValueBDD.Online + "," +
+                    ValueBDD.Emv + "," + ValueBDD.Prop + "," + ValueBDD.PanHash + "," + ValueBDD.Name + "," +
+                    ValueBDD.Bank + "," + ValueBDD.Tags + "," + ValueBDD.IdVoie + "," + ValueBDD.Smact + "," +
+                    ValueBDD.Timings);
     }
 
-    private static void FileManagement()
-    {
-        Console.WriteLine(":: [*] Creating SQL queries.");
-        using (StreamReader reader = new StreamReader(fileData))
-        {
-            List<string> tblCommandSQL = new List<string>();
-            string? line;
-            while ((line = reader.ReadLine()) != null)
-            {
-                if (Regex.IsMatch(line, @"^insert"))
-                {
-                    // SI la taille == 0 ALORS j'ajoute la ligne dans le tableau 
-                    if (tblCommandSQL.Count == 0)
-                    {
-                        tblCommandSQL.Add(line);
-                    }
-                    else
-                    {
-                        string? commandSQL = string.Join("", tblCommandSQL);
-                        using (StreamWriter writer = new StreamWriter(finalFile, true))
-                        {
-                            writer.WriteLine(commandSQL);
-                        }
-                        tblCommandSQL.Clear();
-                        tblCommandSQL.Add(line);
-                    }
-                }
-                else
-                {
-                    tblCommandSQL.Add(line);
-                }
-            }
-            string? lastCommandSQL = string.Join("", tblCommandSQL);
-            using (StreamWriter writer = new StreamWriter(finalFile, true))
-            {
-                writer.WriteLine(lastCommandSQL);
-            }
-        }
-        Console.WriteLine(":: [+] SQL queries created !\r\n::");
-    }
-
-    private static void WriteLogFile(string lineLog, StreamWriter writer)
+    private static void FiltreLine(string lineLog, StreamWriter writer, List<string> linesRecovered)
     {
         try
         {
-            if (recupTramePattern.Match(lineLog).Success) // Sans .Success la condition retournerait un objet de type match et non un bool 
+            // Filtrage de la ligne
+            if (ConstantVar.RECUP_TRAME_PATTERN.Match(lineLog).Success) // Sans .Success la condition retournerait un objet de type match et non un bool 
             {
-                if (!lineLog.Contains(bannedChar[0]) &&
-                    !lineLog.Contains(bannedChar[1]) &&
-                    !lineLog.Contains(bannedChar[2]) &&
-                    !lineLog.Contains(bannedChar[3]) &&
+                if (!lineLog.Contains(ConstantVar.BANNED_CHAR[0]) &&
+                    !lineLog.Contains(ConstantVar.BANNED_CHAR[1]) &&
+                    !lineLog.Contains(ConstantVar.BANNED_CHAR[2]) &&
+                    !lineLog.Contains(ConstantVar.BANNED_CHAR[3]) &&
                     !lineLog.Contains("where Remise="))
                 {
                     // Remplacer les caractères
@@ -119,7 +84,13 @@ public class Program
                         {
                             lineLog = Regex.Replace(lineLog, TblChar.SEARCH_CHAR[count], TblChar.REPLACE_CHAR[count]);
                         }
-                        writer.WriteLine(lineLog.Trim());
+
+                        linesRecovered.Add(lineLog);
+                        if (linesRecovered.Count == 6)
+                        {
+                            WriteCommandFile(lineLog, writer, linesRecovered);   
+                            linesRecovered.Clear();
+                        }
                     }
                 }
             }
@@ -132,25 +103,25 @@ public class Program
 
     private static void ReadAllFile()
     {
-        if (Directory.Exists(log_dir))
+        if (Directory.Exists(ConstantVar.LOG_DIRECTORY))
         {
             // Parcourir tous les fichiers du dossier
-            string[] fichiers = Directory.GetFiles(log_dir);
-
-            using (StreamWriter writer = new StreamWriter(fileData, true)) // Ouvre le fichier une seule fois
+            string[] fichiers = Directory.GetFiles(ConstantVar.LOG_DIRECTORY);
+            using (StreamWriter writer = new StreamWriter(FileName.FINAL_FILE, true)) // Ouvre le fichier une seule fois
             {
                 Console.WriteLine(":: [*] Reading files.");
+                // Tableau pour les Lignes récupérées
+                List<string> linesRecovered = new List<string>();
+                // Boucler sur tous les fichiers 
                 foreach (string fichier in fichiers)
                 {
-                    //Console.WriteLine($"Traitement du fichier : {fichier}");
                     using (StreamReader reader = new StreamReader(fichier))
                     {
-                        //Console.WriteLine($":: Lecture du fichier : {fichier}"); 
                         string? line;
                         // Lire chaque ligne du fichier
                         while ((line = reader.ReadLine()) != null)
                         {
-                            WriteLogFile(line, writer);
+                            FiltreLine(line, writer, linesRecovered);
                         }
                     }
                 }
@@ -160,6 +131,38 @@ public class Program
         else
         {
             Console.WriteLine(":: [-] The 'log' folder doesn't exist.");
+        }
+    }
+
+    private static void CreateBdd()
+    {
+        string settings = "Data Source=log_info.db;Version=3";
+        Console.WriteLine(":: [*] BDD Connection.");
+
+        using (SQLiteConnection connection = new SQLiteConnection(settings))
+        {
+            // Ouverture de la base de données 
+            connection.Open();
+            using (SQLiteCommand command = new SQLiteCommand(connection))
+            {
+                if (File.Exists(FileName.FILE_BDD))
+                {
+                    // Réinitialisation de la table 
+                    command.CommandText = "DROP TABLE IF EXISTS T_TRANS";
+                    command.ExecuteNonQueryAsync();
+
+                    command.CommandText = TblChar.CREATE_BDD;
+                    command.ExecuteNonQueryAsync();
+                    Console.WriteLine(":: [+] BDD Connection OK !\r\n::");
+                }
+                else
+                {
+                    // Création de la table T_TRANS
+                    command.CommandText = TblChar.CREATE_BDD;
+                    command.ExecuteNonQueryAsync();
+                    Console.WriteLine(":: [+] BDD Connection OK !\r\n::");
+                }
+            }
         }
     }
 
@@ -174,7 +177,7 @@ public class Program
     {
         // Affiche le temps écoulé en format minute:seconde:milliseconde
         Console.WriteLine("::---------------------------------------------------------------------------------------------------");
-        Console.WriteLine(":: Temps écoulé: {0:D2}min {1:D2}sec {2:D3}mm",
+        Console.WriteLine(":: Temps écoulé: {0:D2}min {1:D2}sec {2:D3}ms",
             elapsed.Minutes,          // Minutes
             elapsed.Seconds,          // Secondes
             elapsed.Milliseconds);    // Millisecondes
@@ -189,22 +192,24 @@ public class Program
         Stopwatch stopwatch = new Stopwatch();
         stopwatch.Start();
 
+        CreateBdd();
+
         // Delete files before execution
-        if (File.Exists(fileData)) File.Delete(fileData);
-        if (File.Exists(finalFile)) File.Delete(finalFile);
-        if (File.Exists(fileBdd)) File.Delete(fileBdd);
+        if (File.Exists(FileName.FINAL_FILE)) File.Delete(FileName.FINAL_FILE);
 
         ReadAllFile();
-        FileManagement();
-        CreateBdd();
+
+        string sqlitePath = @"C:\sqlite\sqlite3.exe"; // Remplacez par le chemin réel de sqlite3
+        string arguments = @"log_info.db "".import --csv file_command_sql.txt T_TRANS""";
         
+        // Lancer l'écriture dans la base de donner avec .import
+        Process.Start(sqlitePath, arguments);
+
         // Arrête le chronomètre
         stopwatch.Stop();
 
         // Récupère le temps écoulé
         TimeSpan elapsed = stopwatch.Elapsed;
         DisplayRuntime(elapsed);
-
-        BDDValueCheck.CBDDValueCheck.MainBDD();
     }
 }

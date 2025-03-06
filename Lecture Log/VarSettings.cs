@@ -1,21 +1,46 @@
 ﻿using System;
 using System.IO;
 using System.Text.RegularExpressions;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Var
 {
     public class FileName
     {
-        public string FILE_BDD = "log_info.db";
-        public string FILE_DATA = DateTime.Now.ToString("yyyyMMdd") + ".log";
-        public string FINAL_FILE = "file_command_sql.txt";
+        public static string FILE_BDD = "log_info.db";
+        public static string FINAL_FILE = "file_command_sql.csv";
     }
 
     public class ConstantVar
     {
-        public Regex RECUP_TRAME_PATTERN = new Regex(@"(sql> (BEGIN|Replace|Update|COMMIT))");
-        public string[] BANNED_CHAR = new string[] { "BEGIN TRANSACTION", "COMMIT TRANSACTION", "T_REMISE", "MagColl" };
-        public string LOG_DIRECTORY = @"C:\Users\00048322\OneDrive - VINCI Autoroutes\Documents\C#\Lecture Log\Lecture Log\log";
+        public static Regex RECUP_TRAME_PATTERN = new Regex(@"(sql> (BEGIN|Replace|Update|COMMIT))");
+        public static string[] BANNED_CHAR = new string[] { "BEGIN TRANSACTION", "COMMIT TRANSACTION", "T_REMISE", "MagColl" };
+        public static string LOG_DIRECTORY = @"C:\Users\00048322\OneDrive - VINCI Autoroutes\Documents\C#\Lecture Log\Lecture Log\log";
+    }
+
+    public struct ValueBDD
+    {
+        public static string TDate = "";
+        public static int Remise = 0;
+        public static int Num = 0;
+        public static string TTime = "";
+        public static int Approved = 0;
+        public static int Collecte = 0;
+        public static int Amount = 0;
+        public static string Aid = "";
+        public static string Pan = "";
+        public static string Iso2 = "";
+        public static string TACIAC = "";
+        public static string Online = "";
+        public static string Emv = "";
+        public static string Prop = "";
+        public static string PanHash = "";
+        public static string Name = "";
+        public static string Bank = "";
+        public static string Tags = "";
+        public static string IdVoie = "";
+        public static int Smact = 0;
+        public static string Timings = "";
     }
 
     public class TblChar
@@ -60,6 +85,31 @@ namespace Var
         "$1,"
         };
 
+        //public static string CREATE_BDD = @"
+        //CREATE TABLE T_TRANS (
+        //    TDate char(6),
+        //    Remise integer,
+        //    Num integer,
+        //    TTime char(6),
+        //    Approved integer,
+        //    Collecte integer,
+        //    Amount integer,
+        //    Aid char(32),
+        //    Pan char(19),
+        //    Iso2 char(8),
+        //    TacIac char(66),
+        //    Online char(80),
+        //    Emv text(400),
+        //    Prop char(20),
+        //    PanHash char(64),
+        //    Name char(48),
+        //    Bank char(64),
+        //    Tags char(40),
+        //    IdVoie char(40),
+        //    Smact integer,
+        //    Timings char(30),
+        //    PRIMARY KEY( Remise, Num )
+        //);
         public static string CREATE_BDD = @"
         CREATE TABLE T_TRANS (
             TDate char(6),
@@ -82,8 +132,7 @@ namespace Var
             Tags char(40),
             IdVoie char(40),
             Smact integer,
-            Timings char(30),
-            PRIMARY KEY( Remise, Num )
+            Timings char(30)
         );
     ";
     }
