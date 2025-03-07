@@ -10,7 +10,6 @@ using Var;
 using BDDValueCheck;
 using System.Threading.Tasks;
 using System.ComponentModel.Design;
-<<<<<<< HEAD
 using System.Security.Cryptography;
 using System.Xml.Linq;
 
@@ -62,106 +61,6 @@ public class Program
     }
 
     private static void FiltreLine(string lineLog, StreamWriter writer, List<string> linesRecovered)
-=======
-
-public class Program
-{
-    public static string finalFile = new FileName().FINAL_FILE;
-    public static string fileBdd = new FileName().FILE_BDD;
-    public static string log_dir = new ConstantVar().LOG_DIRECTORY;
-    public static Regex recupTramePattern = new ConstantVar().RECUP_TRAME_PATTERN;
-    public static string[] bannedChar = new ConstantVar().BANNED_CHAR;
-
-    // C'est une variable non static
-    //public List<string> linesRecovered = new List<string>();
-
-    private static async Task BddManager()
-    {
-        string settings = "Data Source=log_info.db;Version=3";
-        try
-        {
-            using (SQLiteConnection connection = new SQLiteConnection(settings))
-            {
-                await connection.OpenAsync(); // OpenAsync pour que l'on puisse ouvrir la bdd sans attendre que la ligne s'exécute 
-                using (SQLiteCommand command = new SQLiteCommand(connection))
-                {
-                    Console.WriteLine(":: [*] Execute SQL queries.");
-                    for (int i = 0; i < 1; i++) //TEST
-                    {
-                        using (var transaction = connection.BeginTransaction())
-                        {
-                            using (StreamReader reader = new StreamReader(finalFile))
-                            {
-                                string? line;
-                                // Lire chaque ligne du fichier
-                                while ((line = reader.ReadLine()) != null)
-                                {
-                                    command.CommandText = line;
-                                    //Console.WriteLine(line + "\r\n");
-                                    command.ExecuteNonQuery();
-                                }
-                                //await transaction.CommitAsync();
-                                transaction.Commit();
-                            }
-                        }
-                    }
-                    Console.WriteLine(":: [+] Queries executed successfully !");
-                }
-            }// Close BDD 
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(":: [-] " + e.Message);
-        }
-    }
-
-    private static void InsertInToFileSQL(StreamWriter writer, List<string> allCommandSQL)
-    {
-        List<string> hundredCommandSQL = new List<string>();
-        for (int i = 0; i < allCommandSQL.Count; i++)
-        {
-            if (i == 0)
-            {
-                hundredCommandSQL.Add(allCommandSQL[i]);
-            }
-            else if (i % 100 == 0 && i != 0)
-            {
-                string? stringCmdSQL = string.Join(",", hundredCommandSQL);
-                writer.Write(stringCmdSQL + "\r\n");
-                hundredCommandSQL.Clear();
-                stringCmdSQL = "";
-                hundredCommandSQL.Add(allCommandSQL[i]);
-            }
-            else
-            {
-                if (i == allCommandSQL.Count - 1)
-                {
-                    allCommandSQL[i] = allCommandSQL[i].Substring(157);
-                    string? stringCmdSQL = string.Join(",", hundredCommandSQL);
-                    //for (global::System.Int32 j = 0; j < 100000; j++)
-                    //{
-                    //    writer.Write(stringCmdSQL + "," + allCommandSQL[i] + "\r\n");
-                    //}
-                    writer.Write(stringCmdSQL + "," + allCommandSQL[i] + "\r\n");
-                    
-                    hundredCommandSQL.Clear();
-                }
-                else
-                {
-                    allCommandSQL[i] = allCommandSQL[i].Substring(157);
-                    hundredCommandSQL.Add(allCommandSQL[i]);
-                }
-            }
-        }
-        if (hundredCommandSQL.Count > 0)
-        {
-            string stringCmdSQL = string.Join(",", hundredCommandSQL);
-            writer.Write(stringCmdSQL + "\r\n");
-        }
-    }
-
-    private static void WriteLogFile(string lineLog, StreamWriter writer, List<string> linesRecovered, List<string> allCommandSQL)
->>>>>>> 66c9d4e89a548de3e04c951030c695f941f798cd
     {
         try
         {
@@ -185,21 +84,10 @@ public class Program
                         {
                             lineLog = Regex.Replace(lineLog, TblChar.SEARCH_CHAR[count], TblChar.REPLACE_CHAR[count]);
                         }
-<<<<<<< HEAD
-
                         linesRecovered.Add(lineLog);
                         if (linesRecovered.Count == 6)
                         {
-                            WriteCommandFile(lineLog, writer, linesRecovered);   
-=======
-                        linesRecovered.Add(lineLog);
-                        if (linesRecovered.Count == 6)
-                        {
-                            // Création de la requête sql simple
-                            string? oneSQLCommand = string.Join("", linesRecovered);
-                            //writer.WriteLine(oneSQLCommand);
-                            allCommandSQL.Add(oneSQLCommand);
->>>>>>> 66c9d4e89a548de3e04c951030c695f941f798cd
+                            WriteCommandFile(lineLog, writer, linesRecovered);
                             linesRecovered.Clear();
                         }
                     }
@@ -217,23 +105,13 @@ public class Program
         if (Directory.Exists(ConstantVar.LOG_DIRECTORY))
         {
             // Parcourir tous les fichiers du dossier
-<<<<<<< HEAD
             string[] fichiers = Directory.GetFiles(ConstantVar.LOG_DIRECTORY);
             using (StreamWriter writer = new StreamWriter(FileName.FINAL_FILE, true)) // Ouvre le fichier une seule fois
-=======
-            string[] fichiers = Directory.GetFiles(log_dir);
-            using (StreamWriter writer = new StreamWriter(finalFile, true)) // Ouvre le fichier une seule fois
->>>>>>> 66c9d4e89a548de3e04c951030c695f941f798cd
             {
                 Console.WriteLine(":: [*] Reading files.");
                 // Tableau pour les Lignes récupérées
                 List<string> linesRecovered = new List<string>();
-<<<<<<< HEAD
                 // Boucler sur tous les fichiers 
-=======
-                // Tableau contenant toutes les requêtes SQL
-                List<string> allCommandSQL = new List<string>();
->>>>>>> 66c9d4e89a548de3e04c951030c695f941f798cd
                 foreach (string fichier in fichiers)
                 {
                     using (StreamReader reader = new StreamReader(fichier))
@@ -242,16 +120,11 @@ public class Program
                         // Lire chaque ligne du fichier
                         while ((line = reader.ReadLine()) != null)
                         {
-<<<<<<< HEAD
                             FiltreLine(line, writer, linesRecovered);
-=======
-                            WriteLogFile(line, writer, linesRecovered, allCommandSQL);
->>>>>>> 66c9d4e89a548de3e04c951030c695f941f798cd
                         }
                     }
                 }
                 Console.WriteLine(":: [+] Files are read !\r\n::");
-                InsertInToFileSQL(writer, allCommandSQL);
             }
         }
         else
@@ -267,25 +140,11 @@ public class Program
 
         using (SQLiteConnection connection = new SQLiteConnection(settings))
         {
-<<<<<<< HEAD
             // Ouverture de la base de données 
             connection.Open();
             using (SQLiteCommand command = new SQLiteCommand(connection))
             {
                 if (File.Exists(FileName.FILE_BDD))
-=======
-            connection.OpenAsync(); // OpenAsync pour que l'on puisse ouvrir la bdd sans attendre que la ligne s'exécute 
-            using (SQLiteCommand command = new SQLiteCommand(connection))
-            {
-                if (!File.Exists(fileBdd))
-                {
-                    // Création de la table T_TRANS
-                    command.CommandText = TblChar.CREATE_BDD;
-                    command.ExecuteNonQueryAsync();
-                    Console.WriteLine(":: [+] BDD Connection OK !\r\n::");
-                }
-                else
->>>>>>> 66c9d4e89a548de3e04c951030c695f941f798cd
                 {
                     // Réinitialisation de la table 
                     command.CommandText = "DROP TABLE IF EXISTS T_TRANS";
@@ -295,7 +154,6 @@ public class Program
                     command.ExecuteNonQueryAsync();
                     Console.WriteLine(":: [+] BDD Connection OK !\r\n::");
                 }
-<<<<<<< HEAD
                 else
                 {
                     // Création de la table T_TRANS
@@ -303,8 +161,6 @@ public class Program
                     command.ExecuteNonQueryAsync();
                     Console.WriteLine(":: [+] BDD Connection OK !\r\n::");
                 }
-=======
->>>>>>> 66c9d4e89a548de3e04c951030c695f941f798cd
             }
         }
     }
@@ -338,22 +194,14 @@ public class Program
         CreateBdd();
 
         // Delete files before execution
-<<<<<<< HEAD
         if (File.Exists(FileName.FINAL_FILE)) File.Delete(FileName.FINAL_FILE);
 
         ReadAllFile();
 
         string sqlitePath = @"C:\sqlite\sqlite3.exe"; // Remplacez par le chemin réel de sqlite3
-        string arguments = @"log_info.db "".import --csv file_command_sql.txt T_TRANS""";
-        
-        // Lancer l'écriture dans la base de donner avec .import
-        Process.Start(sqlitePath, arguments);
-=======
-        if (File.Exists(finalFile)) File.Delete(finalFile);
+        string arguments = @"log_info.db "".import --csv file_command_sql.csv T_TRANS""";
 
-        ReadAllFile();
-        _ = BddManager(); // "_ =" sert à ce que la valeur retournée soit ignorée
->>>>>>> 66c9d4e89a548de3e04c951030c695f941f798cd
+        Process.Start(sqlitePath, arguments);
 
         // Arrête le chronomètre
         stopwatch.Stop();
@@ -361,16 +209,5 @@ public class Program
         // Récupère le temps écoulé
         TimeSpan elapsed = stopwatch.Elapsed;
         DisplayRuntime(elapsed);
-<<<<<<< HEAD
-=======
-
-        //BDDValueCheck.CBDDValueCheck.MainBDD();
-
-
-        //string sqlitePath = @"C:\sqlite\sqlite3.exe"; // Remplacez par le chemin réel de sqlite3
-        //string arguments = @"log_info.db "".import --csv file_command_sql_2.csv T_TRANS""";
-
-        //Process.Start(sqlitePath, arguments);
->>>>>>> 66c9d4e89a548de3e04c951030c695f941f798cd
     }
 }
