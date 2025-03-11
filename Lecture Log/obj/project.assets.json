@@ -138,6 +138,26 @@
           }
         }
       },
+      "SyslogLogging/2.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/LoggingModule.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/LoggingModule.dll": {
+            "related": ".xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/net8.0/logo.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "System.CodeDom/4.7.0": {
         "type": "package",
         "compile": {
@@ -623,6 +643,39 @@
         "stub.system.data.sqlite.core.netstandard.nuspec"
       ]
     },
+    "SyslogLogging/2.0.8": {
+      "sha512": "Y7eGs7FvZmwx8CCcMw2qXpWoaKdPGIezIwwSlBfgrS3++AkH0XyKvFTTQ0eEHlYGUKjxGZnj2weYkyQLdiMUqA==",
+      "type": "package",
+      "path": "sysloglogging/2.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "content/logo.ico",
+        "contentFiles/any/net462/logo.ico",
+        "contentFiles/any/net48/logo.ico",
+        "contentFiles/any/net6.0/logo.ico",
+        "contentFiles/any/net8.0/logo.ico",
+        "contentFiles/any/netstandard2.0/logo.ico",
+        "contentFiles/any/netstandard2.1/logo.ico",
+        "lib/net462/LoggingModule.dll",
+        "lib/net462/LoggingModule.xml",
+        "lib/net48/LoggingModule.dll",
+        "lib/net48/LoggingModule.xml",
+        "lib/net6.0/LoggingModule.dll",
+        "lib/net6.0/LoggingModule.xml",
+        "lib/net8.0/LoggingModule.dll",
+        "lib/net8.0/LoggingModule.xml",
+        "lib/netstandard2.0/LoggingModule.dll",
+        "lib/netstandard2.0/LoggingModule.xml",
+        "lib/netstandard2.1/LoggingModule.dll",
+        "lib/netstandard2.1/LoggingModule.xml",
+        "logo.png",
+        "sysloglogging.2.0.8.nupkg.sha512",
+        "sysloglogging.nuspec"
+      ]
+    },
     "System.CodeDom/4.7.0": {
       "sha512": "Hs9pw/kmvH3lXaZ1LFKj3pLQsiGfj2xo3sxSzwiLlRL6UcMZUTeCfoJ9Udalvn3yq5dLlPEZzYegrTQ1/LhPOQ==",
       "type": "package",
@@ -1085,6 +1138,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "SyslogLogging >= 2.0.8",
       "System.Data.SQLite >= 1.0.119",
       "System.Data.SqlClient >= 4.9.0"
     ]
@@ -1140,6 +1194,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "SyslogLogging": {
+            "target": "Package",
+            "version": "[2.0.8, )"
+          },
           "System.Data.SQLite": {
             "target": "Package",
             "version": "[1.0.119, )"

@@ -21,12 +21,12 @@ namespace Var
     public struct ValueBDD
     {
         public static string TDate = "";
-        public static int Remise = 0;
-        public static int Num = 0;
+        public static int? Remise = 0;
+        public static int? Num = 0;
         public static string TTime = "";
-        public static int Approved = 0;
-        public static int Collecte = 0;
-        public static int Amount = 0;
+        public static int? Approved = 0;
+        public static int? Collecte = 0;
+        public static int? Amount = 0;
         public static string Aid = "";
         public static string Pan = "";
         public static string Iso2 = "";

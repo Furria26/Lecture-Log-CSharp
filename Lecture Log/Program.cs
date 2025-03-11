@@ -1,20 +1,94 @@
 ﻿using System;
-using System.IO;
-using System.Reflection.Metadata;
-using System.Text;
 using System.Text.RegularExpressions;
-using static System.Net.Mime.MediaTypeNames;
 using System.Data.SQLite;
 using System.Diagnostics;
+using SyslogLogging;
 using Var;
-using BDDValueCheck;
-using System.Threading.Tasks;
-using System.ComponentModel.Design;
-using System.Security.Cryptography;
-using System.Xml.Linq;
 
 public class Program
 {
+    public static LoggingModule errorLog = new LoggingModule("Error.log");
+    public static int countFinalFileLine = 1;
+
+    private static void VerifPan(string Pan)
+    {
+        if (Pan.Length == 18)
+        {
+            // Pour supprimer les simples côtes du début et de la fin de Pan (ex : '50176742XXXXXX69')
+            Pan = Pan.Substring(1, Pan.Length - 2);
+        }
+        else
+        {
+            errorLog.Error($": Taille de Pan incorrect à la ligne {countFinalFileLine} du fichier {FileName.FINAL_FILE}");
+        }
+    }
+
+    private static void VerifAid(string Aid)
+    {
+        if (Aid.Length == 16)
+        {
+            // Pour supprimer les simples côtes du début et de la fin de TTime (ex : 'A0000000421010')
+            Aid = Aid.Substring(1, Aid.Length - 2);
+        } 
+        else
+        { 
+            errorLog.Error($": Taille de Aid incorrect à la ligne {countFinalFileLine} du fichier {FileName.FINAL_FILE}"); 
+        }
+    }
+
+    private static void VerifAmout(int? Amout)
+    {
+        if (Amout >= 1000 && Amout < 100 || !Amout.HasValue)
+        {
+            errorLog.Error($": Format de Amout {Amout} est incorrect à ligne {countFinalFileLine} du fichier {FileName.FINAL_FILE}");
+        }
+    }
+
+    private static void VerifTTime(string TTime)
+    {
+        if (TTime.Length == 8)
+        {
+            // Pour supprimer les simples côtes du début et de la fin de TTime (ex : '250307')
+            TTime = TTime.Substring(1, TTime.Length - 2);
+            if (!IsAllDigits(TTime))
+            {
+                errorLog.Error($": Format de TTime incorrect à la ligne {countFinalFileLine} du fichier {FileName.FINAL_FILE}");
+            }
+        } 
+        else 
+        { 
+            errorLog.Error($": Taille de TTime incorrect à la ligne {countFinalFileLine} du fichier {FileName.FINAL_FILE}"); 
+        }
+    }
+
+    private static void VerifTDate(string TDate)
+    {
+        if (TDate.Length == 8)
+        {
+            // Pour supprimer les simples côtes du début et de la fin de TDates (ex : '250307')
+            TDate = TDate.Substring(1, TDate.Length - 2);
+            DateTime parsedDate;
+            // Verification du format de TDate 
+            if (!DateTime.TryParseExact(TDate, "yyMMdd", null, System.Globalization.DateTimeStyles.None, out parsedDate))
+            {
+                errorLog.Error($": Format de la date {TDate} est incorrect à ligne {countFinalFileLine} du fichier {FileName.FINAL_FILE}");
+            }
+        }
+        else { errorLog.Error($": Taille de la date incorrect à la ligne {countFinalFileLine} du fichier {FileName.FINAL_FILE}"); }
+    }
+
+    static bool IsAllDigits(string str)
+    {
+        foreach (char singleChar in str)
+        {
+            if (!char.IsDigit(singleChar))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
     private static void WriteCommandFile(string lineLog, StreamWriter writer, List<string> linesRecovered)
     {
         // Variable contenant la requête SQL
@@ -29,16 +103,48 @@ public class Program
         // Créer un tableau de valeur
         string[] lineValue = lineLog.Split(',');
 
-
         ValueBDD.Collecte = Convert.ToInt32(lineValue[0]);
+        if (!ValueBDD.Collecte.HasValue)    // Vérifier si la valeur Collecte est null ou est un entier 
+        {
+            errorLog.Error($": Format de Collecte incorrect à la ligne {countFinalFileLine} du fichier {FileName.FINAL_FILE}");
+        }
+
         ValueBDD.Remise = Convert.ToInt32(lineValue[1]);
+        if (!ValueBDD.Remise.HasValue)  // Vérifier si la valeur Remise n'est pas null ou est un entier 
+        {
+            errorLog.Error($": Format de Remise incorrect à la ligne {countFinalFileLine} du fichier {FileName.FINAL_FILE}");
+        }
+
         ValueBDD.Num = Convert.ToInt32(lineValue[2]);
-        ValueBDD.TDate = lineValue[3];
-        ValueBDD.TTime = lineValue[4];
-        ValueBDD.Pan = lineValue[5];
+        if (!ValueBDD.Num.HasValue) // Vérifier si la valeur Num n'est pas null ou est un entier 
+        {
+            errorLog.Error($": Format de Num incorrect à la ligne {countFinalFileLine} du fichier {FileName.FINAL_FILE}");
+        }
+
         ValueBDD.Approved = Convert.ToInt32(lineValue[6]);
+        if (!ValueBDD.Approved.HasValue)    // Vérifier si la valeur Approuved n'est pas null ou est un entier 
+        {
+            errorLog.Error($": Format de Approuved incorrect à la ligne {countFinalFileLine} du fichier {FileName.FINAL_FILE}");
+        }
+
         ValueBDD.Amount = Convert.ToInt32(lineValue[7]);
+        if (!ValueBDD.Amount.HasValue)    // Vérifier si la valeur Amount n'est pas null ou est un entier 
+        {
+            errorLog.Error($": Format de Amout incorrect à la ligne {countFinalFileLine} du fichier {FileName.FINAL_FILE}");
+        } else { VerifAmout(ValueBDD.Amount); }
+
+        ValueBDD.TDate = lineValue[3];
+        VerifTDate(ValueBDD.TDate);
+
+        ValueBDD.TTime = lineValue[4];
+        VerifTTime(ValueBDD.TTime);
+
+        ValueBDD.Pan = lineValue[5];
+        VerifPan(ValueBDD.Pan);
+
         ValueBDD.Aid = lineValue[8];
+        VerifAid(ValueBDD.Aid);
+
         ValueBDD.PanHash = lineValue[9];
         ValueBDD.Emv = lineValue[10];
         ValueBDD.Iso2 = lineValue[11];
@@ -58,6 +164,7 @@ public class Program
                     ValueBDD.Emv + "," + ValueBDD.Prop + "," + ValueBDD.PanHash + "," + ValueBDD.Name + "," +
                     ValueBDD.Bank + "," + ValueBDD.Tags + "," + ValueBDD.IdVoie + "," + ValueBDD.Smact + "," +
                     ValueBDD.Timings);
+        countFinalFileLine += 1;
     }
 
     private static void FiltreLine(string lineLog, StreamWriter writer, List<string> linesRecovered)
@@ -65,7 +172,8 @@ public class Program
         try
         {
             // Filtrage de la ligne
-            if (ConstantVar.RECUP_TRAME_PATTERN.Match(lineLog).Success) // Sans .Success la condition retournerait un objet de type match et non un bool 
+            if (ConstantVar.RECUP_TRAME_PATTERN.Match(lineLog).Success) 
+                // Sans .Success la condition retournerait un objet de type match et non un bool 
             {
                 if (!lineLog.Contains(ConstantVar.BANNED_CHAR[0]) &&
                     !lineLog.Contains(ConstantVar.BANNED_CHAR[1]) &&
@@ -73,7 +181,7 @@ public class Program
                     !lineLog.Contains(ConstantVar.BANNED_CHAR[3]) &&
                     !lineLog.Contains("where Remise="))
                 {
-                    // Remplacer les caractères
+                    // Transformation de la ligne
                     for (int count = 0; count < 4; count++)
                     {
                         lineLog = Regex.Replace(lineLog, TblChar.SEARCH_CHAR[count], TblChar.REPLACE_CHAR[count]);
@@ -85,6 +193,7 @@ public class Program
                             lineLog = Regex.Replace(lineLog, TblChar.SEARCH_CHAR[count], TblChar.REPLACE_CHAR[count]);
                         }
                         linesRecovered.Add(lineLog);
+                        // "6" pour la fin de la requête 
                         if (linesRecovered.Count == 6)
                         {
                             WriteCommandFile(lineLog, writer, linesRecovered);
@@ -111,12 +220,13 @@ public class Program
                 Console.WriteLine(":: [*] Reading files.");
                 // Tableau pour les Lignes récupérées
                 List<string> linesRecovered = new List<string>();
+
                 // Boucler sur tous les fichiers 
                 foreach (string fichier in fichiers)
                 {
                     using (StreamReader reader = new StreamReader(fichier))
                     {
-                        string? line;
+                        string? line = "";
                         // Lire chaque ligne du fichier
                         while ((line = reader.ReadLine()) != null)
                         {
@@ -149,18 +259,10 @@ public class Program
                     // Réinitialisation de la table 
                     command.CommandText = "DROP TABLE IF EXISTS T_TRANS";
                     command.ExecuteNonQueryAsync();
-
-                    command.CommandText = TblChar.CREATE_BDD;
-                    command.ExecuteNonQueryAsync();
-                    Console.WriteLine(":: [+] BDD Connection OK !\r\n::");
                 }
-                else
-                {
-                    // Création de la table T_TRANS
-                    command.CommandText = TblChar.CREATE_BDD;
-                    command.ExecuteNonQueryAsync();
-                    Console.WriteLine(":: [+] BDD Connection OK !\r\n::");
-                }
+                command.CommandText = TblChar.CREATE_BDD;
+                command.ExecuteNonQueryAsync();
+                Console.WriteLine(":: [+] BDD Connection OK !\r\n::");
             }
         }
     }
@@ -185,12 +287,11 @@ public class Program
 
     public static void Main()
     {
-        OutputTitle();
-
         // Démarre un chronomètre pour calculer le temps d'exécution 
         Stopwatch stopwatch = new Stopwatch();
         stopwatch.Start();
 
+        OutputTitle();
         CreateBdd();
 
         // Delete files before execution
@@ -200,8 +301,10 @@ public class Program
 
         string sqlitePath = @"C:\sqlite\sqlite3.exe"; // Remplacez par le chemin réel de sqlite3
         string arguments = @"log_info.db "".import --csv file_command_sql.csv T_TRANS""";
-
         Process.Start(sqlitePath, arguments);
+
+        // Ce Sleep sert à laisser le temps à la command .import de s'exécuter 
+        System.Threading.Thread.Sleep(50);
 
         // Arrête le chronomètre
         stopwatch.Stop();
