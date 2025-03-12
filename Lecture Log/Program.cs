@@ -29,9 +29,9 @@ public class Program
         {
             // Pour supprimer les simples côtes du début et de la fin de TTime (ex : 'A0000000421010')
             Aid = Aid.Substring(1, Aid.Length - 2);
-        } 
+        }
         else
-        { 
+        {
             errorLog.Error($": Taille de Aid incorrect à la ligne {countFinalFileLine} du fichier {FileName.FINAL_FILE}"); 
         }
     }
@@ -54,7 +54,7 @@ public class Program
             {
                 errorLog.Error($": Format de TTime incorrect à la ligne {countFinalFileLine} du fichier {FileName.FINAL_FILE}");
             }
-        } 
+        }
         else 
         { 
             errorLog.Error($": Taille de TTime incorrect à la ligne {countFinalFileLine} du fichier {FileName.FINAL_FILE}"); 
@@ -303,7 +303,7 @@ public class Program
         string arguments = @"log_info.db "".import --csv file_command_sql.csv T_TRANS""";
         Process.Start(sqlitePath, arguments);
 
-        // Ce Sleep sert à laisser le temps à la command .import de s'exécuter 
+        // Ce Sleep sert à laisser le temps à la command .import de s'exécuter  
         System.Threading.Thread.Sleep(50);
 
         // Arrête le chronomètre
